@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.">
+    <meta name="theme-color" content="#0D0D0D">
+    <title>Insights - Rock .dev</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <header class="main-header">
+        <nav class="main-nav" aria-label="Menu principal">
+            <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
+                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo">
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="insights.html" aria-current="page">Insights</a></li>
+                <li><a href="contato.html" class="btn btn-neon-outline">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="page-header">
+            <h1 class="page-title">> LOGS DO SISTEMA: PENSAMENTOS & DESCOBERTAS</h1>
+            <p class="page-subtitle">Um espaço para compartilhar nosso código-fonte de ideias, análises técnicas e reflexões sobre o futuro da tecnologia.</p>
+        </section>
+
+        <section class="section-container">
+            <div class="insights-feed">
+                <article class="insight-card">
+                    <div class="insight-meta">
+                        <span>DATA: 27.09.2025</span>
+                        <span>CATEGORIA: ARQUITETURA</span>
+                        <span>LEITURA: 8 MIN</span>
+                    </div>
+                    <h2 class="insight-title"><a href="artigo-detalhe.html">Arquitetura Monolítica vs. Microsserviços: Uma Análise Prática</a></h2>
+                    <p class="insight-excerpt">No mundo do desenvolvimento de software, a escolha da arquitetura é uma das decisões mais críticas. Ela impacta a escalabilidade, manutenção e a velocidade de entrega de novas features. Vamos desmistificar dois dos modelos mais discutidos...</p>
+                    <a href="artigo-detalhe.html" class="insight-cta">[ LER ENTRADA COMPLETA... ]</a>
+                </article>
+
+                <article class="insight-card">
+                    <div class="insight-meta">
+                        <span>DATA: 15.08.2025</span>
+                        <span>CATEGORIA: SEGURANÇA</span>
+                        <span>LEITURA: 6 MIN</span>
+                    </div>
+                    <h2 class="insight-title"><a href="#">5 Práticas Essenciais de Segurança em APIs REST</a></h2>
+                    <p class="insight-excerpt">APIs são a espinha dorsal da comunicação entre sistemas modernos, mas também são um dos principais alvos de ataques. Garantir sua segurança não é opcional. Neste artigo, cobrimos 5 práticas fundamentais que todo desenvolvedor deveria implementar...</p>
+                    <a href="#" class="insight-cta">[ LER ENTRADA COMPLETA... ]</a>
+                </article>
+
+                <article class="insight-card">
+                    <div class="insight-meta">
+                        <span>DATA: 02.07.2025</span>
+                        <span>CATEGORIA: UI/UX</span>
+                        <span>LEITURA: 4 MIN</span>
+                    </div>
+                    <h2 class="insight-title"><a href="#">Design Atômico: Como construir interfaces consistentes e escaláveis</a></h2>
+                    <p class="insight-excerpt">Criar um sistema de design coeso é um desafio, especialmente em projetos grandes. A metodologia do Design Atômico oferece uma abordagem estruturada para construir interfaces a partir de componentes reutilizáveis, garantindo consistência e agilidade...</p>
+                    <a href="#" class="insight-cta">[ LER ENTRADA COMPLETA... ]</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Rock .dev Technology. Todos os direitos reservados.</p>
+        <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

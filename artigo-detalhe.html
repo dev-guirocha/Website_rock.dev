@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.">
+    <meta name="theme-color" content="#0D0D0D">
+    <title>Título do Artigo - Rock .dev</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <header class="main-header">
+        <nav class="main-nav" aria-label="Menu principal">
+            <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
+                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo">
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="insights.html" aria-current="page">Insights</a></li>
+                <li><a href="contato.html" class="btn btn-neon-outline">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <header class="article-header">
+            <div class="article-header-content">
+                <span class="article-category">ARQUITETURA</span>
+                <h1 class="article-title">Arquitetura Monolítica vs. Microsserviços: Uma Análise Prática</h1>
+                <div class="article-meta">
+                    <p>Por <strong>Guilherme Rocha</strong> // Publicado em 27 de setembro de 2025 // 8 min de leitura</p>
+                </div>
+            </div>
+        </header>
+        
+        <article class="article-content">
+            <p>No mundo do desenvolvimento de software, a escolha da arquitetura é uma das decisões mais críticas. Ela impacta a escalabilidade, manutenção e a velocidade de entrega de novas features. Vamos desmistificar dois dos modelos mais discutidos: o Monolito e os Microsserviços.</p>
+            
+            <h2>O que é uma Arquitetura Monolítica?</h2>
+            <p>Um monolito, como o nome sugere, é uma aplicação construída como uma única unidade. Todo o código para a interface do usuário, lógica de negócio e acesso a dados está em uma única base de código, e a aplicação é implantada como um único artefato. É o modelo tradicional e, para muitos projetos, ainda é a escolha mais simples e rápida para começar.</p>
+            
+            <blockquote>"A simplicidade inicial é a maior vantagem do monolito. Mas essa simplicidade pode se tornar uma armadilha à medida que o sistema cresce em complexidade."</blockquote>
+            
+            <h2>A Ascensão dos Microsserviços</h2>
+            <p>Em contraste, a arquitetura de microsserviços estrutura uma aplicação como uma coleção de pequenos serviços independentes. Cada serviço é autônomo, focado em uma única capacidade de negócio e pode ser desenvolvido, implantado e escalado de forma independente.</p>
+            <p>Por exemplo, em um sistema de e-commerce, o catálogo de produtos, o carrinho de compras e o processamento de pagamentos podem ser três microsserviços distintos.</p>
+
+            <pre class="code-block"><code>// Exemplo de como serviços podem se comunicar via API
+const updateUser = async (userId, data) => {
+  try {
+    const response = await fetch(`https://api.userservice.com/users/${userId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer YOUR_JWT_TOKEN'
+      },
+      body: JSON.stringify(data)
+    });
+    return await response.json();
+  } catch (error) {
+    console.error('Falha ao atualizar usuário:', error);
+  }
+};</code></pre>
+
+            <h2>Qual escolher?</h2>
+            <p>Não há uma resposta única. A escolha depende do contexto do seu projeto. Para startups e projetos menores, um monolito bem estruturado pode ser a melhor opção. Para sistemas grandes e complexos que exigem alta escalabilidade e equipes de desenvolvimento independentes, os microsserviços brilham. A chave é entender os trade-offs e tomar uma decisão informada.</p>
+        </article>
+        
+        <section class="author-bio">
+            <img src="images/perfil.png" alt="Guilherme Rocha" class="author-photo" loading="lazy">
+            <div class="author-info">
+                <h4>Sobre o Autor</h4>
+                <p><strong>Guilherme Rocha</strong> é o Fundador e Arquiteto de Soluções na Rock .dev. Apaixonado por criar tecnologia com impacto real, ele explora constantemente novas arquiteturas e paradigmas de desenvolvimento.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Rock .dev Technology. Todos os direitos reservados.</p>
+        <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
