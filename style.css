@@ -289,10 +289,22 @@ a:focus-visible,
     opacity: 0.5;
 }
 
-.founder-photo img {
+.founder-photo {
+    width: min(320px, 80vw);
+    aspect-ratio: 1;
     border-radius: 50%;
+    overflow: hidden;
     border: 5px solid #222;
     box-shadow: var(--shadow-neon);
+    justify-self: center;
+}
+
+.founder-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
 }
 
 .pillars {
