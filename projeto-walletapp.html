@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estudo de caso WalletApp: conheça a solução de assistente financeiro pessoal desenvolvida pela Rock .dev.">
+    <meta name="theme-color" content="#0D0D0D">
+    <title>Projeto WalletApp - Rock .dev</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <header class="main-header">
+        <nav class="main-nav" aria-label="Menu principal">
+            <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
+                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo">
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="contato.html" class="btn btn-neon-outline">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="project-hero" style="background-image: url('images/WalletApp.png');">
+            <div class="project-hero-overlay">
+                <div class="project-hero-content">
+                    <h1 class="project-title-detail">Projeto WalletApp</h1>
+                    <p class="project-subtitle-detail">Seu assistente financeiro pessoal.</p>
+                    <div class="project-facts">
+                        <p><strong>CLIENTE:</strong> Projeto Pessoal / SaaS para Autônomos</p>
+                        <p><strong>TIPO:</strong> App Mobile & Gestão Financeira</p>
+                        <p><strong>STACK:</strong> React Native, Expo, AsyncStorage</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="project-detail-container">
+            <section class="project-section">
+                <h2 class="section-title text-center">O Desafio</h2>
+                <p>Profissionais autônomos—como designers, fotógrafos, desenvolvedores e consultores—enfrentam um desafio constante: gerenciar clientes, agendamentos e finanças de forma integrada. Muitos dependem de planilhas complexas, aplicativos de calendário separados e blocos de notas, resultando em desorganização, perda de informações e falta de uma visão clara sobre a saúde financeira do seu negócio.</p>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-title text-center">A Solução Rock .dev</h2>
+                <p>Desenvolvemos o WalletApp, um aplicativo móvel completo construído em React Native e Expo. A solução centraliza todas as ferramentas essenciais para o autônomo em um só lugar, funcionando de forma offline-first com armazenamento local (AsyncStorage).</p>
+                <p>O app inclui um fluxo de onboarding e funcionalidades cruciais: <strong>Gestão de Clientes</strong> (cadastro e detalhes), <strong>Agenda de Compromissos</strong>, e <strong>Controle Financeiro</strong> (lançamento de receitas e despesas).</section>
+
+            <section class="project-section impact-section">
+                <h2 class="section-title text-center">Missão Cumprida: O Impacto</h2>
+                <p>O WalletApp devolve ao profissional autônomo o controle total sobre seu negócio. Ao unificar agenda, clientes e finanças, o aplicativo fornece uma "visão clara e organizada das finanças" e insights de faturamento. Isso permite que os usuários tomem decisões informadas, otimizem seu tempo e projetem um crescimento sustentável, tudo a partir do seu dispositivo móvel.</p>
+            </section>
+
+            <section class="project-section text-center">
+                <a href="https://github.com/dev-guirocha/Wallet_APP" class="btn btn-neon-outline" target="_blank" rel="noopener">[ VER CÓDIGO NO GITHUB ]</a>
+            </section>
+        </div>
+
+        <nav class="project-navigation">
+            <a href="projetos.html" class="nav-link-projects">&lt; Voltar para todos os projetos</a>
+        </nav>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Rock .dev Technology. Todos os direitos reservados.</p>
+        <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
