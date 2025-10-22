@@ -1,38 +1,41 @@
-# Portfólio Pessoal de Desenvolvedor - Guilherme Rocha
+# Website Rock .dev
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+Este é o repositório do site institucional da **Rock .dev Technology**, um estúdio de desenvolvimento focado em "Soluções Sólidas. Código Ousado.".
 
-![Screenshot da Homepage do Portfólio](screenshot-portfolio.png)
+O site é estático, multi-página e totalmente responsivo, construído com HTML, CSS e JavaScript puros. O design apresenta uma estética retro/cyberpunk, utilizando fontes pixeladas (`Press Start 2P`) e monoespaçadas (`IBM Plex Mono`), além de efeitos neon e "scanlines".
 
-## 📖 Sobre o Projeto
+![Logo da Rock .dev](images/ROCK_DEV_LOGO.png)
 
-Este é o repositório do meu portfólio pessoal, uma página web estática e totalmente responsiva criada para apresentar minhas habilidades, formação, experiência e projetos como Analista de Qualidade e Desenvolvedor. O site foi construído do zero, utilizando apenas HTML, CSS e JavaScript puros, com foco em um design limpo, moderno e uma boa experiência de usuário.
+## 📖 Estrutura do Site
 
-O projeto foi desenvolvido em colaboração com a IA Gemini do Google, desde a concepção da estrutura e do design UI/UX até a geração do código final.
+O site é dividido nas seguintes seções principais:
+
+* **Home (`index.html`):** Apresentação principal com a filosofia do estúdio e um projeto em destaque (MedControlApp).
+* **Sobre (`sobre.html`):** Detalhes sobre a fundação, filosofia (Solidez e Inovação) e o fundador, Guilherme Rocha.
+* **Serviços (`servicos.html`):** Descrição dos serviços oferecidos, como Arquitetura de Sistemas, Aplicações Web & Mobile e Consultoria.
+* **Projetos (`projetos.html`):** Galeria de projetos concluídos (MedControlApp, WalletApp, Marmitas da Ka) com links para estudos de caso detalhados.
+* **Insights (`insights.html`):** Seção de blog com artigos técnicos sobre arquitetura, segurança e UI/UX.
+* **Contato (`contato.html`):** Formulário de contato e informações diretas.
 
 ## ✨ Funcionalidades Principais
 
--   ✅ **Design Moderno e Responsivo:** Adaptável para desktops, tablets e dispositivos móveis.
--   ✅ **Seção "Heropage"** com apresentação profissional e chamadas para ação (CTAs).
--   ✅ **Seções Detalhadas** para Formação Acadêmica, Cursos/Certificações e Experiência Profissional.
--   ✅ **Carrossel de Projetos Interativo** construído com JavaScript puro para exibir meus principais trabalhos.
--   ✅ **Filtro de Certificados por Categoria**, permitindo uma navegação fácil e organizada.
--   ✅ **Animações e Transições sutis** em CSS para uma experiência mais fluida.
--   ✅ **Design Acessível** com o uso de HTML semântico.
+* **Design Totalmente Responsivo:** Utiliza Flexbox e Grid Layout para adaptação em desktops, tablets e mobile.
+* **Menu "Hamburguer" Funcional:** Criado com JavaScript puro para navegação mobile (`script.js`).
+* **Foco em Acessibilidade:** Uso de HTML semântico, `skip-link` para pular a navegação e atributos `aria`.
+* **Estética Neon/Retro:** Tema consistente aplicado com Variáveis CSS, efeitos de "scanlines" e tipografia temática.
 
 ## 🛠️ Tecnologias Utilizadas
 
-Este projeto foi construído utilizando as tecnologias fundamentais da web, sem o uso de frameworks, para demonstrar um forte domínio das bases do desenvolvimento front-end.
+Este projeto foi construído do zero, sem frameworks CSS ou JS, para demonstrar um forte domínio das tecnologias web fundamentais.
 
--   **HTML5 Semântico:** Para uma estrutura bem organizada e acessível.
--   **CSS3 Moderno:**
-    -   **Flexbox** e **Grid Layout** para a criação de layouts complexos e responsivos.
-    -   **Variáveis CSS** para um tema de cores fácil de customizar.
-    -   **Animações e Transições** para interatividade.
--   **JavaScript (ES6+):** Utilizado para a manipulação do DOM, criando a interatividade do carrossel de projetos e o sistema de filtros de certificados.
--   **Font Awesome:** Para a inclusão de ícones.
+* **HTML5 Semântico**
+* **CSS3 Moderno**
+    * Flexbox e Grid Layout
+    * Variáveis CSS
+    * Animações e Transições
+* **JavaScript (ES6+)**
+    * Manipulação do DOM (ex: menu mobile)
+* **Font Awesome** (Para ícones)
 
 ## 🚀 Como Executar o Projeto
 
@@ -40,29 +43,16 @@ Como este é um projeto web estático, não há necessidade de instalação de d
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/dev-guirocha/SEU-REPOSITORIO.git](https://github.com/dev-guirocha/SEU-REPOSITORIO.git)
+    git clone [https://github.com/dev-guirocha/website_rock.dev.git](https://github.com/dev-guirocha/website_rock.dev.git)
     ```
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd SEU-REPOSITORIO
+    cd website_rock.dev
     ```
 3.  **Abra o arquivo `index.html`** diretamente no seu navegador de preferência.
 
-    > **Dica:** Para uma melhor experiência de desenvolvimento, recomendo usar a extensão **"Live Server"** no Visual Studio Code, que atualiza a página automaticamente a cada alteração no código.
-
-## ⚙️ Como Personalizar
-
-Este portfólio foi projetado para ser facilmente personalizável:
-
--   **Conteúdo:** Todos os textos, títulos e informações pessoais podem ser editados diretamente nos arquivos `.html`.
--   **Imagens:** Substitua as imagens na pasta `/images` pelos seus próprios arquivos (foto de perfil, prints de projetos, etc.).
--   **Certificados e Projetos:** Para adicionar ou remover itens, basta seguir a estrutura HTML existente nas seções correspondentes dos arquivos `index.html`.
--   **Links:** Atualize os links para suas redes sociais, certificados e projetos nos respectivos atributos `href`.
-
-## 📄 Licença
-
-Distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais informações.
+    > **Dica:** Para uma melhor experiência de desenvolvimento, recomendo usar a extensão **"Live Server"** no Visual Studio Code.
 
 ---
 
-Desenvolvido por **Guilherme Rocha**.
+Desenvolvido por **Guilherme Rocha** para a **Rock .dev Technology**.
