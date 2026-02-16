@@ -4,13 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.">
-    <meta name="theme-color" content="#0D0D0D">
+    <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Insights - Rock .dev</title>
+    <!-- SEO START -->
+    <link rel="canonical" href="https://squadrockdev.com.br/insights.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rock .dev">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Insights - Rock .dev">
+    <meta property="og:description" content="Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.">
+    <meta property="og:url" content="https://squadrockdev.com.br/insights.html">
+    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Insights - Rock .dev">
+    <meta name="twitter:description" content="Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.">
+    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Insights - Rock .dev",
+  "url": "https://squadrockdev.com.br/insights.html",
+  "description": "Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.",
+  "inLanguage": "pt-BR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Rock .dev",
+    "url": "https://squadrockdev.com.br/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rock .dev Technology",
+    "url": "https://squadrockdev.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
+    }
+  }
+}
+    </script>
+    <!-- SEO END -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -22,14 +61,14 @@
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo">
+                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
             </a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu de navegação">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
                 <span class="menu-toggle-bar"></span>
                 <span class="menu-toggle-bar"></span>
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="primary-navigation">
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
@@ -41,7 +80,7 @@
 
     <main id="main-content" tabindex="-1">
         <section class="page-header">
-            <h1 class="page-title">> LOGS DO SISTEMA: PENSAMENTOS & DESCOBERTAS</h1>
+            <h1 class="page-title">Insights técnicos para decisões melhores</h1>
             <p class="page-subtitle">Um espaço para compartilhar nosso código-fonte de ideias, análises técnicas e reflexões sobre o futuro da tecnologia.</p>
         </section>
 
@@ -55,7 +94,7 @@
                     </div>
                     <h2 class="insight-title"><a href="artigo-detalhe.html">Arquitetura Monolítica vs. Microsserviços: Uma Análise Prática</a></h2>
                     <p class="insight-excerpt">No mundo do desenvolvimento de software, a escolha da arquitetura é uma das decisões mais críticas. Ela impacta a escalabilidade, manutenção e a velocidade de entrega de novas features. Vamos desmistificar dois dos modelos mais discutidos...</p>
-                    <a href="artigo-detalhe.html" class="insight-cta">[ LER ENTRADA COMPLETA... ]</a>
+                    <a href="artigo-detalhe.html" class="insight-cta">Ler artigo completo</a>
                 </article>
 
                 <article class="insight-card">
@@ -64,9 +103,9 @@
                         <span>CATEGORIA: SEGURANÇA</span>
                         <span>LEITURA: 6 MIN</span>
                     </div>
-                    <h2 class="insight-title"><a href="#">5 Práticas Essenciais de Segurança em APIs REST</a></h2>
+                    <h2 class="insight-title"><a href="artigo-seguranca-api.html">5 Práticas Essenciais de Segurança em APIs REST</a></h2>
                     <p class="insight-excerpt">APIs são a espinha dorsal da comunicação entre sistemas modernos, mas também são um dos principais alvos de ataques. Garantir sua segurança não é opcional. Neste artigo, cobrimos 5 práticas fundamentais que todo desenvolvedor deveria implementar...</p>
-                    <a href="#" class="insight-cta">[ LER ENTRADA COMPLETA... ]</a>
+                    <a href="artigo-seguranca-api.html" class="insight-cta">Ler artigo completo</a>
                 </article>
 
                 <article class="insight-card">
@@ -75,19 +114,19 @@
                         <span>CATEGORIA: UI/UX</span>
                         <span>LEITURA: 4 MIN</span>
                     </div>
-                    <h2 class="insight-title"><a href="#">Design Atômico: Como construir interfaces consistentes e escaláveis</a></h2>
+                    <h2 class="insight-title"><a href="artigo-design-atomico.html">Design Atômico: Como construir interfaces consistentes e escaláveis</a></h2>
                     <p class="insight-excerpt">Criar um sistema de design coeso é um desafio, especialmente em projetos grandes. A metodologia do Design Atômico oferece uma abordagem estruturada para construir interfaces a partir de componentes reutilizáveis, garantindo consistência e agilidade...</p>
-                    <a href="#" class="insight-cta">[ LER ENTRADA COMPLETA... ]</a>
+                    <a href="artigo-design-atomico.html" class="insight-cta">Ler artigo completo</a>
                 </article>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2025 Rock .dev Technology. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Rock .dev Technology. Todos os direitos reservados.</p>
         <div class="footer-socials">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 

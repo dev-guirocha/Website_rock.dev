@@ -4,13 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.">
-    <meta name="theme-color" content="#0D0D0D">
+    <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
-    <title>Título do Artigo - Rock .dev</title>
+    <title>Arquitetura Monolítica vs. Microsserviços - Rock .dev</title>
+    <!-- SEO START -->
+    <link rel="canonical" href="https://squadrockdev.com.br/artigo-detalhe.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rock .dev">
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="Guilherme Rocha">
+    <meta property="article:published_time" content="2025-09-27">
+    <meta property="article:modified_time" content="2026-02-16">
+    <meta property="og:title" content="Arquitetura Monolítica vs. Microsserviços - Rock .dev">
+    <meta property="og:description" content="Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.">
+    <meta property="og:url" content="https://squadrockdev.com.br/artigo-detalhe.html">
+    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arquitetura Monolítica vs. Microsserviços - Rock .dev">
+    <meta name="twitter:description" content="Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.">
+    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Arquitetura Monolítica vs. Microsserviços: Uma Análise Prática",
+  "description": "Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.",
+  "datePublished": "2025-09-27",
+  "dateModified": "2026-02-16",
+  "inLanguage": "pt-BR",
+  "mainEntityOfPage": "https://squadrockdev.com.br/artigo-detalhe.html",
+  "author": {
+    "@type": "Person",
+    "name": "Guilherme Rocha"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rock .dev Technology",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
+    }
+  },
+  "image": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
+}
+    </script>
+    <!-- SEO END -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -22,14 +65,14 @@
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo">
+                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
             </a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu de navegação">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
                 <span class="menu-toggle-bar"></span>
                 <span class="menu-toggle-bar"></span>
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="primary-navigation">
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
@@ -84,7 +127,7 @@ const updateUser = async (userId, data) => {
         </article>
         
         <section class="author-bio">
-            <img src="images/perfil.png" alt="Guilherme Rocha" class="author-photo" loading="lazy">
+            <img src="images/CEO.jpeg" alt="Guilherme Rocha" class="author-photo" width="1200" height="1600" loading="lazy">
             <div class="author-info">
                 <h4>Sobre o Autor</h4>
                 <p><strong>Guilherme Rocha</strong> é o Fundador e Arquiteto de Soluções na Rock .dev. Apaixonado por criar tecnologia com impacto real, ele explora constantemente novas arquiteturas e paradigmas de desenvolvimento.</p>
@@ -94,10 +137,10 @@ const updateUser = async (userId, data) => {
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2025 Rock .dev Technology. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Rock .dev Technology. Todos os direitos reservados.</p>
         <div class="footer-socials">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 

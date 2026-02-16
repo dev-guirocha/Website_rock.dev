@@ -3,14 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rock .dev cria soluções digitais robustas, combinando engenharia de software, design futurista e consultoria estratégica para negócios de saúde e gestão.">
-    <meta name="theme-color" content="#0D0D0D">
+    <meta name="description" content="Desenvolvimento de software sob medida para empresas que precisam de operações mais eficientes, produtos digitais confiáveis e crescimento sustentável.">
+    <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Rock .dev - Soluções Sólidas. Código Ousado.</title>
+    <!-- SEO START -->
+    <link rel="canonical" href="https://squadrockdev.com.br/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rock .dev">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rock .dev - Soluções Sólidas. Código Ousado.">
+    <meta property="og:description" content="Desenvolvimento de software sob medida para empresas que precisam de operações mais eficientes, produtos digitais confiáveis e crescimento sustentável.">
+    <meta property="og:url" content="https://squadrockdev.com.br/">
+    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rock .dev - Soluções Sólidas. Código Ousado.">
+    <meta name="twitter:description" content="Desenvolvimento de software sob medida para empresas que precisam de operações mais eficientes, produtos digitais confiáveis e crescimento sustentável.">
+    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Rock .dev",
+  "url": "https://squadrockdev.com.br/",
+  "inLanguage": "pt-BR",
+  "description": "Desenvolvimento de software sob medida para empresas que precisam de operações mais eficientes, produtos digitais confiáveis e crescimento sustentável.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rock .dev Technology",
+    "url": "https://squadrockdev.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
+    }
+  }
+}
+    </script>
+    <!-- SEO END -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -23,14 +57,14 @@
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo">
+                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
             </a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu de navegação">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
                 <span class="menu-toggle-bar"></span>
                 <span class="menu-toggle-bar"></span>
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="primary-navigation">
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
@@ -43,63 +77,95 @@
     <main id="main-content" tabindex="-1">
         <section class="hero">
             <div class="hero-content">
-                <div class="hero-logo-container">
-                    <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" class="hero-logo">
+                <p class="hero-kicker">Desenvolvimento sob medida para negócios digitais</p>
+                <h1 class="hero-title">Transformamos desafios operacionais em produtos digitais confiáveis.</h1>
+                <p class="hero-lead">Atuamos da estratégia ao lançamento com foco em clareza, velocidade e impacto no negócio. Sem ruído técnico, sem escopo solto, sem surpresa na entrega.</p>
+                <div class="hero-actions">
+                    <a href="contato.html" class="btn btn-neon">Solicitar diagnóstico inicial</a>
+                    <a href="projetos.html" class="btn btn-ghost">Ver projetos entregues</a>
                 </div>
-                <h1 class="hero-title">Soluções Sólidas. Código Ousado.</h1>
-                <a href="#domains" class="hero-cta">[ INICIAR EXPLORAÇÃO ↓ ]</a>
+                <ul class="hero-proof">
+                    <li>
+                        <strong>Resposta inicial em até 48h úteis</strong>
+                        <span>Ritmo rápido para tirar projetos do papel.</span>
+                    </li>
+                    <li>
+                        <strong>Entregas com visibilidade total</strong>
+                        <span>Você acompanha escopo, prioridade e evolução.</span>
+                    </li>
+                    <li>
+                        <strong>Foco em resultado de operação</strong>
+                        <span>Menos retrabalho e mais previsibilidade.</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <section id="domains" class="section-container">
+            <header class="section-intro">
+                <h2 class="section-title">Como podemos acelerar seu negócio</h2>
+                <p>Unimos arquitetura, produto e execução para resolver gargalos reais de operação e crescimento.</p>
+            </header>
             <div class="domain-grid">
                 <div class="domain-card">
                     <div class="card-icon"><i class="fas fa-cogs"></i></div>
                     <h2 class="card-title">Software Sob Medida</h2>
-                    <p class="card-text">Projetamos e construímos sistemas robustos, com foco em performance e escalabilidade para resolver desafios complexos, especialmente nas áreas de Saúde e Gestão.</p>
+                    <p class="card-text">Projetamos sistemas robustos para automatizar processos críticos, reduzir erros manuais e sustentar crescimento com segurança.</p>
                 </div>
                 <div class="domain-card">
                     <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h2 class="card-title">Aplicações Web & Mobile</h2>
-                    <p class="card-text">Desenvolvemos interfaces intuitivas e experiências de usuário memoráveis, transformando ideias inovadoras em aplicações acessíveis em qualquer dispositivo.</p>
+                    <h2 class="card-title">Aplicações Web &amp; Mobile</h2>
+                    <p class="card-text">Criamos produtos digitais com experiência clara, desempenho consistente e foco em conversão e retenção de usuários.</p>
                 </div>
                 <div class="domain-card">
                     <div class="card-icon"><i class="fas fa-brain"></i></div>
                     <h2 class="card-title">Consultoria Estratégica</h2>
-                    <p class="card-text">Analisamos seus processos e desafios para identificar oportunidades, desenhando a melhor estratégia tecnológica para o seu negócio de forma transparente e direta.</p>
+                    <p class="card-text">Mapeamos prioridades e definimos um plano técnico viável para reduzir risco, controlar custo e acelerar entrega.</p>
                 </div>
             </div>
         </section>
 
         <section class="section-container featured-project">
             <div class="project-image-column">
-                <img src="images/MedControlApp.png" alt="Mockup do Projeto MedControlApp" loading="lazy">
+                <img src="images/MedControlApp.png" alt="Mockup do Projeto MedControlApp" width="1024" height="768" loading="lazy">
             </div>
             <div class="project-text-column">
-                <h3 class="section-subtitle">CASE DE SUCESSO</h3>
-                <h2 class="section-title">Gestão de Saúde Pública</h2>
-                <p>Desenvolvemos do zero uma solução de gerenciamento de medicação para o Sistema Único de Saúde (SUS), otimizando processos e impactando diretamente a qualidade do atendimento a milhares de cidadãos.</p>
-                <a href="projetos.html" class="btn btn-neon">[ VER PROJETO EM DETALHES ]</a>
+                <h3 class="section-subtitle">Caso em destaque</h3>
+                <h2 class="section-title">Gestão de Saúde Pública (SUS)</h2>
+                <p>Desenvolvemos uma solução completa para gestão de medicação, conectando operação em campo e gestão administrativa em um fluxo único e rastreável.</p>
+                <ul class="result-list">
+                    <li>Controle de estoque e dispensação em tempo real</li>
+                    <li>Redução de inconsistências operacionais no processo</li>
+                    <li>Base técnica preparada para expansão da solução</li>
+                </ul>
+                <a href="projetos.html" class="btn btn-neon">Ver estudo de caso</a>
             </div>
         </section>
 
         <section class="section-container philosophy">
-            <h2 class="section-title">Inovação Contínua é o Nosso Código-Fonte.</h2>
-            <p>Na Rock .dev, acreditamos na transparência radical e no poder da tecnologia para criar soluções originais. Investigamos, experimentamos e construímos o futuro, um pixel de cada vez. É assim que garantimos a solidez dos nossos projetos e a confiança dos nossos parceiros.</p>
-            <a href="insights.html" class="btn btn-ghost">[ LEIA NOSSOS INSIGHTS ]</a>
+            <h2 class="section-title">Processo claro, execução sólida</h2>
+            <p>Nosso trabalho combina diagnóstico técnico, priorização orientada ao negócio e desenvolvimento com checkpoints frequentes. Você sabe o que está sendo construído, por que está sendo priorizado e qual impacto esperado em cada etapa.</p>
+            <div class="cta-buttons">
+                <a href="servicos.html" class="btn btn-ghost">Ver metodologia</a>
+                <a href="insights.html" class="btn btn-ghost">Ler insights</a>
+            </div>
         </section>
 
         <section class="section-container final-cta">
-             <h2 class="section-title">Tem um Desafio?<br>Nós Construímos a Solução.</h2>
-             <a href="contato.html" class="btn btn-neon">[ ENTRE EM CONTATO ]</a>
+             <h2 class="section-title">Quer destravar um projeto estratégico?</h2>
+             <p>Compartilhe o contexto do seu desafio e montamos os próximos passos com escopo inicial, premissas técnicas e prioridade de execução.</p>
+             <div class="cta-buttons">
+                <a href="contato.html" class="btn btn-neon">Falar com a Rock .dev</a>
+                <a href="projetos.html" class="btn btn-ghost">Analisar projetos</a>
+             </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2025 Rock .dev Technology. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Rock .dev Technology. Todos os direitos reservados.</p>
         <div class="footer-socials">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 

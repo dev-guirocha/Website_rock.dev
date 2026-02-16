@@ -3,14 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fale com a Rock .dev para desenvolver soluções digitais sob medida, projetos web e mobile ou consultoria estratégica.">
-    <meta name="theme-color" content="#0D0D0D">
+    <meta name="description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial e avançar com seu projeto digital com mais previsibilidade.">
+    <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Contato - Rock .dev</title>
+    <!-- SEO START -->
+    <link rel="canonical" href="https://squadrockdev.com.br/contato.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rock .dev">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contato - Rock .dev">
+    <meta property="og:description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial e avançar com seu projeto digital com mais previsibilidade.">
+    <meta property="og:url" content="https://squadrockdev.com.br/contato.html">
+    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contato - Rock .dev">
+    <meta name="twitter:description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial e avançar com seu projeto digital com mais previsibilidade.">
+    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Contato - Rock .dev",
+  "url": "https://squadrockdev.com.br/contato.html",
+  "description": "Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial e avançar com seu projeto digital com mais previsibilidade.",
+  "inLanguage": "pt-BR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Rock .dev",
+    "url": "https://squadrockdev.com.br/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rock .dev Technology",
+    "url": "https://squadrockdev.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
+    }
+  }
+}
+    </script>
+    <!-- SEO END -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -22,14 +61,14 @@
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo">
+                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
             </a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu de navegação">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
                 <span class="menu-toggle-bar"></span>
                 <span class="menu-toggle-bar"></span>
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="primary-navigation">
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
@@ -41,57 +80,95 @@
 
     <main id="main-content" tabindex="-1">
         <section class="page-header">
-            <h1 class="page-title">> CANAL ABERTO: VAMOS CONSTRUIR O FUTURO?</h1>
-            <p class="page-subtitle">Estamos prontos para ouvir sobre seu próximo grande desafio. Use os canais abaixo para iniciar a conversa.</p>
+            <h1 class="page-title">Vamos conversar sobre seu próximo projeto?</h1>
+            <p class="page-subtitle">Conte o cenário atual da sua operação e retornamos com próximos passos técnicos em até 48h úteis.</p>
         </section>
 
         <section class="section-container contact-layout">
             
             <div class="contact-form-wrapper">
-                <h2 class="section-title">Inicie seu Briefing</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">NOME_COMPLETO:</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
+                <h2 class="section-title">Inicie seu briefing</h2>
+                <form id="contact-form" data-endpoint="/api/contact" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail para contato</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">E-MAIL_PARA_CONTATO:</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
+                        <label for="company">Empresa (opcional)</label>
+                        <input type="text" id="company" name="company" autocomplete="organization">
                     </div>
                     <div class="form-group">
-                        <label for="service">TIPO_DE_MISSÃO:</label>
+                        <label for="service">Tipo de projeto</label>
                         <select id="service" name="service" required>
-                            <option value="">[ Selecione um serviço... ]</option>
+                            <option value="">Selecione um serviço...</option>
                             <option value="software">Desenvolvimento de Software Sob Medida</option>
-                            <option value="web_mobile">Aplicação Web & Mobile</option>
+                            <option value="web_mobile">Aplicação Web &amp; Mobile</option>
                             <option value="consultoria">Consultoria e Estratégia</option>
+                            <option value="sustentacao">Sustentação e Evolução de Produto</option>
                             <option value="outro">Outro</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="message">RESUMO_DA_MISSÃO:</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Descreva seu projeto, seus objetivos e os desafios que você enfrenta..."></textarea>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget">Faixa de investimento (opcional)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Selecione uma faixa...</option>
+                                <option value="ate-15k">Até R$ 15 mil</option>
+                                <option value="15k-40k">R$ 15 mil a R$ 40 mil</option>
+                                <option value="40k-80k">R$ 40 mil a R$ 80 mil</option>
+                                <option value="80k-plus">Acima de R$ 80 mil</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Prazo desejado (opcional)</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Selecione um prazo...</option>
+                                <option value="urgente">Até 30 dias</option>
+                                <option value="curto">1 a 3 meses</option>
+                                <option value="medio">3 a 6 meses</option>
+                                <option value="longo">Acima de 6 meses</option>
+                            </select>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-neon">[ ENVIAR BRIEFING > ]</button>
+                    <div class="form-group">
+                        <label for="message">Resumo do projeto</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Descreva contexto, objetivos, gargalos atuais e resultado esperado..." required></textarea>
+                    </div>
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">Concordo com o uso dos meus dados para retorno comercial sobre este contato.</label>
+                    </div>
+                    <button type="submit" class="btn btn-neon" id="contact-submit">Enviar briefing</button>
+                    <p class="form-status" id="form-status" aria-live="polite"></p>
                 </form>
             </div>
 
             <aside class="contact-sidebar">
                 <div class="sidebar-widget">
-                    <h3 class="widget-title">// CONTATO DIRETO</h3>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:guirocha@squadrockdev.com.br">contato@rock.dev</a></p>
+                    <h3 class="widget-title">Contato direto</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:guirocha@squadrockdev.com.br">guirocha@squadrockdev.com.br</a></p>
                     <p><i class="fas fa-map-marker-alt"></i> Aracaju/SE, Brasil</p>
-                    <p><i class="fas fa-globe"></i> Atuação remota para todo o universo.</p>
+                    <p><i class="fas fa-globe"></i> Atuação remota em todo o Brasil.</p>
                 </div>
                 <div class="sidebar-widget">
-                    <h3 class="widget-title">// PRÓXIMOS PASSOS</h3>
-                    <p>Após o envio, nossa equipe analisará seu briefing. Entraremos em contato em até 48 horas úteis para agendar uma conversa inicial. Aguarde nosso sinal!</p>
+                    <h3 class="widget-title">Próximos passos</h3>
+                    <p>Após o envio, analisamos contexto técnico e prioridade do projeto. Em até 48h úteis retornamos com direcionamento inicial.</p>
                 </div>
                  <div class="sidebar-widget">
-                    <h3 class="widget-title">// SIGA NOSSAS TRANSMISSÕES</h3>
+                    <h3 class="widget-title">Acompanhe nas redes</h3>
                     <div class="sidebar-socials">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </aside>
@@ -100,10 +177,10 @@
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2025 Rock .dev Technology. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Rock .dev Technology. Todos os direitos reservados.</p>
         <div class="footer-socials">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 

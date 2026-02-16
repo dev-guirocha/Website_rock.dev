@@ -1,0 +1,21 @@
+squadrockdev.com.br {
+    root * /var/www/website_rock.dev
+    encode zstd gzip
+
+    header {
+        X-Frame-Options "SAMEORIGIN"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    @assets {
+        path *.css *.js *.png *.jpg *.jpeg *.webp *.svg *.ico *.woff *.woff2
+    }
+    header @assets Cache-Control "public, max-age=2592000, immutable"
+
+    try_files {path} {path}.html {path}/ =404
+    file_server
+
+    reverse_proxy /api/* 127.0.0.1:8787
+    reverse_proxy /health 127.0.0.1:8787
+}
