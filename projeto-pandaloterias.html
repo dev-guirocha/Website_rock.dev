@@ -73,7 +73,7 @@
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="projetos.html" aria-current="page">Projetos</a></li>
                 <li><a href="insights.html">Insights</a></li>
-                <li><a href="contato.html" class="btn btn-neon-outline">Contato</a></li>
+                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
             </ul>
         </nav>
     </header>
@@ -83,7 +83,7 @@
             <div class="project-hero-overlay">
                 <div class="project-hero-content">
                     <h1 class="project-title-detail">Projeto Panda Loterias</h1>
-                    <p class="project-subtitle-detail">Plataforma de apostas brasileira.</p>
+                    <p class="project-subtitle-detail">Plataforma Transacional de Alta Consistência.</p>
                     <div class="project-facts">
                         <p><strong>CLIENTE:</strong> Plataforma Panda Loterias</p>
                         <p><strong>TIPO:</strong> Plataforma Web Transacional</p>
@@ -96,22 +96,33 @@
         <div class="project-detail-container">
             <section class="project-section">
                 <h2 class="section-title text-center">O Desafio</h2>
-                <p>Plataformas de apostas exigem interface fluida, confiabilidade operacional e painel administrativo sólido para acompanhar volume, saldo e movimentações em tempo real.</p>
+                <p>Este projeto surgiu da necessidade de estruturar uma plataforma transacional capaz de lidar com múltiplos usuários concorrentes, operações financeiras e processamento contínuo de eventos em tempo real, um cenário onde falhas não representam apenas bugs, mas prejuízo direto.</p>
+                <p>O desafio principal não era apenas criar uma interface de apostas, e sim garantir integridade operacional em um ambiente naturalmente sensível: operações simultâneas, atualização constante de saldo, validação de resultados e prevenção de inconsistências entre estados do sistema.</p>
             </section>
 
             <section class="project-section">
                 <h2 class="section-title text-center">A Solução Rock .dev</h2>
-                <p>Desenvolvemos uma experiência web completa com foco em mobile-first, incluindo área de usuário, carteira digital, navegação por modalidades e dashboard de gestão operacional.</p>
-                <p>A arquitetura priorizou leitura rápida de indicadores, trilha de ações do usuário e organização das rotinas administrativas para suportar escala de operação.</p>
+                <p>Para isso, a arquitetura foi planejada com foco em previsibilidade de comportamento. As regras de negócio foram centralizadas no backend, evitando dependência do cliente para validações críticas, e os fluxos passaram a operar de forma determinística.</p>
+                <p>Cada operação é tratada como uma transação verificável, garantindo que o estado final do sistema seja sempre coerente mesmo sob concorrência. Além da lógica principal, o sistema foi preparado para tolerância a reprocessamento de eventos, prevenindo duplicidade de operações.</p>
+                <p>A organização do código priorizou legibilidade operacional: o comportamento do sistema pode ser auditado sem depender de contexto externo, facilitando manutenção e evolução.</p>
             </section>
 
             <section class="project-section impact-section">
                 <h2 class="section-title text-center">Missão Cumprida: O Impacto</h2>
-                <p>O projeto consolidou experiência de apostas e monitoramento em uma única plataforma, melhorando a visibilidade da operação e a capacidade de gestão dos fluxos financeiros.</p>
+                <p>O resultado é uma base backend estável, preparada para crescimento e monitoramento contínuo, onde a interface passa a ser apenas um meio de interação, e não a responsável pela consistência do negócio.</p>
+                <p>Este projeto demonstra domínio de construção de sistemas críticos: modelagem de regras complexas, tratamento de concorrência e confiabilidade operacional em cenários reais de uso.</p>
+                <ul class="result-list">
+                    <li>Operações financeiras tratadas como transações verificáveis</li>
+                    <li>Regras críticas centralizadas no backend com execução determinística</li>
+                    <li>Tolerância a reprocessamento para evitar duplicidade e inconsistência</li>
+                </ul>
             </section>
 
             <section class="project-section text-center">
-                <a href="contato.html" class="btn btn-neon-outline">Solicitar demonstração</a>
+                <div class="cta-buttons">
+                    <a href="https://github.com/dev-guirocha/PL" class="btn btn-neon-outline" target="_blank" rel="noopener noreferrer">Ver repositório no GitHub</a>
+                    <a href="contato.html" class="btn btn-ghost">Solicitar demonstração</a>
+                </div>
             </section>
         </div>
 
@@ -122,6 +133,7 @@
 
     <footer class="main-footer">
         <p>&copy; 2026 Rock .dev Technology. Todos os direitos reservados.</p>
+        <p><a href="politica-de-privacidade.html">Política de Privacidade</a></p>
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>

@@ -16,11 +16,11 @@
     <meta property="og:title" content="Projeto MedControl - Rock .dev">
     <meta property="og:description" content="Estudo de caso MedControl: solução desenvolvida pela Rock .dev para otimizar a gestão de medicamentos no SUS com app mobile e painel web.">
     <meta property="og:url" content="https://squadrockdev.com.br/projeto-detalhe.html">
-    <meta property="og:image" content="https://squadrockdev.com.br/images/MedControlApp.png">
+    <meta property="og:image" content="https://squadrockdev.com.br/images/medcontrolapp.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Projeto MedControl - Rock .dev">
     <meta name="twitter:description" content="Estudo de caso MedControl: solução desenvolvida pela Rock .dev para otimizar a gestão de medicamentos no SUS com app mobile e painel web.">
-    <meta name="twitter:image" content="https://squadrockdev.com.br/images/MedControlApp.png">
+    <meta name="twitter:image" content="https://squadrockdev.com.br/images/medcontrolapp.png">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,17 +73,17 @@
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="projetos.html" aria-current="page">Projetos</a></li>
                 <li><a href="insights.html">Insights</a></li>
-                <li><a href="contato.html" class="btn btn-neon-outline">Contato</a></li>
+                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="project-hero" style="background-image: url('images/MedControlApp.png');">
+        <section class="project-hero" style="background-image: url('images/medcontrolapp.png');">
             <div class="project-hero-overlay">
                 <div class="project-hero-content">
                     <h1 class="project-title-detail">Projeto MedControl</h1>
-                    <p class="project-subtitle-detail">Revolucionando a Gestão de Saúde Pública</p>
+                    <p class="project-subtitle-detail">Sistema de Gestão de Tratamento e Medicação.</p>
                     <div class="project-facts">
                         <p><strong>CLIENTE:</strong> Sistema Único de Saúde (SUS)</p>
                         <p><strong>TIPO:</strong> App Mobile &amp; Sistema de Gestão</p>
@@ -96,21 +96,33 @@
         <div class="project-detail-container">
             <section class="project-section">
                 <h2 class="section-title text-center">O Desafio</h2>
-                <p>O gerenciamento manual e descentralizado de medicamentos no sistema público resultava em inconsistências de estoque, dificuldades de rastreamento e potenciais atrasos na entrega a pacientes. O desafio era criar uma ferramenta digital centralizada, segura e intuitiva para agentes de saúde.</p>
+                <p>O MedControl foi desenvolvido para lidar com um tipo de informação onde falhas não representam apenas inconsistências técnicas, mas riscos reais: acompanhamento de tratamentos de saúde. O objetivo do projeto não era criar apenas um aplicativo de lembretes, e sim estruturar um sistema confiável para organização contínua de rotinas médicas.</p>
+                <p>O desafio central envolvia representar corretamente o tempo. Medicamentos não são apenas registros, eles possuem frequência, intervalo, dependência de eventos e histórico acumulativo.</p>
             </section>
 
             <section class="project-section">
                 <h2 class="section-title text-center">A Solução Rock .dev</h2>
-                <p>Projetamos uma arquitetura de sistema robusta para centralizar todas as informações. A solução consiste em um <strong>aplicativo mobile para iOS</strong> utilizado pelos agentes em campo e um <strong>painel de controle web</strong> para administradores. Focamos em uma interface de usuário simples (UI/UX) para garantir rápida adoção e minimizar erros, aplicando rigorosos protocolos de segurança para proteger os dados dos pacientes.</p>
-                </section>
+                <p>A aplicação foi projetada para transformar essas regras em um fluxo verificável, garantindo que o estado atual do tratamento seja sempre coerente com o histórico registrado.</p>
+                <p>A arquitetura separa claramente interface e domínio, permitindo que a lógica de controle de doses e acompanhamento funcione independentemente da navegação do usuário. O sistema mantém histórico completo de tomadas, consultas e dados clínicos, possibilitando revisão posterior e compartilhamento estruturado das informações.</p>
+                <p>Além do uso individual, a aplicação foi preparada para múltiplos perfis, permitindo que um usuário gerencie tratamentos de terceiros sem comprometer a organização dos dados. O armazenamento persistente e as notificações garantem continuidade da rotina mesmo sem interação constante com o aplicativo.</p>
+            </section>
 
             <section class="project-section impact-section">
                 <h2 class="section-title text-center">Missão Cumprida: O Impacto</h2>
-                <p>A implementação do MedControl resultou em uma <strong>redução significativa de erros</strong> de dispensação e otimizou o controle de estoque em tempo real. A plataforma agora serve como uma ferramenta essencial para a gestão, garantindo que os medicamentos cheguem a quem precisa com mais segurança e agilidade.</p>
+                <p>O resultado é uma ferramenta orientada à previsibilidade: o usuário não depende de memória para seguir um tratamento, mas de um sistema que representa corretamente o que deve acontecer ao longo do tempo.</p>
+                <p>Este projeto demonstra capacidade de modelar software em domínios sensíveis, onde consistência de estado, histórico confiável e comportamento previsível são mais importantes que a interface em si.</p>
+                <ul class="result-list">
+                    <li>Controle temporal de doses com estado sempre coerente ao histórico</li>
+                    <li>Separação entre domínio e interface para evolução segura da regra clínica</li>
+                    <li>Histórico completo e notificações persistentes para continuidade do tratamento</li>
+                </ul>
             </section>
 
             <section class="project-section text-center">
-                <a href="https://github.com/dev-guirocha/MedControlApp" class="btn btn-neon-outline" target="_blank" rel="noopener">Ver código no GitHub</a>
+                <div class="cta-buttons">
+                    <a href="https://github.com/dev-guirocha/MedControlAppNovo" class="btn btn-neon-outline" target="_blank" rel="noopener noreferrer">Ver repositório no GitHub</a>
+                    <a href="https://dev-guirocha.github.io/medcontrolapp-site/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Visitar site do projeto</a>
+                </div>
             </section>
         </div>
 
@@ -121,6 +133,7 @@
 
     <footer class="main-footer">
         <p>&copy; 2026 Rock .dev Technology. Todos os direitos reservados.</p>
+        <p><a href="politica-de-privacidade.html">Política de Privacidade</a></p>
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>

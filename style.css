@@ -328,6 +328,33 @@ textarea:focus-visible {
     color: var(--color-text-muted);
 }
 
+.impact-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: -1.4rem;
+}
+
+.impact-kpi-card {
+    background: #f9fbff;
+    border: 1px solid #d7e3f5;
+    border-radius: var(--radius-md);
+    padding: 1.1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.impact-kpi-value {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.3rem;
+}
+
+.impact-kpi-label {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+}
+
 .hero-cta {
     display: inline-block;
     font-family: var(--font-display);
@@ -450,6 +477,69 @@ textarea:focus-visible {
 
 .final-cta .section-title {
     font-size: clamp(1.55rem, 3.4vw, 2.4rem);
+}
+
+.lead-magnet {
+    text-align: center;
+    padding: 2.8rem 2rem;
+    background: linear-gradient(140deg, rgba(13, 110, 253, 0.08), rgba(14, 165, 122, 0.08));
+    border: 1px solid #d4e0f2;
+    border-radius: var(--radius-md);
+}
+
+.lead-magnet p {
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+}
+
+.faq-section .section-intro {
+    margin-bottom: 1.2rem;
+}
+
+.faq-list {
+    width: min(860px, 100%);
+    margin: 0 auto;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+    padding: 0.95rem 1rem;
+}
+
+.faq-item summary {
+    font-family: var(--font-display);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 1.3rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--color-primary-dark);
+}
+
+.faq-item[open] summary::after {
+    content: '-';
+}
+
+.faq-item p {
+    margin-top: 0.7rem;
+    color: var(--color-text-muted);
 }
 
 /*=============== SHARED PAGE HEADER ===============*/
@@ -950,6 +1040,19 @@ textarea:focus-visible {
     color: #b3261e;
 }
 
+.roi-calculator-form {
+    margin-bottom: 1.2rem;
+}
+
+.roi-result {
+    border: 1px solid #d4e1f4;
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    background: #f6f9ff;
+    min-height: 2rem;
+    color: #24436d;
+}
+
 .checkbox-group {
     display: flex;
     align-items: flex-start;
@@ -986,6 +1089,25 @@ textarea:focus-visible {
 
 .sidebar-widget:last-child {
     margin-bottom: 0;
+}
+
+.schedule-section {
+    padding-top: 1rem;
+}
+
+.schedule-embed-wrapper {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.schedule-embed {
+    width: 100%;
+    min-height: 650px;
+    border: 0;
+    display: block;
 }
 
 .widget-title {
@@ -1042,9 +1164,76 @@ textarea:focus-visible {
     color: #385375;
 }
 
+.main-footer a {
+    color: #385375;
+    font-weight: 600;
+}
+
+.main-footer a:hover {
+    color: var(--color-primary-dark);
+}
+
 .footer-socials {
     margin-top: 0.75rem;
     justify-content: center;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cookie-banner {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1200;
+    background: rgba(24, 35, 58, 0.96);
+    color: #f5f8ff;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 1rem;
+    display: none;
+}
+
+.cookie-banner.is-visible {
+    display: block;
+}
+
+.cookie-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cookie-banner p {
+    margin: 0;
+    font-size: 0.92rem;
+}
+
+.cookie-banner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.cookie-banner .btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.78rem;
 }
 
 /*=============== RESPONSIVO ===============*/
@@ -1055,6 +1244,10 @@ textarea:focus-visible {
 
     .process-timeline {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .impact-kpis {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1169,6 +1362,16 @@ textarea:focus-visible {
 
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .schedule-embed {
+        min-height: 560px;
+    }
+
+    .cookie-banner {
+        left: 0.7rem;
+        right: 0.7rem;
+        bottom: 0.7rem;
     }
 }
 

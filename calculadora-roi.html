@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de custo operacional da Rock .dev para estimar o impacto financeiro de processos manuais.">
+    <meta name="theme-color" content="#f4f7fb">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <title>Calculadora de ROI - Rock .dev</title>
+    <link rel="canonical" href="https://squadrockdev.com.br/calculadora-roi.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rock .dev">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Calculadora de ROI - Rock .dev">
+    <meta property="og:description" content="Estime quanto sua operação perde por mês com processos manuais e retrabalho.">
+    <meta property="og:url" content="https://squadrockdev.com.br/calculadora-roi.html">
+    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calculadora de ROI - Rock .dev">
+    <meta name="twitter:description" content="Estime quanto sua operação perde por mês com processos manuais e retrabalho.">
+    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <header class="main-header">
+        <nav class="main-nav" aria-label="Menu principal">
+            <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
+                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+            <ul class="nav-menu" id="primary-navigation">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="page-header reveal-on-scroll">
+            <h1 class="page-title">Calculadora de custo operacional</h1>
+            <p class="page-subtitle">Descubra uma estimativa rápida de quanto o processo manual pode estar custando por mês na sua operação.</p>
+        </section>
+
+        <section class="section-container reveal-on-scroll">
+            <div class="contact-form-wrapper roi-calculator-wrapper">
+                <h2 class="section-title">Simulação rápida</h2>
+                <form id="roi-calculator" class="roi-calculator-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="people">Pessoas no processo</label>
+                            <input type="number" id="people" name="people" min="1" step="1" value="3" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hourlyCost">Custo médio por hora (R$)</label>
+                            <input type="number" id="hourlyCost" name="hourlyCost" min="1" step="1" value="55" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hoursLost">Horas perdidas por pessoa/semana</label>
+                            <input type="number" id="hoursLost" name="hoursLost" min="0" step="0.5" value="6" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="errorCost">Custo mensal com erros/retrabalho (R$)</label>
+                            <input type="number" id="errorCost" name="errorCost" min="0" step="1" value="1200" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-neon">Calcular impacto mensal</button>
+                </form>
+                <div id="roi-result" class="roi-result" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section-container final-cta reveal-on-scroll">
+            <h2 class="section-title">Quer reduzir esse custo de forma estruturada?</h2>
+            <p>Com os números estimados em mãos, montamos um plano de implementação com escopo inicial e prioridades técnicas.</p>
+            <div class="cta-buttons">
+                <a href="contato.html" class="btn btn-neon">Receber diagnóstico</a>
+                <a href="projetos.html" class="btn btn-ghost">Ver casos reais</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Rock .dev Technology. Todos os direitos reservados.</p>
+        <p><a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

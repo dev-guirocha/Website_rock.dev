@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial e avançar com seu projeto digital com mais previsibilidade.">
+    <meta name="description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial ou agendar uma reunião estratégica.">
     <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Contato - Rock .dev</title>
@@ -14,20 +14,20 @@
     <meta property="og:site_name" content="Rock .dev">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Contato - Rock .dev">
-    <meta property="og:description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial e avançar com seu projeto digital com mais previsibilidade.">
+    <meta property="og:description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial ou agendar uma reunião estratégica.">
     <meta property="og:url" content="https://squadrockdev.com.br/contato.html">
     <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contato - Rock .dev">
-    <meta name="twitter:description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial e avançar com seu projeto digital com mais previsibilidade.">
+    <meta name="twitter:description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial ou agendar uma reunião estratégica.">
     <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
+  "@type": "ContactPage",
   "name": "Contato - Rock .dev",
   "url": "https://squadrockdev.com.br/contato.html",
-  "description": "Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial e avançar com seu projeto digital com mais previsibilidade.",
+  "description": "Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial ou agendar uma reunião estratégica.",
   "inLanguage": "pt-BR",
   "isPartOf": {
     "@type": "WebSite",
@@ -46,7 +46,7 @@
 }
     </script>
     <!-- SEO END -->
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
@@ -73,19 +73,18 @@
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="insights.html">Insights</a></li>
-                <li><a href="contato.html" aria-current="page" class="btn btn-neon-outline">Contato</a></li>
+                <li><a href="contato.html" aria-current="page" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="page-header">
-            <h1 class="page-title">Vamos conversar sobre seu próximo projeto?</h1>
-            <p class="page-subtitle">Conte o cenário atual da sua operação e retornamos com próximos passos técnicos em até 48h úteis.</p>
+        <section class="page-header reveal-on-scroll">
+            <h1 class="page-title">Vamos conversar sobre seu projeto?</h1>
+            <p class="page-subtitle">Escolha entre enviar o briefing agora ou agendar uma reunião estratégica para validar escopo, prazo e retorno esperado.</p>
         </section>
 
-        <section class="section-container contact-layout">
-            
+        <section class="section-container contact-layout reveal-on-scroll">
             <div class="contact-form-wrapper">
                 <h2 class="section-title">Inicie seu briefing</h2>
                 <form id="contact-form" data-endpoint="/api/contact" novalidate>
@@ -107,10 +106,10 @@
                         <label for="service">Tipo de projeto</label>
                         <select id="service" name="service" required>
                             <option value="">Selecione um serviço...</option>
-                            <option value="software">Desenvolvimento de Software Sob Medida</option>
-                            <option value="web_mobile">Aplicação Web &amp; Mobile</option>
-                            <option value="consultoria">Consultoria e Estratégia</option>
-                            <option value="sustentacao">Sustentação e Evolução de Produto</option>
+                            <option value="automacao">Automação Operacional</option>
+                            <option value="sistemas-internos">Sistemas Internos para Equipes</option>
+                            <option value="plataformas">Plataformas de Receita e Escala</option>
+                            <option value="diagnostico">Diagnóstico Técnico</option>
                             <option value="outro">Outro</option>
                         </select>
                     </div>
@@ -146,7 +145,7 @@
                     </div>
                     <div class="checkbox-group">
                         <input type="checkbox" id="consent" name="consent" required>
-                        <label for="consent">Concordo com o uso dos meus dados para retorno comercial sobre este contato.</label>
+                        <label for="consent">Concordo com o uso dos meus dados para retorno comercial, conforme a <a href="politica-de-privacidade.html">Política de Privacidade</a>.</label>
                     </div>
                     <button type="submit" class="btn btn-neon" id="contact-submit">Enviar briefing</button>
                     <p class="form-status" id="form-status" aria-live="polite"></p>
@@ -160,11 +159,12 @@
                     <p><i class="fas fa-map-marker-alt"></i> Aracaju/SE, Brasil</p>
                     <p><i class="fas fa-globe"></i> Atuação remota em todo o Brasil.</p>
                 </div>
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Próximos passos</h3>
-                    <p>Após o envio, analisamos contexto técnico e prioridade do projeto. Em até 48h úteis retornamos com direcionamento inicial.</p>
+                <div class="sidebar-widget" id="agendamento">
+                    <h3 class="widget-title">Agendamento imediato</h3>
+                    <p>Prefere pular o formulário? Agende uma conversa de 30 minutos e validamos cenário, prioridade e próximos passos.</p>
+                    <a href="https://calendly.com/dev-guirocha/diagnostico" class="btn btn-neon-outline" target="_blank" rel="noopener noreferrer">Abrir agenda</a>
                 </div>
-                 <div class="sidebar-widget">
+                <div class="sidebar-widget">
                     <h3 class="widget-title">Acompanhe nas redes</h3>
                     <div class="sidebar-socials">
                         <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -172,12 +172,27 @@
                     </div>
                 </div>
             </aside>
+        </section>
 
+        <section class="section-container schedule-section reveal-on-scroll">
+            <header class="section-intro">
+                <h2 class="section-title">Agende direto pelo calendário</h2>
+                <p>Se o widget não carregar no seu navegador, use o botão "Abrir agenda" acima.</p>
+            </header>
+            <div class="schedule-embed-wrapper">
+                <iframe
+                    class="schedule-embed"
+                    src="https://calendly.com/dev-guirocha/diagnostico?hide_gdpr_banner=1"
+                    title="Agenda de diagnóstico Rock .dev"
+                    loading="lazy">
+                </iframe>
+            </div>
         </section>
     </main>
 
     <footer class="main-footer">
         <p>&copy; 2026 Rock .dev Technology. Todos os direitos reservados.</p>
+        <p><a href="politica-de-privacidade.html">Política de Privacidade</a></p>
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
