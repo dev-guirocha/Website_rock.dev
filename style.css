@@ -1453,12 +1453,12 @@ main {
 }
 
 .founder-layout {
-    width: min(1520px, calc(100% - 1.5rem));
+    width: min(1240px, 100%);
     margin-inline: auto;
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 1.2rem;
-    align-items: stretch;
+    align-items: start;
 }
 
 .founder-card,
@@ -1483,11 +1483,14 @@ main {
 
 .founder-card {
     overflow: hidden;
+    max-width: 560px;
+    justify-self: start;
 }
 
 .founder-card img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
 }
 
@@ -2602,6 +2605,11 @@ main {
 
     .project-actions {
         justify-content: flex-start;
+    }
+
+    .founder-card {
+        max-width: none;
+        justify-self: stretch;
     }
 
     .case-headline {
