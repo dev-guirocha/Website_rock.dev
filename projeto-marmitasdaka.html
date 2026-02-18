@@ -3,65 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Estudo de caso Marmitas da Ka: desenvolvimento de website e e-commerce para delivery de comida saudável pela Rock .dev.">
+    <meta name="description" content="Estudo de caso Marmitas da Ka: sistema de gestão de pedidos, estoque e entregas para reduzir retrabalho operacional.">
     <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Projeto Marmitas da Ka - Rock .dev</title>
-    <!-- SEO START -->
     <link rel="canonical" href="https://squadrockdev.com.br/projeto-marmitasdaka.html">
     <meta name="robots" content="index, follow">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Rock .dev">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Projeto Marmitas da Ka - Rock .dev">
-    <meta property="og:description" content="Estudo de caso Marmitas da Ka: desenvolvimento de website e e-commerce para delivery de comida saudável pela Rock .dev.">
+    <meta property="og:description" content="Sistema de trabalho para operação de alimentação com menos atrito e maior previsibilidade.">
     <meta property="og:url" content="https://squadrockdev.com.br/projeto-marmitasdaka.html">
     <meta property="og:image" content="https://squadrockdev.com.br/images/marmitasdaka.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Projeto Marmitas da Ka - Rock .dev">
-    <meta name="twitter:description" content="Estudo de caso Marmitas da Ka: desenvolvimento de website e e-commerce para delivery de comida saudável pela Rock .dev.">
-    <meta name="twitter:image" content="https://squadrockdev.com.br/images/marmitasdaka.png">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Projeto Marmitas da Ka - Rock .dev",
-  "url": "https://squadrockdev.com.br/projeto-marmitasdaka.html",
-  "description": "Estudo de caso Marmitas da Ka: desenvolvimento de website e e-commerce para delivery de comida saudável pela Rock .dev.",
-  "inLanguage": "pt-BR",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Rock .dev",
-    "url": "https://squadrockdev.com.br/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Rock .dev Technology",
-    "url": "https://squadrockdev.com.br/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-    }
-  }
-}
-    </script>
-    <!-- SEO END -->
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scanlines"></div>
     <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
+                <img src="images/icon.png" alt="Rock .dev Logo" width="2000" height="2000">
             </a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
@@ -69,65 +37,124 @@
                 <span class="menu-toggle-bar"></span>
             </button>
             <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html" aria-current="page">Projetos</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
+                <li><a href="projetos.html" aria-current="page">Portfólio</a></li>
+                <li class="nav-cta"><a href="contato.html" class="btn btn-neon">Diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="project-hero" style="background-image: url('images/marmitasdaka.png');">
-            <div class="project-hero-overlay">
-                <div class="project-hero-content">
-                    <h1 class="project-title-detail">Projeto Marmitas da Ka</h1>
-                    <p class="project-subtitle-detail">Sistema de Gestão de Marmitas.</p>
-                    <div class="project-facts">
-                        <p><strong>CLIENTE:</strong> Marmitas da Ka</p>
-                        <p><strong>TIPO:</strong> Website &amp; E-Commerce</p>
-                        <p><strong>STACK:</strong> HTML5, CSS3, JavaScript (Vanilla), Firebase</p>
+        <section class="project-hero">
+            <div class="project-hero-banner">
+                <div class="project-hero-top">
+                    <div>
+                        <h1 class="project-title-detail">Marmitas da Ka</h1>
+                        <p class="project-subtitle-detail">Sistema de Gestão de Marmitas.</p>
+                        <div class="project-facts">
+                            <p><strong>CLIENTE:</strong> Marmitas da Ka</p>
+                            <p><strong>TIPO:</strong> Sistema de operação e pedidos</p>
+                            <p><strong>STACK:</strong> Web, Firebase, Painel de gestão</p>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/dev-guirocha/marmitas-da-ka" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver código</a>
+                        <a href="https://www.marmitasdaka.com.br" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Site oficial</a>
+                        <a href="contato.html" class="btn btn-dark">Falar comigo</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="project-detail-container">
-            <section class="project-section">
-                <h2 class="section-title text-center">O Desafio</h2>
-                <p>O “Marmitas da Ka” nasceu da necessidade de organizar um negócio de alimentação que, à medida que crescia, começou a sofrer com retrabalho operacional: pedidos espalhados em vários canais, dificuldade em controlar entregas, falta de histórico organizado e necessidade constante de reconciliação entre planilhas e mensagens.</p>
+        <div class="project-shell">
+            <section class="project-section reveal">
+                <h2>O desafio</h2>
+                <ul class="project-list">
+                    <li>Pedidos distribuídos em múltiplos canais sem histórico único.</li>
+                    <li>Dificuldade para coordenar estoque, entregas e produção no mesmo fluxo.</li>
+                    <li>Reconciliação manual constante entre planilhas e mensagens.</li>
+                </ul>
+                <p>O problema central era operacional: reduzir o atrito diário e devolver previsibilidade para o negócio crescer sem depender de improviso.</p>
             </section>
 
-            <section class="project-section">
-                <h2 class="section-title text-center">A Solução Rock .dev</h2>
-                <p>Este projeto não é apenas um app de cadastro de marmitas, ele é um sistema de trabalho projetado para reduzir o atrito do dia a dia. Cada funcionalidade foi pensada para refletir os passos reais da operação: cadastrar itens, gerenciar estoque de ingredientes, processar pedidos e acompanhar entregas de forma sequencial e intuitiva.</p>
-                <p>Na engenharia do sistema, as decisões foram orientadas por consistência e simplicidade. A modelagem de dados foi estruturada para evitar redundância e sempre manter o estado atualizado, reduzindo erros comuns como duplicidade de pedidos ou conflitos de estoque.</p>
-                <p>A lógica de negócio foi implementada de forma que cada operação afete diretamente o próximo passo do fluxo, garantindo previsibilidade e apoio à tomada de decisão.</p>
-            </section>
-
-            <section class="project-section impact-section">
-                <h2 class="section-title text-center">Missão Cumprida: O Impacto</h2>
-                <p>O resultado é uma ferramenta que não só registra informações, mas que organiza a operação e dá controle real ao empreendedor, permitindo-lhe focar no crescimento em vez de apagar incêndios todos os dias.</p>
-                <p>Este projeto demonstra habilidade em transformar processos manuais complexos em software prático, com foco em eficiência, continuidade operacional e usabilidade real para negócios em crescimento.</p>
-                <ul class="result-list">
-                    <li>Fluxo operacional sequencial para pedidos, estoque e entregas</li>
-                    <li>Modelagem de dados com estado consistente e sem redundância crítica</li>
-                    <li>Previsibilidade no dia a dia com redução de retrabalho operacional</li>
+            <section class="project-section reveal">
+                <h2>A solução (arquitetura)</h2>
+                <div class="arch-diagram" aria-label="Fluxo de arquitetura Marmitas da Ka">
+                    <article class="arch-node"><h3>UI Web</h3><p>Pedidos e catálogo</p></article>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <article class="arch-node"><h3>Regras</h3><p>Estoque e entrega</p></article>
+                </div>
+                <div class="arch-diagram" aria-hidden="true">
+                    <article class="arch-node"><h3>Operação</h3><p>Pipeline de pedidos</p></article>
+                    <div class="arch-arrow">→</div>
+                    <article class="arch-node"><h3>Persistência</h3><p>Estado atualizado</p></article>
+                </div>
+                <ul class="bullet-list">
+                    <li>Fluxo sequencial refletindo a rotina real da operação.</li>
+                    <li>Modelagem de dados para reduzir redundância e conflito de estoque.</li>
+                    <li>Lógica de negócio com impacto direto na próxima etapa do processo.</li>
+                    <li>Painéis pensados para uso rápido no contexto de trabalho.</li>
                 </ul>
             </section>
 
-            <section class="project-section text-center">
-                <div class="cta-buttons">
-                    <a href="https://github.com/dev-guirocha/marmitas-da-ka" class="btn btn-neon-outline" target="_blank" rel="noopener noreferrer">Ver repositório no GitHub</a>
-                    <a href="https://www.marmitasdaka.com.br" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Visitar site ao vivo</a>
+            <section class="project-section reveal">
+                <h2>Impacto</h2>
+                <div class="impact-grid">
+                    <article class="metric-card">
+                        <h3>Menos retrabalho</h3>
+                        <p class="metric-value">Operação unificada em um fluxo</p>
+                    </article>
+                    <article class="metric-card">
+                        <h3>Controle real</h3>
+                        <p class="metric-value">Pedidos, estoque e entregas sincronizados</p>
+                    </article>
+                    <article class="metric-card">
+                        <h3>Rotina previsível</h3>
+                        <p class="metric-value">Decisão diária com estado confiável</p>
+                    </article>
+                </div>
+                <h3>O que isso prova</h3>
+                <ul class="bullet-list">
+                    <li>Capacidade de transformar processo manual em sistema utilizável.</li>
+                    <li>Equilíbrio entre simplicidade de uso e consistência de engenharia.</li>
+                </ul>
+            </section>
+
+            <section class="project-section reveal">
+                <h2>Galeria / preview</h2>
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="images/marmitasdaka.png" alt="Tela principal do sistema Marmitas da Ka" width="1024" height="768" loading="lazy">
+                        <figcaption>Fluxo inicial de pedidos e organização.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/marmitasdaka.png" alt="Tela de gestão de itens do Marmitas da Ka" width="1024" height="768" loading="lazy">
+                        <figcaption>Gestão de itens e operação de produção.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/marmitasdaka.png" alt="Tela de acompanhamento operacional do Marmitas da Ka" width="1024" height="768" loading="lazy">
+                        <figcaption>Acompanhamento contínuo da operação.</figcaption>
+                    </figure>
                 </div>
             </section>
-        </div>
 
-        <nav class="project-navigation">
-            <a href="projetos.html" class="nav-link-projects">&lt; Voltar para todos os projetos</a>
-        </nav>
+            <section class="project-section reveal">
+                <div class="page-final-cta">
+                    <h2 class="page-title">Quer digitalizar sua operação com menos atrito?</h2>
+                    <p>Estruturamos software para negócios em crescimento que precisam de controle diário e execução previsível.</p>
+                    <div class="hero-actions" style="justify-content:center;">
+                        <a href="contato.html" class="btn btn-neon">Solicitar diagnóstico</a>
+                        <a href="projetos.html" class="btn btn-ghost">Ver outros cases</a>
+                    </div>
+                </div>
+            </section>
+
+            <nav class="project-navigation">
+                <a href="projetos.html" class="nav-link-projects">&lt; Voltar para todos os projetos</a>
+            </nav>
+        </div>
     </main>
 
     <footer class="main-footer">
@@ -136,6 +163,7 @@
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_guidev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 

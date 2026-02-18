@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Como aplicar Design Atômico para criar interfaces consistentes, reduzir retrabalho e acelerar entregas de produto.">
+    <meta name="description" content="Design Atômico aplicado em produto real para reduzir retrabalho e manter consistência visual em escala.">
     <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
-    <title>Design Atômico para interfaces consistentes - Rock .dev</title>
-    <!-- SEO START -->
+    <title>Design Atômico para Interfaces Consistentes - Rock .dev</title>
     <link rel="canonical" href="https://squadrockdev.com.br/artigo-design-atomico.html">
     <meta name="robots" content="index, follow">
     <meta property="og:locale" content="pt_BR">
@@ -15,57 +14,25 @@
     <meta property="og:type" content="article">
     <meta property="article:author" content="Guilherme Rocha">
     <meta property="article:published_time" content="2025-07-02">
-    <meta property="article:modified_time" content="2026-02-16">
-    <meta property="og:title" content="Design Atômico para interfaces consistentes - Rock .dev">
-    <meta property="og:description" content="Como aplicar Design Atômico para criar interfaces consistentes, reduzir retrabalho e acelerar entregas de produto.">
+    <meta property="article:modified_time" content="2026-02-18">
+    <meta property="og:title" content="Design Atômico para Interfaces Consistentes - Rock .dev">
+    <meta property="og:description" content="Como estruturar interface em camadas reutilizáveis para ganhar velocidade e previsibilidade no front-end.">
     <meta property="og:url" content="https://squadrockdev.com.br/artigo-design-atomico.html">
-    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Design Atômico para interfaces consistentes - Rock .dev">
-    <meta name="twitter:description" content="Como aplicar Design Atômico para criar interfaces consistentes, reduzir retrabalho e acelerar entregas de produto.">
-    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Design Atômico: Como construir interfaces consistentes e escaláveis",
-  "description": "Como aplicar Design Atômico para criar interfaces consistentes, reduzir retrabalho e acelerar entregas de produto.",
-  "datePublished": "2025-07-02",
-  "dateModified": "2026-02-16",
-  "inLanguage": "pt-BR",
-  "mainEntityOfPage": "https://squadrockdev.com.br/artigo-design-atomico.html",
-  "author": {
-    "@type": "Person",
-    "name": "Guilherme Rocha"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Rock .dev Technology",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-    }
-  },
-  "image": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-}
-    </script>
-    <!-- SEO END -->
+    <meta property="og:image" content="https://squadrockdev.com.br/images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scanlines"></div>
     <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
+                <img src="images/icon.png" alt="Rock .dev Logo" width="2000" height="2000">
             </a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
@@ -73,49 +40,73 @@
                 <span class="menu-toggle-bar"></span>
             </button>
             <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="insights.html" aria-current="page">Insights</a></li>
-                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
+                <li><a href="projetos.html">Portfólio</a></li>
+                <li class="nav-cta"><a href="contato.html" class="btn btn-neon">Diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <header class="article-header">
-            <div class="article-header-content">
-                <span class="article-category">UI/UX</span>
-                <h1 class="article-title">Design Atômico: Como construir interfaces consistentes e escaláveis</h1>
-                <div class="article-meta">
-                    <p>Por <strong>Guilherme Rocha</strong> // Publicado em 2 de julho de 2025 // 4 min de leitura</p>
-                </div>
+        <header class="article-header reveal">
+            <p class="kicker">UI/UX</p>
+            <h1 class="article-title">Design Atômico para interfaces consistentes e escaláveis</h1>
+            <p class="page-subtitle">Estrutura de componentes para acelerar entregas sem perder coerência visual e técnica.</p>
+            <div class="insight-meta" style="justify-content:center; margin-top:0.8rem;">
+                <span>02 jul 2025</span>
+                <span>4 min de leitura</span>
+                <span>Por Guilherme Rocha</span>
+            </div>
+            <div class="hero-actions" style="justify-content:center; margin-top:1rem;">
+                <a href="contato.html" class="btn btn-ghost">Falar comigo</a>
             </div>
         </header>
 
-        <article class="article-content">
-            <p>À medida que o produto cresce, inconsistência visual e duplicação de componentes começam a gerar custo de manutenção. O Design Atômico ajuda a estruturar o sistema de interface em níveis claros e reutilizáveis.</p>
+        <div class="article-wrap">
+            <aside class="toc-card reveal" aria-label="Sumário do artigo">
+                <h2>Conteúdo</h2>
+                <ul>
+                    <li><a href="#camadas">Camadas do Design Atômico</a></li>
+                    <li><a href="#beneficios">Benefícios para produto</a></li>
+                    <li><a href="#adocao">Como adotar sem travar o time</a></li>
+                </ul>
+            </aside>
 
-            <h2>Átomos, moléculas e organismos</h2>
-            <p>Átomos são elementos básicos de interface, como botões e campos. Moléculas combinam átomos em blocos funcionais. Organismos agrupam moléculas para montar seções completas de tela.</p>
+            <article class="article-shell reveal">
+                <div class="article-content">
+                    <p>Quando o produto cresce, inconsistência vira custo recorrente. Design Atômico organiza a interface em blocos reutilizáveis para reduzir retrabalho e manter evolução previsível.</p>
 
-            <h2>Vantagens práticas para times de produto</h2>
-            <p>Com a biblioteca bem definida, a criação de novas telas fica mais rápida e com menos retrabalho. Isso acelera a entrega e reduz divergências entre design e desenvolvimento.</p>
+                    <h2 id="camadas">Camadas do Design Atômico</h2>
+                    <p>O método separa interface por nível de composição:</p>
+                    <ul class="bullet-list">
+                        <li><strong>Átomos:</strong> botões, labels, inputs, ícones.</li>
+                        <li><strong>Moléculas:</strong> combinação funcional de átomos.</li>
+                        <li><strong>Organismos:</strong> seções completas de interface.</li>
+                    </ul>
+                    <p>Com isso, o time altera comportamento ou visual em um ponto e propaga melhoria para múltiplas telas.</p>
 
-            <h2>Quando começar</h2>
-            <p>Não precisa esperar o projeto ficar grande. Vale iniciar cedo, mesmo com um conjunto pequeno de componentes, e evoluir junto com as necessidades do produto.</p>
+                    <h2 id="beneficios">Benefícios para produto</h2>
+                    <p>Além de consistência estética, o ganho é operacional:</p>
+                    <ul class="bullet-list">
+                        <li>Entrega mais rápida de novas telas.</li>
+                        <li>Menos regressão visual entre releases.</li>
+                        <li>Menos divergência entre design e implementação.</li>
+                    </ul>
 
-            <blockquote>Consistência visual não é detalhe estético, é eficiência operacional no ciclo de produto.</blockquote>
-        </article>
+                    <h2 id="adocao">Como adotar sem travar o time</h2>
+                    <p>Não precisa parar o projeto para "fazer design system". Comece com os componentes de maior reuso e evolua junto com backlog real.</p>
+                    <blockquote>Consistência de UI não é luxo: é infraestrutura para entregar software com ritmo.</blockquote>
 
-        <section class="author-bio">
-            <img src="images/CEO.jpeg" alt="Guilherme Rocha" class="author-photo" width="1200" height="1600" loading="lazy">
-            <div class="author-info">
-                <h4>Sobre o Autor</h4>
-                <p><strong>Guilherme Rocha</strong> é fundador da Rock .dev e atua no desenho de interfaces e arquiteturas de front-end para aplicações web e mobile.</p>
-            </div>
-        </section>
-
+                    <div class="cta-card">
+                        <h3>Próximo passo</h3>
+                        <p>Se sua interface está difícil de escalar, eu ajudo a estruturar uma base de componentes orientada a produto real.</p>
+                        <a href="contato.html" class="btn btn-neon">Solicitar diagnóstico</a>
+                    </div>
+                </div>
+            </article>
+        </div>
     </main>
 
     <footer class="main-footer">
@@ -124,6 +115,7 @@
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_guidev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 

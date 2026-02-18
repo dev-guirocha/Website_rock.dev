@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.">
+    <meta name="description" content="Monolito vs microsserviços: guia prático para decidir arquitetura com base em contexto, risco e velocidade de entrega.">
     <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Arquitetura Monolítica vs. Microsserviços - Rock .dev</title>
-    <!-- SEO START -->
     <link rel="canonical" href="https://squadrockdev.com.br/artigo-detalhe.html">
     <meta name="robots" content="index, follow">
     <meta property="og:locale" content="pt_BR">
@@ -15,57 +14,25 @@
     <meta property="og:type" content="article">
     <meta property="article:author" content="Guilherme Rocha">
     <meta property="article:published_time" content="2025-09-27">
-    <meta property="article:modified_time" content="2026-02-16">
+    <meta property="article:modified_time" content="2026-02-18">
     <meta property="og:title" content="Arquitetura Monolítica vs. Microsserviços - Rock .dev">
-    <meta property="og:description" content="Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.">
+    <meta property="og:description" content="Quando manter simplicidade monolítica e quando migrar para serviços independentes.">
     <meta property="og:url" content="https://squadrockdev.com.br/artigo-detalhe.html">
-    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Arquitetura Monolítica vs. Microsserviços - Rock .dev">
-    <meta name="twitter:description" content="Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.">
-    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Arquitetura Monolítica vs. Microsserviços: Uma Análise Prática",
-  "description": "Comparativo prático entre arquitetura monolítica e microsserviços pela Rock .dev, explorando vantagens, riscos e cenários ideais.",
-  "datePublished": "2025-09-27",
-  "dateModified": "2026-02-16",
-  "inLanguage": "pt-BR",
-  "mainEntityOfPage": "https://squadrockdev.com.br/artigo-detalhe.html",
-  "author": {
-    "@type": "Person",
-    "name": "Guilherme Rocha"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Rock .dev Technology",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-    }
-  },
-  "image": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-}
-    </script>
-    <!-- SEO END -->
-    
+    <meta property="og:image" content="https://squadrockdev.com.br/images/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scanlines"></div>
     <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
+                <img src="images/icon.png" alt="Rock .dev Logo" width="2000" height="2000">
             </a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
@@ -73,67 +40,82 @@
                 <span class="menu-toggle-bar"></span>
             </button>
             <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="insights.html" aria-current="page">Insights</a></li>
-                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
+                <li><a href="projetos.html">Portfólio</a></li>
+                <li class="nav-cta"><a href="contato.html" class="btn btn-neon">Diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <header class="article-header">
-            <div class="article-header-content">
-                <span class="article-category">ARQUITETURA</span>
-                <h1 class="article-title">Arquitetura Monolítica vs. Microsserviços: Uma Análise Prática</h1>
-                <div class="article-meta">
-                    <p>Por <strong>Guilherme Rocha</strong> // Publicado em 27 de setembro de 2025 // 8 min de leitura</p>
-                </div>
+        <header class="article-header reveal">
+            <p class="kicker">Arquitetura</p>
+            <h1 class="article-title">Monolito vs. Microsserviços: como decidir sem dogma</h1>
+            <p class="page-subtitle">A escolha certa depende de contexto operacional, não de tendência. Este guia resume trade-offs práticos para produto real.</p>
+            <div class="insight-meta" style="justify-content:center; margin-top:0.8rem;">
+                <span>27 set 2025</span>
+                <span>8 min de leitura</span>
+                <span>Por Guilherme Rocha</span>
+            </div>
+            <div class="hero-actions" style="justify-content:center; margin-top:1rem;">
+                <a href="contato.html" class="btn btn-ghost">Falar comigo</a>
             </div>
         </header>
-        
-        <article class="article-content">
-            <p>No mundo do desenvolvimento de software, a escolha da arquitetura é uma das decisões mais críticas. Ela impacta a escalabilidade, manutenção e a velocidade de entrega de novas features. Vamos desmistificar dois dos modelos mais discutidos: o Monolito e os Microsserviços.</p>
-            
-            <h2>O que é uma Arquitetura Monolítica?</h2>
-            <p>Um monolito, como o nome sugere, é uma aplicação construída como uma única unidade. Todo o código para a interface do usuário, lógica de negócio e acesso a dados está em uma única base de código, e a aplicação é implantada como um único artefato. É o modelo tradicional e, para muitos projetos, ainda é a escolha mais simples e rápida para começar.</p>
-            
-            <blockquote>"A simplicidade inicial é a maior vantagem do monolito. Mas essa simplicidade pode se tornar uma armadilha à medida que o sistema cresce em complexidade."</blockquote>
-            
-            <h2>A Ascensão dos Microsserviços</h2>
-            <p>Em contraste, a arquitetura de microsserviços estrutura uma aplicação como uma coleção de pequenos serviços independentes. Cada serviço é autônomo, focado em uma única capacidade de negócio e pode ser desenvolvido, implantado e escalado de forma independente.</p>
-            <p>Por exemplo, em um sistema de e-commerce, o catálogo de produtos, o carrinho de compras e o processamento de pagamentos podem ser três microsserviços distintos.</p>
 
-            <pre class="code-block"><code>// Exemplo de como serviços podem se comunicar via API
-const updateUser = async (userId, data) => {
-  try {
-    const response = await fetch(`https://api.userservice.com/users/${userId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_JWT_TOKEN'
-      },
-      body: JSON.stringify(data)
-    });
-    return await response.json();
-  } catch (error) {
-    console.error('Falha ao atualizar usuário:', error);
-  }
-};</code></pre>
+        <div class="article-wrap">
+            <aside class="toc-card reveal" aria-label="Sumário do artigo">
+                <h2>Conteúdo</h2>
+                <ul>
+                    <li><a href="#monolito">Quando monolito é melhor</a></li>
+                    <li><a href="#microservicos">Quando microsserviços fazem sentido</a></li>
+                    <li><a href="#tradeoffs">Trade-offs reais</a></li>
+                    <li><a href="#decisao">Checklist de decisão</a></li>
+                </ul>
+            </aside>
 
-            <h2>Qual escolher?</h2>
-            <p>Não há uma resposta única. A escolha depende do contexto do seu projeto. Para startups e projetos menores, um monolito bem estruturado pode ser a melhor opção. Para sistemas grandes e complexos que exigem alta escalabilidade e equipes de desenvolvimento independentes, os microsserviços brilham. A chave é entender os trade-offs e tomar uma decisão informada.</p>
-        </article>
-        
-        <section class="author-bio">
-            <img src="images/CEO.jpeg" alt="Guilherme Rocha" class="author-photo" width="1200" height="1600" loading="lazy">
-            <div class="author-info">
-                <h4>Sobre o Autor</h4>
-                <p><strong>Guilherme Rocha</strong> é o Fundador e Arquiteto de Soluções na Rock .dev. Apaixonado por criar tecnologia com impacto real, ele explora constantemente novas arquiteturas e paradigmas de desenvolvimento.</p>
-            </div>
-        </section>
+            <article class="article-shell reveal">
+                <div class="article-content">
+                    <p>Arquitetura é decisão de negócio. Ela impacta custo, velocidade de entrega, incidência de falhas e capacidade de evolução. Antes de escolher, defina seu cenário: tamanho da equipe, maturidade de produto e criticidade operacional.</p>
 
+                    <h2 id="monolito">Quando monolito é melhor</h2>
+                    <p>Para produto em fase inicial, um monolito bem estruturado tende a entregar valor mais rápido. A complexidade operacional é menor e o ciclo de deploy é simples.</p>
+                    <ul class="bullet-list">
+                        <li>Time pequeno com forte necessidade de velocidade.</li>
+                        <li>Domínio ainda em descoberta.</li>
+                        <li>Baixa necessidade de escalar módulos separadamente.</li>
+                    </ul>
+
+                    <h2 id="microservicos">Quando microsserviços fazem sentido</h2>
+                    <p>Microsserviços começam a valer quando existem limites de domínio claros e necessidade real de escalar ou evoluir partes do sistema de forma independente.</p>
+                    <ul class="bullet-list">
+                        <li>Domínio complexo com módulos bem definidos.</li>
+                        <li>Times independentes com ownership por serviço.</li>
+                        <li>Demandas de escalabilidade por componente.</li>
+                    </ul>
+
+                    <h2 id="tradeoffs">Trade-offs reais</h2>
+                    <p>Microsserviços aumentam flexibilidade, mas cobram um preço alto em observabilidade, comunicação entre serviços, gestão de falhas distribuídas e governança técnica.</p>
+                    <blockquote>Simplicidade não é retrocesso. Em muitos cenários, é a estratégia mais eficiente para reduzir risco.</blockquote>
+
+                    <h2 id="decisao">Checklist de decisão</h2>
+                    <p>Antes de migrar, valide estes pontos:</p>
+                    <ul class="bullet-list">
+                        <li>Seu gargalo é realmente arquitetural ou de processo?</li>
+                        <li>Há clareza de fronteira entre domínios?</li>
+                        <li>Seu time já opera com logs, métricas e tracing?</li>
+                        <li>Existe ganho concreto de negócio para justificar a complexidade?</li>
+                    </ul>
+
+                    <div class="cta-card">
+                        <h3>Próximo passo</h3>
+                        <p>Se quiser avaliar sua arquitetura com base em operação real, eu monto um diagnóstico técnico objetivo para o seu contexto.</p>
+                        <a href="contato.html" class="btn btn-neon">Solicitar diagnóstico</a>
+                    </div>
+                </div>
+            </article>
+        </div>
     </main>
 
     <footer class="main-footer">
@@ -142,6 +124,7 @@ const updateUser = async (userId, data) => {
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_guidev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 

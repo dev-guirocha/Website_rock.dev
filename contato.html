@@ -3,65 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial ou agendar uma reunião estratégica.">
+    <meta name="description" content="Solicite diagnóstico técnico com a Rock .dev e receba escopo inicial, riscos e próximos passos em até 48h úteis.">
     <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Contato - Rock .dev</title>
-    <!-- SEO START -->
     <link rel="canonical" href="https://squadrockdev.com.br/contato.html">
     <meta name="robots" content="index, follow">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Rock .dev">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Contato - Rock .dev">
-    <meta property="og:description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial ou agendar uma reunião estratégica.">
+    <meta property="og:description" content="Diagnóstico técnico com retorno em até 48h úteis.">
     <meta property="og:url" content="https://squadrockdev.com.br/contato.html">
-    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contato - Rock .dev">
-    <meta name="twitter:description" content="Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial ou agendar uma reunião estratégica.">
-    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
+    <meta property="og:image" content="https://squadrockdev.com.br/images/logo.png">
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contato - Rock .dev",
   "url": "https://squadrockdev.com.br/contato.html",
-  "description": "Entre em contato com a Rock .dev para receber um diagnóstico técnico inicial ou agendar uma reunião estratégica.",
-  "inLanguage": "pt-BR",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Rock .dev",
-    "url": "https://squadrockdev.com.br/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Rock .dev Technology",
-    "url": "https://squadrockdev.com.br/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-    }
-  }
+  "description": "Página de contato para diagnóstico técnico.",
+  "inLanguage": "pt-BR"
 }
     </script>
-    <!-- SEO END -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scanlines"></div>
     <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
+                <img src="images/icon.png" alt="Rock .dev Logo" width="2000" height="2000">
             </a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
@@ -69,123 +48,131 @@
                 <span class="menu-toggle-bar"></span>
             </button>
             <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="contato.html" aria-current="page" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
+                <li><a href="projetos.html">Portfólio</a></li>
+                <li class="nav-cta"><a href="contato.html" class="btn btn-neon" aria-current="page">Diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="page-header reveal-on-scroll">
-            <h1 class="page-title">Vamos conversar sobre seu projeto?</h1>
-            <p class="page-subtitle">Escolha entre enviar o briefing agora ou agendar uma reunião estratégica para validar escopo, prazo e retorno esperado.</p>
+        <section class="page-header reveal">
+            <p class="kicker">Contato</p>
+            <h1 class="page-title">Vamos montar seu diagnóstico técnico</h1>
+            <p class="page-subtitle">Preencha o briefing e receba uma leitura inicial do cenário com riscos e próximos passos práticos.</p>
         </section>
 
-        <section class="section-container contact-layout reveal-on-scroll">
-            <div class="contact-form-wrapper">
-                <h2 class="section-title">Inicie seu briefing</h2>
-                <form id="contact-form" data-endpoint="/api/contact" novalidate>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Nome completo</label>
-                            <input type="text" id="name" name="name" autocomplete="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail para contato</label>
-                            <input type="email" id="email" name="email" autocomplete="email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Empresa (opcional)</label>
-                        <input type="text" id="company" name="company" autocomplete="organization">
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Tipo de projeto</label>
-                        <select id="service" name="service" required>
-                            <option value="">Selecione um serviço...</option>
-                            <option value="automacao">Automação Operacional</option>
-                            <option value="sistemas-internos">Sistemas Internos para Equipes</option>
-                            <option value="plataformas">Plataformas de Receita e Escala</option>
-                            <option value="diagnostico">Diagnóstico Técnico</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="budget">Faixa de investimento (opcional)</label>
-                            <select id="budget" name="budget">
-                                <option value="">Selecione uma faixa...</option>
-                                <option value="ate-15k">Até R$ 15 mil</option>
-                                <option value="15k-40k">R$ 15 mil a R$ 40 mil</option>
-                                <option value="40k-80k">R$ 40 mil a R$ 80 mil</option>
-                                <option value="80k-plus">Acima de R$ 80 mil</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="timeline">Prazo desejado (opcional)</label>
-                            <select id="timeline" name="timeline">
-                                <option value="">Selecione um prazo...</option>
-                                <option value="urgente">Até 30 dias</option>
-                                <option value="curto">1 a 3 meses</option>
-                                <option value="medio">3 a 6 meses</option>
-                                <option value="longo">Acima de 6 meses</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Resumo do projeto</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Descreva contexto, objetivos, gargalos atuais e resultado esperado..." required></textarea>
-                    </div>
-                    <div class="hp-field" aria-hidden="true">
-                        <label for="website">Website</label>
-                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-                    </div>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="consent" name="consent" required>
-                        <label for="consent">Concordo com o uso dos meus dados para retorno comercial, conforme a <a href="politica-de-privacidade.html">Política de Privacidade</a>.</label>
-                    </div>
-                    <button type="submit" class="btn btn-neon" id="contact-submit">Enviar briefing</button>
-                    <p class="form-status" id="form-status" aria-live="polite"></p>
-                </form>
-            </div>
+        <section class="section-container reveal">
+            <div class="contact-layout">
+                <div class="form-card">
+                    <h2>Formulário de briefing</h2>
+                    <form id="contact-form" data-endpoint="/api/contact" novalidate>
+                        <fieldset class="form-step">
+                            <h3>1. Dados de contato</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nome completo</label>
+                                    <input type="text" id="name" name="name" autocomplete="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" autocomplete="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Empresa (opcional)</label>
+                                <input type="text" id="company" name="company" autocomplete="organization">
+                            </div>
+                        </fieldset>
 
-            <aside class="contact-sidebar">
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Contato direto</h3>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:guirocha@squadrockdev.com.br">guirocha@squadrockdev.com.br</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> Aracaju/SE, Brasil</p>
-                    <p><i class="fas fa-globe"></i> Atuação remota em todo o Brasil.</p>
-                </div>
-                <div class="sidebar-widget" id="agendamento">
-                    <h3 class="widget-title">Agendamento imediato</h3>
-                    <p>Prefere pular o formulário? Agende uma conversa de 30 minutos e validamos cenário, prioridade e próximos passos.</p>
-                    <a href="https://calendly.com/dev-guirocha/diagnostico" class="btn btn-neon-outline" target="_blank" rel="noopener noreferrer">Abrir agenda</a>
-                </div>
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Acompanhe nas redes</h3>
-                    <div class="sidebar-socials">
-                        <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </aside>
-        </section>
+                        <fieldset class="form-step">
+                            <h3>2. Contexto do projeto</h3>
+                            <div class="form-group">
+                                <label for="service">Tipo de projeto</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Selecione um serviço...</option>
+                                    <option value="automacao">Automação Operacional</option>
+                                    <option value="sistemas-internos">Sistemas Internos para Equipes</option>
+                                    <option value="plataformas">Plataformas de Receita e Escala</option>
+                                    <option value="diagnostico">Diagnóstico Técnico</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="budget">Faixa de investimento</label>
+                                    <select id="budget" name="budget">
+                                        <option value="">Selecione uma faixa...</option>
+                                        <option value="ate-15k">Até R$ 15 mil</option>
+                                        <option value="15k-40k">R$ 15 mil a R$ 40 mil</option>
+                                        <option value="40k-80k">R$ 40 mil a R$ 80 mil</option>
+                                        <option value="80k-plus">Acima de R$ 80 mil</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="timeline">Prazo desejado</label>
+                                    <select id="timeline" name="timeline">
+                                        <option value="">Selecione um prazo...</option>
+                                        <option value="urgente">Até 30 dias</option>
+                                        <option value="curto">1 a 3 meses</option>
+                                        <option value="medio">3 a 6 meses</option>
+                                        <option value="longo">Acima de 6 meses</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
 
-        <section class="section-container schedule-section reveal-on-scroll">
-            <header class="section-intro">
-                <h2 class="section-title">Agende direto pelo calendário</h2>
-                <p>Se o widget não carregar no seu navegador, use o botão "Abrir agenda" acima.</p>
-            </header>
-            <div class="schedule-embed-wrapper">
-                <iframe
-                    class="schedule-embed"
-                    src="https://calendly.com/dev-guirocha/diagnostico?hide_gdpr_banner=1"
-                    title="Agenda de diagnóstico Rock .dev"
-                    loading="lazy">
-                </iframe>
+                        <fieldset class="form-step">
+                            <h3>3. Objetivo e gargalos</h3>
+                            <div class="form-group">
+                                <label for="message">Resumo do projeto</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Descreva dores atuais, objetivo esperado e impacto desejado..." required></textarea>
+                            </div>
+                        </fieldset>
+
+                        <div class="hp-field" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Concordo com o uso dos meus dados para retorno comercial. <a href="politica-de-privacidade.html">Política de Privacidade</a>.</label>
+                        </div>
+                        <p style="font-size:0.82rem; color:#5a6c91; margin-top:-0.3rem;">Privacidade: seus dados são usados apenas para análise e retorno sobre este contato.</p>
+
+                        <div class="hero-actions" style="margin-top: 0.9rem;">
+                            <button type="submit" class="btn btn-neon" id="contact-submit">Enviar briefing</button>
+                            <a href="https://wa.me/5500000000000" class="btn btn-ghost" aria-label="WhatsApp em breve">Falar no WhatsApp (em breve)</a>
+                        </div>
+                        <p class="form-status" id="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <aside style="display:grid; gap:1rem;">
+                    <article class="contact-card">
+                        <h3>O que você recebe em 48h</h3>
+                        <ul class="project-list">
+                            <li>Escopo inicial com prioridades.</li>
+                            <li>Principais riscos técnicos mapeados.</li>
+                            <li>Próximos passos de implementação.</li>
+                        </ul>
+                    </article>
+
+                    <article class="sidebar-card">
+                        <h3>Contato direto</h3>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:dev.guirocha@gmail.com">dev.guirocha@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Aracaju/SE, Brasil</p>
+                        <p><i class="fas fa-globe"></i> Atendimento remoto no Brasil.</p>
+                        <div class="sidebar-socials" style="margin-top: 0.75rem;">
+                            <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/_guidev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </article>
+                </aside>
             </div>
         </section>
     </main>
@@ -196,6 +183,7 @@
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_guidev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 

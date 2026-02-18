@@ -3,65 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Estudo de caso FlowDesk: plataforma mobile para profissionais autônomos com agenda, clientes e finanças em um único fluxo.">
+    <meta name="description" content="Estudo de caso FlowDesk: sistema operacional para profissionais autônomos com agenda, clientes e finanças em fluxo contínuo.">
     <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Projeto FlowDesk - Rock .dev</title>
-    <!-- SEO START -->
     <link rel="canonical" href="https://squadrockdev.com.br/projeto-flowdesk.html">
     <meta name="robots" content="index, follow">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Rock .dev">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Projeto FlowDesk - Rock .dev">
-    <meta property="og:description" content="Estudo de caso FlowDesk: plataforma mobile para profissionais autônomos com agenda, clientes e finanças em um único fluxo.">
+    <meta property="og:description" content="Sistema operacional de rotina para profissionais autônomos.">
     <meta property="og:url" content="https://squadrockdev.com.br/projeto-flowdesk.html">
     <meta property="og:image" content="https://squadrockdev.com.br/images/flowdesk.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Projeto FlowDesk - Rock .dev">
-    <meta name="twitter:description" content="Estudo de caso FlowDesk: plataforma mobile para profissionais autônomos com agenda, clientes e finanças em um único fluxo.">
-    <meta name="twitter:image" content="https://squadrockdev.com.br/images/flowdesk.png">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Projeto FlowDesk - Rock .dev",
-  "url": "https://squadrockdev.com.br/projeto-flowdesk.html",
-  "description": "Estudo de caso FlowDesk: plataforma mobile para profissionais autônomos com agenda, clientes e finanças em um único fluxo.",
-  "inLanguage": "pt-BR",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Rock .dev",
-    "url": "https://squadrockdev.com.br/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Rock .dev Technology",
-    "url": "https://squadrockdev.com.br/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-    }
-  }
-}
-    </script>
-    <!-- SEO END -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scanlines"></div>
     <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
+                <img src="images/icon.png" alt="Rock .dev Logo" width="2000" height="2000">
             </a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
@@ -69,65 +37,123 @@
                 <span class="menu-toggle-bar"></span>
             </button>
             <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html" aria-current="page">Projetos</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
+                <li><a href="projetos.html" aria-current="page">Portfólio</a></li>
+                <li class="nav-cta"><a href="contato.html" class="btn btn-neon">Diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="project-hero" style="background-image: url('images/flowdesk.png');">
-            <div class="project-hero-overlay">
-                <div class="project-hero-content">
-                    <h1 class="project-title-detail">Projeto FlowDesk</h1>
-                    <p class="project-subtitle-detail">Sistema Operacional para Profissionais Autônomos.</p>
-                    <div class="project-facts">
-                        <p><strong>CLIENTE:</strong> Produto Próprio / Profissionais Autônomos</p>
-                        <p><strong>TIPO:</strong> App Mobile de Gestão Operacional</p>
-                        <p><strong>STACK:</strong> React Native, Expo, AsyncStorage</p>
+        <section class="project-hero">
+            <div class="project-hero-banner">
+                <div class="project-hero-top">
+                    <div>
+                        <h1 class="project-title-detail">FlowDesk</h1>
+                        <p class="project-subtitle-detail">Sistema Operacional para Profissionais Autônomos.</p>
+                        <div class="project-facts">
+                            <p><strong>CLIENTE:</strong> Produto próprio</p>
+                            <p><strong>TIPO:</strong> App de gestão operacional</p>
+                            <p><strong>STACK:</strong> React Native, Expo, Local DB</p>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/dev-guirocha/Wallet_APP" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver código</a>
+                        <a href="contato.html" class="btn btn-dark">Falar comigo</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="project-detail-container">
-            <section class="project-section">
-                <h2 class="section-title text-center">O Desafio</h2>
-                <p>O FlowDesk nasceu de um problema recorrente em negócios de serviço: a operação diária fragmentada. Agenda, clientes, cobranças e tarefas normalmente ficam distribuídos entre aplicativos diferentes, gerando retrabalho, atrasos e perda de controle financeiro.</p>
-                <p>O objetivo do projeto não foi criar mais um aplicativo de gestão, mas consolidar o fluxo de trabalho em um único ciclo operacional contínuo. Cada ação executada pelo usuário influencia diretamente a próxima etapa da rotina, eliminando a necessidade de reconciliação manual entre ferramentas.</p>
+        <div class="project-shell">
+            <section class="project-section reveal">
+                <h2>O desafio</h2>
+                <ul class="project-list">
+                    <li>Agenda, cobranças e clientes em apps diferentes.</li>
+                    <li>Rotina sem continuidade entre ações do dia.</li>
+                    <li>Reconciliação manual e atraso de decisão.</li>
+                </ul>
+                <p>O objetivo foi consolidar o fluxo de trabalho em um ciclo único, onde cada ação impacta diretamente a próxima etapa da operação.</p>
             </section>
 
-            <section class="project-section">
-                <h2 class="section-title text-center">A Solução Rock .dev</h2>
-                <p>A arquitetura foi construída priorizando consistência de estado e rapidez de interação. Em vez de múltiplas telas independentes, o sistema opera como uma linha de execução: compromissos geram registros financeiros, registros financeiros atualizam previsões e a previsibilidade orienta decisões do dia seguinte.</p>
-                <p>Grande parte da complexidade do projeto está na modelagem das regras, não apenas armazenar dados, mas representar a rotina real do profissional. O aplicativo foi estruturado para funcionar com mínimo atrito cognitivo, permitindo uso rápido durante o trabalho sem exigir atenção exclusiva ao sistema.</p>
-            </section>
-
-            <section class="project-section impact-section">
-                <h2 class="section-title text-center">Missão Cumprida: O Impacto</h2>
-                <p>O resultado é uma ferramenta que deixa de ser apenas registro histórico e passa a atuar como apoio operacional. O usuário não consulta o aplicativo para ver o que aconteceu, ele consulta para saber o que precisa fazer agora.</p>
-                <p>Este projeto evidencia capacidade de transformar processos reais em software utilizável, unindo engenharia, UX funcional e pensamento de produto.</p>
-                <ul class="result-list">
-                    <li>Fluxo operacional contínuo com agenda, clientes, cobranças e tarefas conectados</li>
-                    <li>Consistência de estado entre compromissos, finanças e previsões diárias</li>
-                    <li>Uso rápido no contexto de trabalho com baixo atrito cognitivo</li>
+            <section class="project-section reveal">
+                <h2>A solução (arquitetura)</h2>
+                <div class="arch-diagram" aria-label="Fluxo de arquitetura FlowDesk">
+                    <article class="arch-node"><h3>UI Mobile</h3><p>Agenda + clientes</p></article>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <article class="arch-node"><h3>API Domínio</h3><p>Regras de rotina</p></article>
+                </div>
+                <div class="arch-diagram" aria-hidden="true">
+                    <article class="arch-node"><h3>Eventos</h3><p>Cobranças e tarefas</p></article>
+                    <div class="arch-arrow">→</div>
+                    <article class="arch-node"><h3>Persistência</h3><p>Estado contínuo</p></article>
+                </div>
+                <ul class="bullet-list">
+                    <li>Fluxo orientado a estado, não a telas isoladas.</li>
+                    <li>Armazenamento local para rapidez de interação.</li>
+                    <li>Modelagem de regra alinhada à rotina real.</li>
+                    <li>Baixo atrito cognitivo para uso durante o trabalho.</li>
                 </ul>
             </section>
 
-            <section class="project-section text-center">
-                <div class="cta-buttons">
-                    <a href="https://github.com/dev-guirocha/Wallet_APP" class="btn btn-neon-outline" target="_blank" rel="noopener noreferrer">Ver repositório no GitHub</a>
-                    <a href="contato.html" class="btn btn-ghost">Solicitar demonstração</a>
+            <section class="project-section reveal">
+                <h2>Impacto</h2>
+                <div class="impact-grid">
+                    <article class="metric-card">
+                        <h3>Rotina contínua</h3>
+                        <p class="metric-value">Sem reconciliação manual</p>
+                    </article>
+                    <article class="metric-card">
+                        <h3>Estado unificado</h3>
+                        <p class="metric-value">Agenda + finanças + tarefas</p>
+                    </article>
+                    <article class="metric-card">
+                        <h3>Decisão rápida</h3>
+                        <p class="metric-value">Visão diária consolidada</p>
+                    </article>
+                </div>
+                <h3>O que isso prova</h3>
+                <ul class="bullet-list">
+                    <li>Capacidade de transformar processo real em produto útil.</li>
+                    <li>Integração entre engenharia, UX funcional e produto.</li>
+                </ul>
+            </section>
+
+            <section class="project-section reveal">
+                <h2>Galeria / preview</h2>
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="images/flowdesk.png" alt="Tela inicial do FlowDesk" width="1024" height="768" loading="lazy">
+                        <figcaption>Visão consolidada da operação.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/flowdesk.png" alt="Tela de agenda e clientes do FlowDesk" width="1024" height="768" loading="lazy">
+                        <figcaption>Agenda e carteira no mesmo fluxo.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/flowdesk.png" alt="Tela financeira do FlowDesk" width="1024" height="768" loading="lazy">
+                        <figcaption>Estado financeiro atualizado em tempo real.</figcaption>
+                    </figure>
                 </div>
             </section>
-        </div>
 
-        <nav class="project-navigation">
-            <a href="projetos.html" class="nav-link-projects">&lt; Voltar para todos os projetos</a>
-        </nav>
+            <section class="project-section reveal">
+                <div class="page-final-cta">
+                    <h2 class="page-title">Quer algo assim para sua operação?</h2>
+                    <p>Construímos fluxos de trabalho com consistência de estado e usabilidade real.</p>
+                    <div class="hero-actions" style="justify-content:center;">
+                        <a href="contato.html" class="btn btn-neon">Solicitar diagnóstico</a>
+                        <a href="projetos.html" class="btn btn-ghost">Ver outros cases</a>
+                    </div>
+                </div>
+            </section>
+
+            <nav class="project-navigation">
+                <a href="projetos.html" class="nav-link-projects">&lt; Voltar para todos os projetos</a>
+            </nav>
+        </div>
     </main>
 
     <footer class="main-footer">
@@ -136,6 +162,7 @@
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_guidev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 

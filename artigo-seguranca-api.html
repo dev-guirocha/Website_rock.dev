@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Boas práticas de segurança para APIs REST: autenticação, autorização, validação de entrada, rate limit e observabilidade.">
+    <meta name="description" content="5 práticas essenciais de segurança em APIs REST para reduzir risco operacional e vazamento de dados.">
     <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>5 Práticas Essenciais de Segurança em APIs REST - Rock .dev</title>
-    <!-- SEO START -->
     <link rel="canonical" href="https://squadrockdev.com.br/artigo-seguranca-api.html">
     <meta name="robots" content="index, follow">
     <meta property="og:locale" content="pt_BR">
@@ -15,57 +14,25 @@
     <meta property="og:type" content="article">
     <meta property="article:author" content="Guilherme Rocha">
     <meta property="article:published_time" content="2025-08-15">
-    <meta property="article:modified_time" content="2026-02-16">
+    <meta property="article:modified_time" content="2026-02-18">
     <meta property="og:title" content="5 Práticas Essenciais de Segurança em APIs REST - Rock .dev">
-    <meta property="og:description" content="Boas práticas de segurança para APIs REST: autenticação, autorização, validação de entrada, rate limit e observabilidade.">
+    <meta property="og:description" content="Checklist técnico para autenticação, autorização, validação e observabilidade em APIs críticas.">
     <meta property="og:url" content="https://squadrockdev.com.br/artigo-seguranca-api.html">
-    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="5 Práticas Essenciais de Segurança em APIs REST - Rock .dev">
-    <meta name="twitter:description" content="Boas práticas de segurança para APIs REST: autenticação, autorização, validação de entrada, rate limit e observabilidade.">
-    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "5 Práticas Essenciais de Segurança em APIs REST",
-  "description": "Boas práticas de segurança para APIs REST: autenticação, autorização, validação de entrada, rate limit e observabilidade.",
-  "datePublished": "2025-08-15",
-  "dateModified": "2026-02-16",
-  "inLanguage": "pt-BR",
-  "mainEntityOfPage": "https://squadrockdev.com.br/artigo-seguranca-api.html",
-  "author": {
-    "@type": "Person",
-    "name": "Guilherme Rocha"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Rock .dev Technology",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-    }
-  },
-  "image": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-}
-    </script>
-    <!-- SEO END -->
+    <meta property="og:image" content="https://squadrockdev.com.br/images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scanlines"></div>
     <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
+                <img src="images/icon.png" alt="Rock .dev Logo" width="2000" height="2000">
             </a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
@@ -73,55 +40,70 @@
                 <span class="menu-toggle-bar"></span>
             </button>
             <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="insights.html" aria-current="page">Insights</a></li>
-                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
+                <li><a href="projetos.html">Portfólio</a></li>
+                <li class="nav-cta"><a href="contato.html" class="btn btn-neon">Diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <header class="article-header">
-            <div class="article-header-content">
-                <span class="article-category">SEGURANÇA</span>
-                <h1 class="article-title">5 Práticas Essenciais de Segurança em APIs REST</h1>
-                <div class="article-meta">
-                    <p>Por <strong>Guilherme Rocha</strong> // Publicado em 15 de agosto de 2025 // 6 min de leitura</p>
-                </div>
+        <header class="article-header reveal">
+            <p class="kicker">Segurança</p>
+            <h1 class="article-title">5 práticas essenciais de segurança em APIs REST</h1>
+            <p class="page-subtitle">Controles mínimos para APIs que sustentam operação, faturamento e dados sensíveis.</p>
+            <div class="insight-meta" style="justify-content:center; margin-top:0.8rem;">
+                <span>15 ago 2025</span>
+                <span>6 min de leitura</span>
+                <span>Por Guilherme Rocha</span>
+            </div>
+            <div class="hero-actions" style="justify-content:center; margin-top:1rem;">
+                <a href="contato.html" class="btn btn-ghost">Falar comigo</a>
             </div>
         </header>
 
-        <article class="article-content">
-            <p>APIs REST são a camada crítica de integração entre aplicações. Uma falha de segurança nessa fronteira pode afetar dados, faturamento e reputação. Em vez de tratar segurança como etapa final, o ideal é adotar controles desde a primeira versão.</p>
+        <div class="article-wrap">
+            <aside class="toc-card reveal" aria-label="Sumário do artigo">
+                <h2>Conteúdo</h2>
+                <ul>
+                    <li><a href="#auth">1. Autenticação forte</a></li>
+                    <li><a href="#authorization">2. Autorização por recurso</a></li>
+                    <li><a href="#validation">3. Validação de entrada</a></li>
+                    <li><a href="#ratelimit">4. Rate limit</a></li>
+                    <li><a href="#observability">5. Observabilidade</a></li>
+                </ul>
+            </aside>
 
-            <h2>1. Autenticação forte e expiração de sessão</h2>
-            <p>Use tokens com validade curta e mecanismos de renovação controlados. Evite credenciais de longa duração e nunca trafegue segredos em texto puro.</p>
+            <article class="article-shell reveal">
+                <div class="article-content">
+                    <p>API é fronteira crítica. Quando segurança falha, o impacto não fica só no código: chega em dados, receita e confiança do cliente. Estas práticas são o baseline para reduzir risco desde a primeira versão.</p>
 
-            <h2>2. Autorização por recurso</h2>
-            <p>Não basta validar quem é o usuário. Também é preciso validar se ele pode acessar aquele recurso específico. Isso evita vazamento por enumeração de IDs e chamadas indevidas.</p>
+                    <h2 id="auth">1. Autenticação forte e sessão curta</h2>
+                    <p>Use tokens com validade curta, refresh controlado e rotação de segredo. Evite chaves permanentes e credenciais expostas em cliente.</p>
 
-            <h2>3. Validação e sanitização de entrada</h2>
-            <p>Padronize validação no backend para todos os campos: tipo, tamanho, formato e presença. Toda entrada externa deve ser tratada como não confiável.</p>
+                    <h2 id="authorization">2. Autorização por recurso</h2>
+                    <p>Não basta saber quem é o usuário. Cada rota precisa validar se ele pode acessar aquele recurso específico.</p>
 
-            <h2>4. Rate limit e proteção contra abuso</h2>
-            <p>Defina limites por IP, token e rota. Isso reduz impacto de brute force, scraping agressivo e negação de serviço em endpoints sensíveis.</p>
+                    <h2 id="validation">3. Validação e sanitização de entrada</h2>
+                    <p>Padronize schema no backend: tipo, tamanho, formato e campos obrigatórios. Toda entrada externa deve ser tratada como não confiável.</p>
 
-            <h2>5. Logs estruturados e monitoramento ativo</h2>
-            <p>Registre tentativas de acesso negado, falhas de autenticação e picos de tráfego com contexto suficiente para investigação. Segurança sem observabilidade vira adivinhação.</p>
+                    <h2 id="ratelimit">4. Rate limit contra abuso</h2>
+                    <p>Defina limites por IP, token e endpoint. Isso reduz brute force, scraping agressivo e picos não controlados.</p>
 
-            <blockquote>Segurança efetiva em API é disciplina contínua, não checklist de release.</blockquote>
-        </article>
+                    <h2 id="observability">5. Logs estruturados e monitoramento</h2>
+                    <p>Segurança sem telemetria vira adivinhação. Registre falhas de autenticação, tentativas negadas e padrões de tráfego anômalo.</p>
+                    <blockquote>Segurança em API é disciplina contínua de engenharia, não etapa final de release.</blockquote>
 
-        <section class="author-bio">
-            <img src="images/CEO.jpeg" alt="Guilherme Rocha" class="author-photo" width="1200" height="1600" loading="lazy">
-            <div class="author-info">
-                <h4>Sobre o Autor</h4>
-                <p><strong>Guilherme Rocha</strong> é fundador da Rock .dev e trabalha com arquitetura de software e práticas de engenharia para produtos digitais escaláveis.</p>
-            </div>
-        </section>
-
+                    <div class="cta-card">
+                        <h3>Próximo passo</h3>
+                        <p>Quer uma revisão de segurança pragmática no seu backend? Posso mapear risco técnico e ações prioritárias para o seu cenário.</p>
+                        <a href="contato.html" class="btn btn-neon">Solicitar diagnóstico</a>
+                    </div>
+                </div>
+            </article>
+        </div>
     </main>
 
     <footer class="main-footer">
@@ -130,6 +112,7 @@
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_guidev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 

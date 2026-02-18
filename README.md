@@ -106,7 +106,7 @@ SMTP_SECURE=false
 SMTP_USER=...
 SMTP_PASS=...
 CONTACT_FROM=\"Rock .dev Site <no-reply@squadrockdev.com.br>\"
-CONTACT_TO=guirocha@squadrockdev.com.br
+CONTACT_TO=dev.guirocha@gmail.com
 ```
 
 ## 🔎 SEO e Indexação

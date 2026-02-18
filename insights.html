@@ -3,65 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.">
+    <meta name="description" content="Insights técnicos da Rock .dev sobre arquitetura, segurança e UI/UX para software de operação real.">
     <meta name="theme-color" content="#f4f7fb">
     <link rel="icon" type="image/png" href="images/icon.png">
     <title>Insights - Rock .dev</title>
-    <!-- SEO START -->
     <link rel="canonical" href="https://squadrockdev.com.br/insights.html">
     <meta name="robots" content="index, follow">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Rock .dev">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Insights - Rock .dev">
-    <meta property="og:description" content="Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.">
+    <meta property="og:description" content="Artigos práticos sobre arquitetura de software, segurança de API e UI/UX orientado a produto.">
     <meta property="og:url" content="https://squadrockdev.com.br/insights.html">
-    <meta property="og:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Insights - Rock .dev">
-    <meta name="twitter:description" content="Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.">
-    <meta name="twitter:image" content="https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Insights - Rock .dev",
-  "url": "https://squadrockdev.com.br/insights.html",
-  "description": "Insights da Rock .dev: artigos, análises e aprendizados sobre arquitetura de software, segurança, UI/UX e estratégias digitais.",
-  "inLanguage": "pt-BR",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Rock .dev",
-    "url": "https://squadrockdev.com.br/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Rock .dev Technology",
-    "url": "https://squadrockdev.com.br/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://squadrockdev.com.br/images/ROCK_DEV_LOGO.png"
-    }
-  }
-}
-    </script>
-    <!-- SEO END -->
-    
+    <meta property="og:image" content="https://squadrockdev.com.br/images/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scanlines"></div>
     <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
     <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="nav-logo" aria-label="Página inicial Rock .dev">
-                <img src="images/ROCK_DEV_LOGO.png" alt="Rock .dev Logo" width="1563" height="1563">
+                <img src="images/icon.png" alt="Rock .dev Logo" width="2000" height="2000">
             </a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu de navegação">
                 <span class="menu-toggle-bar"></span>
@@ -69,54 +37,62 @@
                 <span class="menu-toggle-bar"></span>
             </button>
             <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="insights.html" aria-current="page">Insights</a></li>
-                <li><a href="contato.html" class="btn btn-neon-outline">Agendar diagnóstico</a></li>
+                <li><a href="projetos.html">Portfólio</a></li>
+                <li class="nav-cta"><a href="contato.html" class="btn btn-neon">Diagnóstico</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-        <section class="page-header">
-            <h1 class="page-title">Insights técnicos para decisões melhores</h1>
-            <p class="page-subtitle">Um espaço para compartilhar nosso código-fonte de ideias, análises técnicas e reflexões sobre o futuro da tecnologia.</p>
+        <section class="page-header reveal">
+            <p class="kicker">Insights</p>
+            <h1 class="page-title">Decisões técnicas para produto real</h1>
+            <p class="page-subtitle">Conteúdo direto sobre arquitetura, segurança e experiência de uso para software que não pode falhar na operação.</p>
         </section>
 
-        <section class="section-container">
-            <div class="insights-feed">
-                <article class="insight-card">
+        <section class="section-container reveal" data-filter-scope>
+            <div class="filter-row" role="toolbar" aria-label="Filtrar insights">
+                <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">Todos</button>
+                <button type="button" class="filter-chip" data-filter="arquitetura" aria-pressed="false">Arquitetura</button>
+                <button type="button" class="filter-chip" data-filter="seguranca" aria-pressed="false">Segurança</button>
+                <button type="button" class="filter-chip" data-filter="uiux" aria-pressed="false">UI/UX</button>
+            </div>
+
+            <div class="insights-grid">
+                <article class="insight-card-v2" data-category="arquitetura">
                     <div class="insight-meta">
-                        <span>DATA: 27.09.2025</span>
-                        <span>CATEGORIA: ARQUITETURA</span>
-                        <span>LEITURA: 8 MIN</span>
+                        <span>Arquitetura</span>
+                        <span>27 set 2025</span>
+                        <span>8 min</span>
                     </div>
-                    <h2 class="insight-title"><a href="artigo-detalhe.html">Arquitetura Monolítica vs. Microsserviços: Uma Análise Prática</a></h2>
-                    <p class="insight-excerpt">No mundo do desenvolvimento de software, a escolha da arquitetura é uma das decisões mais críticas. Ela impacta a escalabilidade, manutenção e a velocidade de entrega de novas features. Vamos desmistificar dois dos modelos mais discutidos...</p>
-                    <a href="artigo-detalhe.html" class="insight-cta">Ler artigo completo</a>
+                    <h2 class="insight-title"><a href="artigo-detalhe.html">Arquitetura Monolítica vs. Microsserviços</a></h2>
+                    <p>Trade-offs práticos para decidir quando manter simplicidade e quando quebrar em serviços independentes.</p>
+                    <a href="artigo-detalhe.html" class="btn btn-ghost">Ler</a>
                 </article>
 
-                <article class="insight-card">
+                <article class="insight-card-v2" data-category="seguranca">
                     <div class="insight-meta">
-                        <span>DATA: 15.08.2025</span>
-                        <span>CATEGORIA: SEGURANÇA</span>
-                        <span>LEITURA: 6 MIN</span>
+                        <span>Segurança</span>
+                        <span>15 ago 2025</span>
+                        <span>6 min</span>
                     </div>
-                    <h2 class="insight-title"><a href="artigo-seguranca-api.html">5 Práticas Essenciais de Segurança em APIs REST</a></h2>
-                    <p class="insight-excerpt">APIs são a espinha dorsal da comunicação entre sistemas modernos, mas também são um dos principais alvos de ataques. Garantir sua segurança não é opcional. Neste artigo, cobrimos 5 práticas fundamentais que todo desenvolvedor deveria implementar...</p>
-                    <a href="artigo-seguranca-api.html" class="insight-cta">Ler artigo completo</a>
+                    <h2 class="insight-title"><a href="artigo-seguranca-api.html">5 práticas essenciais de segurança em APIs REST</a></h2>
+                    <p>Checklist objetivo de autenticação, autorização, validação de entrada e observabilidade para APIs críticas.</p>
+                    <a href="artigo-seguranca-api.html" class="btn btn-ghost">Ler</a>
                 </article>
 
-                <article class="insight-card">
+                <article class="insight-card-v2" data-category="uiux">
                     <div class="insight-meta">
-                        <span>DATA: 02.07.2025</span>
-                        <span>CATEGORIA: UI/UX</span>
-                        <span>LEITURA: 4 MIN</span>
+                        <span>UI/UX</span>
+                        <span>02 jul 2025</span>
+                        <span>4 min</span>
                     </div>
-                    <h2 class="insight-title"><a href="artigo-design-atomico.html">Design Atômico: Como construir interfaces consistentes e escaláveis</a></h2>
-                    <p class="insight-excerpt">Criar um sistema de design coeso é um desafio, especialmente em projetos grandes. A metodologia do Design Atômico oferece uma abordagem estruturada para construir interfaces a partir de componentes reutilizáveis, garantindo consistência e agilidade...</p>
-                    <a href="artigo-design-atomico.html" class="insight-cta">Ler artigo completo</a>
+                    <h2 class="insight-title"><a href="artigo-design-atomico.html">Design Atômico para interfaces consistentes</a></h2>
+                    <p>Como reduzir retrabalho no front-end com uma estrutura de componentes escalável e fácil de manter.</p>
+                    <a href="artigo-design-atomico.html" class="btn btn-ghost">Ler</a>
                 </article>
             </div>
         </section>
@@ -128,6 +104,7 @@
         <div class="footer-socials">
             <a href="https://www.linkedin.com/in/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/dev-guirocha" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_guidev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
