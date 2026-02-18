@@ -1,5 +1,10 @@
 const SITE_LANGUAGE_KEY = 'rockdev_site_language_v1';
 const LANGUAGE_OPTIONS = ['pt', 'en', 'es'];
+const LANGUAGE_META = {
+    pt: { flag: '🇧🇷', label: 'Português' },
+    en: { flag: '🇺🇸', label: 'English' },
+    es: { flag: '🇪🇸', label: 'Español' }
+};
 
 const UI_TEXT = {
     pt: {
@@ -354,18 +359,43 @@ function renderLanguageSwitcher(activeLanguage) {
     const container = document.createElement('li');
     container.className = 'nav-language';
 
-    const switcher = document.createElement('div');
-    switcher.className = 'language-switcher';
-    switcher.setAttribute('role', 'group');
-    switcher.setAttribute('aria-label', labels.ariaLanguageSelector);
+    const picker = document.createElement('div');
+    picker.className = 'language-picker';
+
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'lang-trigger';
+    trigger.setAttribute('aria-haspopup', 'true');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-label', labels.ariaLanguageSelector);
+
+    const triggerFlag = document.createElement('span');
+    triggerFlag.className = 'lang-flag';
+    triggerFlag.setAttribute('aria-hidden', 'true');
+    triggerFlag.textContent = (LANGUAGE_META[activeLanguage] || LANGUAGE_META.pt).flag;
+
+    const triggerCaret = document.createElement('span');
+    triggerCaret.className = 'lang-caret';
+    triggerCaret.setAttribute('aria-hidden', 'true');
+    triggerCaret.textContent = '▾';
+
+    trigger.appendChild(triggerFlag);
+    trigger.appendChild(triggerCaret);
+
+    const optionsRow = document.createElement('div');
+    optionsRow.className = 'language-options';
+    optionsRow.setAttribute('role', 'group');
+    optionsRow.setAttribute('aria-label', labels.ariaLanguageSelector);
 
     LANGUAGE_OPTIONS.forEach((language) => {
         const button = document.createElement('button');
         button.type = 'button';
-        button.className = 'lang-btn';
+        button.className = 'lang-option';
         button.setAttribute('data-lang', language);
         button.setAttribute('aria-pressed', String(language === activeLanguage));
-        button.textContent = language.toUpperCase();
+        button.setAttribute('aria-label', LANGUAGE_META[language].label);
+        button.title = LANGUAGE_META[language].label;
+        button.textContent = LANGUAGE_META[language].flag;
 
         if (language === activeLanguage) {
             button.classList.add('is-active');
@@ -379,10 +409,38 @@ function renderLanguageSwitcher(activeLanguage) {
             window.location.reload();
         });
 
-        switcher.appendChild(button);
+        optionsRow.appendChild(button);
     });
 
-    container.appendChild(switcher);
+    let isOpen = false;
+    const setOpen = (open) => {
+        isOpen = open;
+        picker.classList.toggle('is-open', isOpen);
+        trigger.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    trigger.addEventListener('click', (event) => {
+        event.stopPropagation();
+        setOpen(!isOpen);
+    });
+
+    document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Node)) return;
+        if (!container.contains(target)) {
+            setOpen(false);
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            setOpen(false);
+        }
+    });
+
+    picker.appendChild(trigger);
+    picker.appendChild(optionsRow);
+    container.appendChild(picker);
 
     const ctaItem = navMenu.querySelector('.nav-cta');
     if (ctaItem instanceof HTMLElement) {
