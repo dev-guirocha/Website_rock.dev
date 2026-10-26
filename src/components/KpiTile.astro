@@ -1,0 +1,4 @@
+---
+const { id, rotulo, valor } = Astro.props;
+---
+<div class="kpi" data-kpi={id}><span class="kpi-rotulo">{rotulo}</span><strong class="kpi-valor" data-valor>{valor}</strong></div>

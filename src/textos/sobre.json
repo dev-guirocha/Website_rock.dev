@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "titulo": { "pt": "Sobre", "en": "About" },
+    "descricao": { "pt": "Guilherme Rocha, fundador da Rock .dev: do desenvolvimento de software para dados e IA aplicada.", "en": "Guilherme Rocha, founder of Rock .dev: from software development to data and applied AI." }
+  },
+  "rotulo": { "pt": "Sobre", "en": "About" },
+  "cargo": { "pt": "Fundador da Rock .dev", "en": "Founder of Rock .dev" },
+  "foto": { "pt": "Foto de Guilherme Rocha", "en": "Photo of Guilherme Rocha" },
+  "paragrafos": [
+    { "pt": "Comecei construindo software: apps e sistemas de gestão para rotinas reais, como saúde, pedidos e operação financeira. Em todos eles o problema de fundo era o mesmo: informação espalhada e decisões tomadas no escuro.", "en": "I started out building software: apps and management systems for real routines such as healthcare, orders and financial operations. In all of them the underlying problem was the same: scattered information and decisions made in the dark." },
+    { "pt": "Hoje trabalho com BI e dados, montando painéis, indicadores e automações que as pessoas usam para decidir. A Rock .dev leva essa experiência para outros escritórios e empresas, agora com IA aplicada em cima do dado organizado.", "en": "Today I work in BI and data, building dashboards, KPIs and automations that people use to make decisions. Rock .dev brings that experience to other firms and businesses, now with applied AI on top of well-organized data." },
+    { "pt": "Meu jeito de trabalhar é simples: cada número tem definição escrita, cada painel é conferido contra a origem e nenhuma resposta de IA vale mais do que o dado que a sustenta.", "en": "The way I work is simple: every number has a written definition, every dashboard is checked against its source, and no AI answer is worth more than the data behind it." }
+  ],
+  "resume": { "pt": "Ver o currículo completo", "en": "See the full résumé" },
+  "projetos": { "pt": "Ver projetos de software", "en": "See software projects" }
+}

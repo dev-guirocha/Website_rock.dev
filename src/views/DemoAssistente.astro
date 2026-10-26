@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import DemoFrame from '../components/DemoFrame.astro';
+import MiniChart from '../components/MiniChart.astro';
+import textos from '../textos/demos.json';
+import dados from '../data/demos/assessoria.json';
+import { t, href } from '../lib/i18n.js';
+import { resumoAssessoria } from '../lib/agregados.js';
+import { PERGUNTAS, responder } from '../lib/assistente.js';
+import { htmlRanking, rotulosMes } from '../lib/tabelas.js';
+
+const { lang } = Astro.props;
+const a = textos.assistente;
+const respostas = PERGUNTAS.map((id) => responder(id, dados, a, lang));
+const trimestre = resumoAssessoria(dados, { n: 3 });
+const ano = resumoAssessoria(dados, { n: 12 });
+---
+<Base lang={lang} rota="demos/assistente-ia/" titulo={t(a.meta.titulo, lang)} descricao={t(a.meta.descricao, lang)}>
+  <section class="container secao">
+    <p><a class="link-acao" href={href(lang, 'demos/')}>{t(textos.comum.voltar, lang)}</a></p>
+    <h1>{t(a.titulo, lang)}</h1>
+    <p class="lead">{t(a.texto, lang)}</p>
+    <p class="aviso" role="note">{t(a.aviso, lang)}</p>
+    <div class="assistente" data-assistente>
+      <DemoFrame lang={lang} titulo={dados.nome} subtitulo={t(a.subtitulo, lang)}>
+        <MiniChart id="receita" titulo={t(a.grafico, lang)} valores={ano.porMes.map((p) => p.receita)} rotulos={rotulosMes(ano.porMes, 'receita', lang)} />
+        <h2>{t(a.ranking, lang)}</h2>
+        <table>
+          <thead><tr><th scope="col">{t(a.colunas.assessor, lang)}</th><th scope="col" class="num">{t(a.colunas.captacao, lang)}</th></tr></thead>
+          <tbody set:html={htmlRanking(trimestre.ranking, lang)} />
+        </table>
+      </DemoFrame>
+      <div class="chat demo">
+        <p class="demo-empresa">{t(a.nome, lang)}</p>
+        <ol class="chat-log" data-log aria-live="polite">
+          {respostas.map((r) => (
+            <li class="chat-par" data-pergunta={r.id} data-valor={r.valor} data-destaque-assessor={r.destaque.assessor} data-destaque-mes={r.destaque.mes}>
+              <p class="chat-voce"><span class="sr">{t(a.voce, lang)}: </span>{r.pergunta}</p>
+              <p class="chat-resposta"><span class="sr">{t(a.nome, lang)}: </span>{r.texto}</p>
+            </li>
+          ))}
+        </ol>
+        <div class="chat-perguntas" data-perguntas hidden>
+          <p class="suave">{t(a.escolha, lang)}</p>
+          {respostas.map((r) => <button type="button" data-perguntar={r.id}>{r.pergunta}</button>)}
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+<script>
+  import '../scripts/assistente.js';
+</script>
+<style>
+  .assistente { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); align-items: start; margin-top: 24px; }
+  .chat { display: grid; gap: 16px; }
+  .chat-log { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+  .chat-par { display: grid; gap: 8px; }
+  .chat-par[hidden] { display: none; }
+  .chat-voce { justify-self: end; max-width: 90%; margin: 0; padding: 10px 14px; background: var(--painel-borda); border-radius: 12px 12px 2px 12px; }
+  .chat-resposta { justify-self: start; max-width: 90%; margin: 0; padding: 10px 14px; border: 1px solid var(--painel-acento); border-radius: 12px 12px 12px 2px; }
+  .chat-perguntas { display: grid; gap: 8px; }
+  .chat-perguntas[hidden] { display: none; }
+  .chat-perguntas button { font: inherit; text-align: left; min-height: 44px; padding: 10px 12px; cursor: pointer; color: var(--painel-texto); background: transparent; border: 1px solid var(--painel-suave); border-radius: 8px; }
+  .chat-perguntas button:hover { border-color: var(--painel-acento); }
+</style>

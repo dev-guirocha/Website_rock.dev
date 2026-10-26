@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import p from '../textos/privacidade.json';
+import { t } from '../lib/i18n.js';
+
+const { lang } = Astro.props;
+---
+<Base lang={lang} rota="privacidade/" titulo={t(p.meta.titulo, lang)} descricao={t(p.meta.descricao, lang)}>
+  <section class="container secao texto-legal">
+    <h1>{t(p.titulo, lang)}</h1>
+    <p class="suave">{t(p.atualizado, lang)}</p>
+    {p.secoes.map((s) => (<><h2>{t(s.titulo, lang)}</h2><p>{t(s.texto, lang)}</p></>))}
+  </section>
+</Base>
+<style>
+  .texto-legal { max-width: 760px; }
+  .texto-legal h2 { font-size: 1.3rem; margin-top: 32px; }
+</style>

@@ -1,0 +1,44 @@
+---
+import ui from '../textos/ui.json';
+import contato from '../config/contato.json';
+import { t, href } from '../lib/i18n.js';
+import { linkEmail } from '../lib/whatsapp.js';
+import WhatsAppCTA from './WhatsAppCTA.astro';
+
+const { lang } = Astro.props;
+const ano = new Date().getFullYear();
+---
+<footer class="rodape" id="contato">
+  <div class="container rodape-grade">
+    <div>
+      <p class="rodape-marca">Rock .dev</p>
+      <p class="suave">{t(ui.rodape.descricao, lang)}</p>
+    </div>
+    <div>
+      <h2 class="rodape-titulo">{t(ui.rodape.contato, lang)}</h2>
+      <div class="acoes">
+        <WhatsAppCTA lang={lang} />
+        <a class="botao botao-secundario" href={linkEmail(contato.email, t(ui.rodape.assunto, lang))}>{t(ui.cta.email, lang)}</a>
+      </div>
+      <p class="suave rodape-email">{contato.email}</p>
+    </div>
+    <ul class="rodape-links">
+      <li><a href={contato.linkedin} target="_blank" rel="me noopener">LinkedIn</a></li>
+      <li><a href={contato.github} target="_blank" rel="me noopener">GitHub</a></li>
+      <li><a href={contato.resume} target="_blank" rel="noopener">{t(ui.rodape.resume, lang)}</a></li>
+      <li><a href={href(lang, 'projetos/')}>{t(ui.rodape.projetos, lang)}</a></li>
+      <li><a href={href(lang, 'privacidade/')}>{t(ui.rodape.privacidade, lang)}</a></li>
+    </ul>
+  </div>
+  <p class="container rodape-direitos suave">© {ano} Rock .dev · Guilherme Rocha. {t(ui.rodape.direitos, lang)}</p>
+</footer>
+<style>
+  .rodape { background: var(--superficie); border-top: 1px solid var(--borda); padding-block: 48px 24px; }
+  .rodape-grade { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+  .rodape-marca { font-family: var(--fonte-titulo); font-weight: 700; font-size: 1.3rem; color: var(--primaria); margin: 0 0 .25em; }
+  .rodape-titulo { font-size: 1.1rem; }
+  .rodape-email { margin-top: 12px; overflow-wrap: anywhere; }
+  .rodape-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+  .rodape-links a { display: inline-block; padding: 10px 0; }
+  .rodape-direitos { margin-top: 32px; font-size: .85rem; }
+</style>

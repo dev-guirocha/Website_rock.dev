@@ -1,0 +1,6 @@
+---
+import { svgGrafico } from '../lib/grafico.js';
+
+const { id, titulo, valores, rotulos, tipo = 'barras' } = Astro.props;
+---
+<figure class="grafico" data-grafico={id} data-titulo={titulo} set:html={svgGrafico({ tipo, valores, rotulos, titulo })} />

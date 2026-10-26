@@ -1,0 +1,23 @@
+{
+  "name": "website-rock-dev",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "gerar-demos": "node scripts/gerar-demos.mjs",
+    "imagens": "node scripts/otimizar-imagens.mjs",
+    "test": "astro build && node --test \"tests/*.test.mjs\"",
+    "crivo": "astro build && node scripts/crivo.mjs"
+  },
+  "dependencies": {
+    "astro": "7.3.8"
+  },
+  "devDependencies": {
+    "sharp": "0.35.5"
+  }
+}

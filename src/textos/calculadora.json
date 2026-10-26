@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "titulo": { "pt": "Calculadora do relatório manual", "en": "Manual report calculator" },
+    "descricao": { "pt": "Calcule quanto o seu relatório manual custa por mês e por ano.", "en": "Calculate how much your manual report costs per month and per year." }
+  },
+  "rotulo": { "pt": "Calculadora", "en": "Calculator" },
+  "titulo": { "pt": "Quanto custa o seu relatório manual?", "en": "How much does your manual report cost?" },
+  "texto": { "pt": "Preencha com os seus números. A conta roda no seu navegador: nada é enviado.", "en": "Fill in your own numbers. The math runs in your browser: nothing is sent." },
+  "campos": {
+    "horasMes": { "pt": "Horas por mês que cada pessoa gasta montando relatórios", "en": "Hours per month each person spends building reports" },
+    "custoHora": { "pt": "Custo da hora de trabalho (R$)", "en": "Hourly cost of work (R$)" },
+    "pessoas": { "pt": "Pessoas envolvidas", "en": "People involved" },
+    "investimento": { "pt": "Investimento que você estima para automatizar (R$, opcional)", "en": "Investment you estimate for automation (R$, optional)" }
+  },
+  "resultados": {
+    "mensal": { "pt": "Custo por mês", "en": "Cost per month" },
+    "anual": { "pt": "Custo por ano", "en": "Cost per year" },
+    "retorno": { "pt": "Retorno do investimento", "en": "Payback" },
+    "meses": { "pt": "{n} meses", "en": "{n} months" },
+    "sem-retorno": { "pt": "Informe o investimento", "en": "Enter the investment" }
+  },
+  "premissa": { "pt": "Premissa: o custo é horas × custo da hora × pessoas, e o retorno supõe que a automação elimina essas horas. Na prática parte do tempo continua (conferência, análise), então use o resultado como ordem de grandeza, não como promessa.", "en": "Assumption: cost is hours × hourly cost × people, and payback assumes automation removes those hours. In practice some time remains (checking, analysis), so treat the result as an order of magnitude, not a promise." },
+  "cta": { "pt": "Quero automatizar esse relatório", "en": "I want to automate this report" },
+  "padrao": { "horasMes": 20, "custoHora": 80, "pessoas": 3 }
+}

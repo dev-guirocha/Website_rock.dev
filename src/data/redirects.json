@@ -1,0 +1,19 @@
+{
+  "sobre.html": "/sobre/",
+  "servicos.html": "/solucoes/",
+  "projetos.html": "/projetos/",
+  "projeto-detalhe.html": "/projetos/",
+  "projeto-medcontrol.html": "/projetos/",
+  "projeto-flowdesk.html": "/projetos/",
+  "projeto-walletapp.html": "/projetos/",
+  "projeto-marmitasdaka.html": "/projetos/",
+  "projeto-flashcard.html": "/projetos/",
+  "projeto-pandaloterias.html": "/projetos/",
+  "calculadora-roi.html": "/calculadora/",
+  "contato.html": "/#contato",
+  "politica-de-privacidade.html": "/privacidade/",
+  "insights.html": "/",
+  "artigo-detalhe.html": "/",
+  "artigo-seguranca-api.html": "/",
+  "artigo-design-atomico.html": "/"
+}

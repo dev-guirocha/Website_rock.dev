@@ -1,0 +1,115 @@
+---
+import Base from '../layouts/Base.astro';
+import DemoFrame from '../components/DemoFrame.astro';
+import KpiTile from '../components/KpiTile.astro';
+import MiniChart from '../components/MiniChart.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import Faq from '../components/Faq.astro';
+import home from '../textos/home.json';
+import demos from '../textos/demos.json';
+import dados from '../data/demos/assessoria.json';
+import { t, href } from '../lib/i18n.js';
+import { resumoAssessoria } from '../lib/agregados.js';
+import { compacto, numero } from '../lib/formato.js';
+import { rotulosMes } from '../lib/tabelas.js';
+
+const { lang } = Astro.props;
+const h = home.hero;
+const r = resumoAssessoria(dados, { n: 12 });
+---
+<Base lang={lang} rota="" titulo={t(home.meta.titulo, lang)} descricao={t(home.meta.descricao, lang)}>
+  <section class="container secao hero">
+    <div>
+      <p class="rotulo">{t(h.rotulo, lang)}</p>
+      <h1>{t(h.titulo, lang)}</h1>
+      <p class="lead">{t(h.texto, lang)}</p>
+      <div class="acoes">
+        <WhatsAppCTA lang={lang} mensagem="diagnostico-bi" rotulo={t(h.cta, lang)} />
+        <a class="botao botao-secundario" href={href(lang, 'demos/')}>{t(h.demos, lang)}</a>
+      </div>
+    </div>
+    <DemoFrame lang={lang} titulo={dados.nome} subtitulo={t(h.grafico, lang)}>
+      <div class="kpis">
+        <KpiTile id="captacao" rotulo={t(h.kpis.captacao, lang)} valor={compacto(r.captacao, lang)} />
+        <KpiTile id="receita" rotulo={t(h.kpis.receita, lang)} valor={compacto(r.receita, lang)} />
+        <KpiTile id="clientes" rotulo={t(h.kpis.clientes, lang)} valor={numero(r.clientes, lang)} />
+      </div>
+      <MiniChart id="hero" titulo={t(h.grafico, lang)} valores={r.porMes.map((p) => p.captacao)} rotulos={rotulosMes(r.porMes, 'captacao', lang)} />
+      <a class="link-acao" href={href(lang, 'demos/captacao-assessoria/')}>{t(h.painel, lang)} →</a>
+    </DemoFrame>
+  </section>
+
+  <section class="secao secao-alt" id="frentes">
+    <div class="container">
+      <p class="rotulo">{t(home.frentes.rotulo, lang)}</p>
+      <h2>{t(home.frentes.titulo, lang)}</h2>
+      <div class="grade">
+        {home.frentes.itens.map((f) => (
+          <article class="cartao" data-frente={f.id}>
+            <h3>{t(f.titulo, lang)}</h3>
+            <p>{t(f.texto, lang)}</p>
+            <a class="link-acao" href={href(lang, f.link)}>{t(f.rotulo, lang)} →</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="container secao">
+    <p class="rotulo">{t(home.demos.rotulo, lang)}</p>
+    <h2>{t(home.demos.titulo, lang)}</h2>
+    <div class="grade">
+      {demos.galeria.itens.map((d) => (
+        <article class="cartao">
+          <h3>{t(d.titulo, lang)}</h3>
+          <p>{t(d.texto, lang)}</p>
+          <a class="link-acao" href={href(lang, `demos/${d.id}/`)}>{t(demos.galeria.abrir, lang)} →</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="secao secao-alt">
+    <div class="container">
+      <p class="rotulo">{t(home.metodo.rotulo, lang)}</p>
+      <h2>{t(home.metodo.titulo, lang)}</h2>
+      <ol class="passos">
+        {home.metodo.passos.map((p) => <li class="passo"><h3>{t(p.titulo, lang)}</h3><p>{t(p.texto, lang)}</p></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="container secao">
+    <div class="cartao chamada">
+      <div>
+        <h2>{t(home.calculadora.titulo, lang)}</h2>
+        <p>{t(home.calculadora.texto, lang)}</p>
+      </div>
+      <a class="botao botao-secundario" href={href(lang, 'calculadora/')}>{t(home.calculadora.cta, lang)}</a>
+    </div>
+  </section>
+
+  <section class="container secao" id="faq">
+    <h2>{t(home.faq.titulo, lang)}</h2>
+    <Faq lang={lang} itens={home.faq.itens} />
+  </section>
+
+  <section class="secao final">
+    <div class="container">
+      <h2>{t(home.final.titulo, lang)}</h2>
+      <p class="lead">{t(home.final.texto, lang)}</p>
+      <div class="acoes"><WhatsAppCTA lang={lang} /></div>
+    </div>
+  </section>
+</Base>
+<style>
+  .hero { display: grid; gap: 40px; align-items: center; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+  .passos { list-style: none; counter-reset: passo; margin: 0; padding: 0; display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+  .passo { counter-increment: passo; }
+  .passo::before { content: counter(passo, decimal-leading-zero); display: block; margin-bottom: 8px; font-family: var(--fonte-numero); font-weight: 600; color: var(--acento); }
+  .chamada { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; }
+  .chamada h2 { font-size: 1.5rem; }
+  .final { background: var(--primaria); color: var(--primaria-texto); }
+  .final h2, .final .lead { color: var(--primaria-texto); }
+  .final :global(.botao-primario:hover) { background: var(--acento); box-shadow: 0 0 0 2px var(--primaria-texto); }
+</style>

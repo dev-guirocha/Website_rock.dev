@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://squadrockdev.com.br/sitemap.xml

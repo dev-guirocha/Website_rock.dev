@@ -1,0 +1,23 @@
+---
+import WhatsAppCTA from './WhatsAppCTA.astro';
+import c from '../textos/cursos.json';
+import { t } from '../lib/i18n.js';
+
+const { lang, trilha } = Astro.props;
+---
+<article class="cartao trilha" data-trilha={trilha.id}>
+  <span class="etiqueta">{t(c['em-breve'], lang)}</span>
+  <h2>{t(trilha.titulo, lang)}</h2>
+  <h3>{t(c.publico, lang)}</h3>
+  <p>{t(trilha.publico, lang)}</p>
+  <h3>{t(c.temas, lang)}</h3>
+  <ul class="lista">{trilha.temas.map((tema) => <li>{t(tema, lang)}</li>)}</ul>
+  <div class="trilha-acao"><WhatsAppCTA lang={lang} mensagem={trilha.mensagem} rotulo={t(c.interesse, lang)} variante="secundario" /></div>
+</article>
+<style>
+  .trilha { display: flex; flex-direction: column; }
+  .trilha h2 { font-size: 1.4rem; margin-top: 12px; }
+  .trilha h3 { font-family: var(--fonte-texto); font-size: 1rem; margin-top: 8px; }
+  .trilha-acao { margin-top: auto; padding-top: 8px; }
+  .etiqueta { align-self: flex-start; font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--primaria-texto); background: var(--primaria); padding: 4px 10px; border-radius: 999px; }
+</style>

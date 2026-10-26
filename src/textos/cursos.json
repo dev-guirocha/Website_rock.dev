@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "titulo": { "pt": "Cursos de IA aplicada", "en": "Applied AI courses" },
+    "descricao": { "pt": "Trilhas de IA aplicada por área: assessores de investimento, financeiro e pequenos negócios. Em breve.", "en": "Applied AI tracks by field: investment advisors, finance and small businesses. Coming soon." }
+  },
+  "rotulo": { "pt": "Em breve", "en": "Coming soon" },
+  "titulo": { "pt": "Cursos de IA aplicada, por área", "en": "Applied AI courses, by field" },
+  "texto": { "pt": "Trilhas práticas, com exemplos do dia a dia de cada área. As turmas ainda não abriram: deixe o seu interesse e eu aviso quando a sua trilha começar.", "en": "Hands-on tracks with everyday examples from each field. Enrollment hasn't opened yet: register your interest and I'll let you know when your track starts." },
+  "em-breve": { "pt": "Em breve", "en": "Coming soon" },
+  "publico": { "pt": "Para quem", "en": "Who it's for" },
+  "temas": { "pt": "O que você vai praticar", "en": "What you'll practice" },
+  "interesse": { "pt": "Tenho interesse", "en": "I'm interested" },
+  "trilhas": [
+    {
+      "id": "assessores",
+      "mensagem": "curso-assessores",
+      "titulo": { "pt": "IA para assessores de investimento", "en": "AI for investment advisors" },
+      "publico": { "pt": "Assessores, especialistas e times comerciais de escritórios de investimento.", "en": "Advisors, specialists and sales teams at investment firms." },
+      "temas": [
+        { "pt": "Preparar reuniões com cliente em minutos", "en": "Prepare client meetings in minutes" },
+        { "pt": "Resumir relatórios e cartas de gestores", "en": "Summarize reports and fund manager letters" },
+        { "pt": "Escrever comunicações claras para clientes", "en": "Write clear communications to clients" },
+        { "pt": "Usar IA sem expor dado de cliente", "en": "Use AI without exposing client data" }
+      ]
+    },
+    {
+      "id": "financeiro",
+      "mensagem": "curso-financeiro",
+      "titulo": { "pt": "IA para o financeiro e a controladoria", "en": "AI for finance and controlling" },
+      "publico": { "pt": "Times de finanças, controladoria e BI que fecham números todo mês.", "en": "Finance, controlling and BI teams that close numbers every month." },
+      "temas": [
+        { "pt": "Automatizar conciliações e conferências", "en": "Automate reconciliations and checks" },
+        { "pt": "Analisar planilhas grandes com IA", "en": "Analyze large spreadsheets with AI" },
+        { "pt": "Gerar comentários de resultado a partir do dado", "en": "Generate results commentary from data" },
+        { "pt": "Conferir o que a IA calculou", "en": "Check what the AI calculated" }
+      ]
+    },
+    {
+      "id": "pequenos-negocios",
+      "mensagem": "curso-pequenos-negocios",
+      "titulo": { "pt": "IA para pequenos negócios", "en": "AI for small businesses" },
+      "publico": { "pt": "Donos e gestores de comércio, serviços e clínicas que fazem um pouco de tudo.", "en": "Owners and managers of shops, services and clinics who do a bit of everything." },
+      "temas": [
+        { "pt": "Atendimento e respostas a clientes", "en": "Customer service and replies" },
+        { "pt": "Controle de vendas e estoque com planilha e IA", "en": "Sales and inventory tracking with spreadsheets and AI" },
+        { "pt": "Textos para redes e divulgação", "en": "Copy for social media and promotion" },
+        { "pt": "Organizar a rotina com assistentes", "en": "Organize your routine with assistants" }
+      ]
+    }
+  ]
+}

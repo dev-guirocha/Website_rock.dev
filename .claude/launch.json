@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "website-rock-dev", "runtimeExecutable": "npm", "runtimeArgs": ["run", "preview", "--", "--port", "4321"], "port": 4321 }
+  ]
+}

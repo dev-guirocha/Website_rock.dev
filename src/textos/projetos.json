@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "titulo": { "pt": "Projetos de software", "en": "Software projects" },
+    "descricao": { "pt": "Sistemas e apps que construí antes de focar em dados e IA.", "en": "Systems and apps I built before focusing on data and AI." }
+  },
+  "rotulo": { "pt": "Antes dos dados: software", "en": "Before data: software" },
+  "titulo": { "pt": "Projetos de software", "en": "Software projects" },
+  "texto": { "pt": "Antes de focar em dados e IA, construí sistemas de gestão e produtos digitais. Eles mostram a base de engenharia que hoje sustenta os painéis.", "en": "Before focusing on data and AI, I built management systems and digital products. They show the engineering foundation behind today's dashboards." },
+  "codigo": { "pt": "Ver código", "en": "View code" },
+  "site": { "pt": "Visitar site", "en": "Visit website" },
+  "itens": [
+    { "id": "medcontrol", "nome": "MedControl", "stack": ["Swift", "Node.js", "SQL"], "codigo": "https://github.com/dev-guirocha/MedControlAppNovo", "site": "https://dev-guirocha.github.io/medcontrolapp-site/", "tipo": { "pt": "App mobile de saúde", "en": "Health mobile app" }, "resumo": { "pt": "Gestão de tratamento e medicação: doses, intervalos e consultas com histórico confiável e notificações, para a rotina não depender de memória.", "en": "Treatment and medication management: doses, intervals and appointments with a reliable history and notifications, so the routine doesn't rely on memory." } },
+    { "id": "flowdesk", "nome": "FlowDesk", "imagem": "/images/projetos/flowdesk.webp", "stack": ["React Native", "Expo"], "codigo": "https://github.com/dev-guirocha/Wallet_APP", "tipo": { "pt": "App de gestão para autônomos", "en": "Management app for freelancers" }, "resumo": { "pt": "Agenda, clientes e cobranças num fluxo só, para o profissional autônomo fechar o dia sem conciliar à mão.", "en": "Schedule, clients and billing in a single flow, so freelancers close the day without manual reconciliation." } },
+    { "id": "marmitasdaka", "nome": "Marmitas da Ka", "imagem": "/images/projetos/marmitasdaka.webp", "stack": ["Web", "Firebase"], "codigo": "https://github.com/dev-guirocha/marmitas-da-ka", "site": "https://www.marmitasdaka.com.br", "tipo": { "pt": "Sistema de pedidos e operação", "en": "Orders and operations system" }, "resumo": { "pt": "Pedidos, estoque e entregas sincronizados num painel de gestão, no lugar de planilhas e mensagens soltas.", "en": "Orders, inventory and deliveries synchronized in a management panel, replacing scattered spreadsheets and messages." } },
+    { "id": "flashcard", "nome": "Deutsch Flashcard", "imagem": "/images/projetos/flashcard.webp", "stack": ["React Native", "Expo"], "codigo": "https://github.com/dev-guirocha/Flashcard-deutsch", "tipo": { "pt": "App educacional", "en": "Learning app" }, "resumo": { "pt": "Flashcards de alemão com repetição adaptada aos acertos e erros, funcionando offline.", "en": "German flashcards with repetition adapted to right and wrong answers, working offline." } }
+  ]
+}

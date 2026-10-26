@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "rotulo": { "pt": "Navegação principal", "en": "Main navigation" },
+    "pular": { "pt": "Pular para o conteúdo", "en": "Skip to content" },
+    "idioma": { "pt": "Idioma", "en": "Language" },
+    "solucoes": { "pt": "Soluções", "en": "Solutions" },
+    "demos": { "pt": "Demos", "en": "Demos" },
+    "cursos": { "pt": "Cursos", "en": "Courses" },
+    "calculadora": { "pt": "Calculadora", "en": "Calculator" },
+    "sobre": { "pt": "Sobre", "en": "About" }
+  },
+  "cta": {
+    "whatsapp": { "pt": "Falar no WhatsApp", "en": "Chat on WhatsApp" },
+    "email": { "pt": "Enviar e-mail", "en": "Send an email" }
+  },
+  "mensagens": {
+    "geral": { "pt": "Olá! Vim pelo site da Rock .dev e quero conversar sobre um projeto.", "en": "Hi! I found the Rock .dev website and would like to talk about a project." },
+    "diagnostico-bi": { "pt": "Olá! Vim pelo site e quero um diagnóstico de BI.", "en": "Hi! I found the website and would like a BI assessment." },
+    "ia-aplicada": { "pt": "Olá! Vim pelo site e quero entender como aplicar IA no meu negócio.", "en": "Hi! I found the website and want to understand how to apply AI to my business." },
+    "curso-assessores": { "pt": "Olá! Tenho interesse na trilha IA para assessores de investimento.", "en": "Hi! I'm interested in the AI for investment advisors track." },
+    "curso-financeiro": { "pt": "Olá! Tenho interesse na trilha IA para o financeiro e a controladoria.", "en": "Hi! I'm interested in the AI for finance and controlling track." },
+    "curso-pequenos-negocios": { "pt": "Olá! Tenho interesse na trilha IA para pequenos negócios.", "en": "Hi! I'm interested in the AI for small businesses track." },
+    "calculadora": { "pt": "Olá! Fiz a conta na calculadora do site e quero automatizar meus relatórios.", "en": "Hi! I used the calculator on the website and want to automate my reports." }
+  },
+  "rodape": {
+    "descricao": { "pt": "Dados e IA para quem decide.", "en": "Data and AI for decision-makers." },
+    "contato": { "pt": "Contato", "en": "Contact" },
+    "assunto": { "pt": "Contato pelo site da Rock .dev", "en": "Contact from the Rock .dev website" },
+    "resume": { "pt": "Currículo", "en": "Résumé" },
+    "projetos": { "pt": "Projetos de software", "en": "Software projects" },
+    "privacidade": { "pt": "Privacidade", "en": "Privacy" },
+    "direitos": { "pt": "Todos os direitos reservados.", "en": "All rights reserved." }
+  },
+  "selo": { "pt": "Dados fictícios", "en": "Fictional data" },
+  "selo-detalhe": { "pt": "Empresa, pessoas e números inventados para demonstração.", "en": "Company, people and figures invented for demonstration." }
+}

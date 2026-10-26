@@ -1,0 +1,16 @@
+---
+import ui from '../textos/ui.json';
+import { t } from '../lib/i18n.js';
+
+const { lang, titulo, subtitulo } = Astro.props;
+---
+<section class="demo" data-demo>
+  <div class="demo-topo">
+    <div>
+      <p class="demo-empresa">{titulo}</p>
+      {subtitulo && <p class="demo-sub">{subtitulo}</p>}
+    </div>
+    <span class="selo" data-selo title={t(ui['selo-detalhe'], lang)}>{t(ui.selo, lang)}</span>
+  </div>
+  <slot />
+</section>

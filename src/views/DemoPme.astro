@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import DemoFrame from '../components/DemoFrame.astro';
+import KpiTile from '../components/KpiTile.astro';
+import MiniChart from '../components/MiniChart.astro';
+import textos from '../textos/demos.json';
+import dados from '../data/demos/pme.json';
+import { t, href, preencher } from '../lib/i18n.js';
+import { jsonEmbutido } from '../lib/html.js';
+import { resumoPme } from '../lib/agregados.js';
+import { compacto, pct } from '../lib/formato.js';
+import { htmlCategorias, rotulosMes } from '../lib/tabelas.js';
+
+const { lang } = Astro.props;
+const p = textos.pme;
+const comum = textos.comum;
+const r = resumoPme(dados, { n: 12 });
+---
+<Base lang={lang} rota="demos/vendas-pme/" titulo={t(p.meta.titulo, lang)} descricao={t(p.meta.descricao, lang)}>
+  <section class="container secao">
+    <p><a class="link-acao" href={href(lang, 'demos/')}>{t(comum.voltar, lang)}</a></p>
+    <h1>{t(p.titulo, lang)}</h1>
+    <p class="lead">{t(p.texto, lang)}</p>
+    <div data-painel="pme">
+      <DemoFrame lang={lang} titulo={dados.nome} subtitulo={t(p.subtitulo, lang)}>
+        <form class="filtros" data-filtros hidden>
+          <label>{t(comum.periodo, lang)}
+            <select name="periodo">{[3, 6, 12].map((n) => <option value={n} selected={n === 12}>{preencher(t(comum.meses, lang), { n })}</option>)}</select>
+          </label>
+          <label>{t(p.categoria, lang)}
+            <select name="categoria">
+              <option value="todas">{t(comum.todas, lang)}</option>
+              {dados.categorias.map((c) => <option value={c.id}>{t(c.nome, lang)}</option>)}
+            </select>
+          </label>
+        </form>
+        <div class="kpis">
+          <KpiTile id="vendas" rotulo={t(p.kpis.vendas, lang)} valor={compacto(r.vendas, lang)} />
+          <KpiTile id="custo" rotulo={t(p.kpis.custo, lang)} valor={compacto(r.custo, lang)} />
+          <KpiTile id="margem" rotulo={t(p.kpis.margem, lang)} valor={compacto(r.margem, lang)} />
+          <KpiTile id="margem-pct" rotulo={t(p.kpis['margem-pct'], lang)} valor={pct(r.margemPct, lang)} />
+        </div>
+        <MiniChart id="vendas" tipo="linha" titulo={t(p.grafico, lang)} valores={r.porMes.map((m) => m.vendas)} rotulos={rotulosMes(r.porMes, 'vendas', lang)} />
+        <h2>{t(p.tabela, lang)}</h2>
+        <table>
+          <thead><tr><th scope="col">{t(p.colunas.categoria, lang)}</th><th scope="col" class="num">{t(p.colunas.vendas, lang)}</th><th scope="col" class="num">{t(p.colunas.margem, lang)}</th></tr></thead>
+          <tbody data-categorias set:html={htmlCategorias(r.porCategoria, lang)} />
+        </table>
+        <script type="application/json" data-dados is:inline set:html={jsonEmbutido(dados)} />
+      </DemoFrame>
+    </div>
+    <h2>{t(comum['como-ler'], lang)}</h2>
+    <p>{t(p.explicacao, lang)}</p>
+  </section>
+</Base>
+<script>
+  import '../scripts/painel-pme.js';
+</script>

@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import DemoFrame from '../components/DemoFrame.astro';
+import KpiTile from '../components/KpiTile.astro';
+import MiniChart from '../components/MiniChart.astro';
+import textos from '../textos/demos.json';
+import dados from '../data/demos/assessoria.json';
+import { t, href, preencher } from '../lib/i18n.js';
+import { jsonEmbutido } from '../lib/html.js';
+import { resumoAssessoria } from '../lib/agregados.js';
+import { compacto, moeda, numero } from '../lib/formato.js';
+import { htmlRanking, rotulosMes } from '../lib/tabelas.js';
+
+const { lang } = Astro.props;
+const c = textos.captacao;
+const comum = textos.comum;
+const r = resumoAssessoria(dados, { n: 12 });
+---
+<Base lang={lang} rota="demos/captacao-assessoria/" titulo={t(c.meta.titulo, lang)} descricao={t(c.meta.descricao, lang)}>
+  <section class="container secao">
+    <p><a class="link-acao" href={href(lang, 'demos/')}>{t(comum.voltar, lang)}</a></p>
+    <h1>{t(c.titulo, lang)}</h1>
+    <p class="lead">{t(c.texto, lang)}</p>
+    <div data-painel="assessoria">
+      <DemoFrame lang={lang} titulo={dados.nome} subtitulo={t(c.subtitulo, lang)}>
+        <form class="filtros" data-filtros hidden>
+          <label>{t(comum.periodo, lang)}
+            <select name="periodo">{[3, 6, 12].map((n) => <option value={n} selected={n === 12}>{preencher(t(comum.meses, lang), { n })}</option>)}</select>
+          </label>
+          <label>{t(c.assessor, lang)}
+            <select name="assessor">
+              <option value="todos">{t(comum.todos, lang)}</option>
+              {dados.assessores.map((a) => <option value={a.id}>{a.nome}</option>)}
+            </select>
+          </label>
+        </form>
+        <div class="kpis">
+          <KpiTile id="captacao" rotulo={t(c.kpis.captacao, lang)} valor={compacto(r.captacao, lang)} />
+          <KpiTile id="receita" rotulo={t(c.kpis.receita, lang)} valor={compacto(r.receita, lang)} />
+          <KpiTile id="clientes" rotulo={t(c.kpis.clientes, lang)} valor={numero(r.clientes, lang)} />
+          <KpiTile id="receita-cliente" rotulo={t(c.kpis['receita-cliente'], lang)} valor={moeda(r.receitaPorCliente, lang, 2)} />
+        </div>
+        <MiniChart id="captacao" titulo={t(c.grafico, lang)} valores={r.porMes.map((p) => p.captacao)} rotulos={rotulosMes(r.porMes, 'captacao', lang)} />
+        <h2>{t(c.ranking, lang)}</h2>
+        <table>
+          <thead><tr><th scope="col">{t(c.colunas.assessor, lang)}</th><th scope="col" class="num">{t(c.colunas.captacao, lang)}</th></tr></thead>
+          <tbody data-ranking set:html={htmlRanking(r.ranking, lang)} />
+        </table>
+        <script type="application/json" data-dados is:inline set:html={jsonEmbutido(dados)} />
+      </DemoFrame>
+    </div>
+    <h2>{t(comum['como-ler'], lang)}</h2>
+    <p>{t(c.explicacao, lang)}</p>
+  </section>
+</Base>
+<script>
+  import '../scripts/painel-assessoria.js';
+</script>

@@ -1,0 +1,11 @@
+---
+import ui from '../textos/ui.json';
+import contato from '../config/contato.json';
+import { t } from '../lib/i18n.js';
+import { linkWhatsApp } from '../lib/whatsapp.js';
+
+const { lang, mensagem = 'geral', rotulo, variante = 'primario' } = Astro.props;
+if (!ui.mensagens[mensagem]) throw new Error(`mensagem de WhatsApp desconhecida: ${mensagem}`);
+const link = linkWhatsApp(contato.whatsapp, t(ui.mensagens[mensagem], lang));
+---
+<a class:list={['botao', `botao-${variante}`]} href={link} target="_blank" rel="noopener" data-whatsapp={mensagem}>{rotulo ?? t(ui.cta.whatsapp, lang)}</a>
