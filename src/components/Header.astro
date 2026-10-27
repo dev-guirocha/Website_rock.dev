@@ -1,0 +1,41 @@
+---
+import ui from '../textos/ui.json';
+import { t, href, htmlLang, LANGS } from '../lib/i18n.js';
+import WhatsAppCTA from './WhatsAppCTA.astro';
+
+const { lang, rota } = Astro.props;
+const itens = ['solucoes', 'demos', 'cursos', 'calculadora', 'sobre'];
+const ativo = (id) => rota.startsWith(`${id}/`);
+---
+<header class="topo">
+  <div class="container topo-linha">
+    <a class="marca" href={href(lang, '')}><img src="/images/logo-64.png" width="32" height="32" alt="" /><span>Rock .dev</span></a>
+    <nav aria-label={t(ui.nav.rotulo, lang)}>
+      <ul>
+        {itens.map((id) => <li><a href={href(lang, `${id}/`)} aria-current={ativo(id) ? 'page' : undefined}>{t(ui.nav[id], lang)}</a></li>)}
+      </ul>
+    </nav>
+    <div class="topo-acoes">
+      <div class="idiomas" role="group" aria-label={t(ui.nav.idioma, lang)}>
+        {LANGS.map((l) => <a href={href(l, rota)} hreflang={htmlLang(l)} lang={htmlLang(l)} aria-current={l === lang ? 'true' : undefined}>{l.toUpperCase()}</a>)}
+      </div>
+      <WhatsAppCTA lang={lang} />
+    </div>
+  </div>
+</header>
+<style>
+  .topo { background: var(--superficie); border-bottom: 1px solid var(--borda); }
+  .topo-linha { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-block: 10px; }
+  .marca { display: inline-flex; align-items: center; gap: 8px; font-family: var(--fonte-titulo); font-weight: 700; font-size: 1.2rem; color: var(--primaria); text-decoration: none; min-height: 44px; }
+  nav ul { display: flex; flex-wrap: wrap; gap: 0 20px; list-style: none; margin: 0; padding: 0; }
+  nav a { display: inline-block; padding: 10px 0; color: var(--texto); text-decoration: none; font-weight: 500; }
+  nav a[aria-current='page'] { color: var(--acento); box-shadow: inset 0 -2px 0 var(--acento); }
+  .topo-acoes { display: flex; align-items: center; gap: 8px; }
+  .idiomas { display: flex; }
+  .idiomas a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 10px 6px; text-align: center; font-size: .85rem; font-weight: 600; color: var(--texto-suave); text-decoration: none; }
+  .idiomas a[aria-current='true'] { color: var(--primaria); text-decoration: underline; }
+  @media (max-width: 760px) {
+    nav { order: 3; width: 100%; }
+    .topo-acoes :global(.botao) { padding: 10px 14px; font-size: .9rem; }
+  }
+</style>

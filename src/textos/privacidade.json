@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "titulo": { "pt": "Política de privacidade", "en": "Privacy policy" },
+    "descricao": { "pt": "O que o site da Rock .dev coleta e como funciona o contato.", "en": "What the Rock .dev website collects and how contact works." }
+  },
+  "titulo": { "pt": "Política de privacidade", "en": "Privacy policy" },
+  "atualizado": { "pt": "Atualizada em 26/10/2026.", "en": "Updated on October 26, 2026." },
+  "secoes": [
+    { "titulo": { "pt": "O que este site coleta", "en": "What this site collects" }, "texto": { "pt": "Eu não coleto dados diretamente. O site não tem formulário, não usa cookies de rastreamento nem ferramentas de análise de visitas.", "en": "I don't collect data directly. The site has no forms and uses no tracking cookies or visitor analytics tools." } },
+    { "titulo": { "pt": "Contato por WhatsApp e e-mail", "en": "Contact by WhatsApp and email" }, "texto": { "pt": "Os botões de contato abrem o WhatsApp ou o seu programa de e-mail. A partir daí a conversa segue as políticas desses serviços, e o que você enviar é usado só para responder ao seu contato.", "en": "The contact buttons open WhatsApp or your email app. From there the conversation follows those services' policies, and anything you send is used only to reply to you." } },
+    { "titulo": { "pt": "Hospedagem e fontes", "en": "Hosting and fonts" }, "texto": { "pt": "O site é hospedado no GitHub Pages e carrega fontes do Google Fonts. Esses serviços podem registrar dados técnicos de acesso, como o endereço IP, conforme as políticas deles.", "en": "The site is hosted on GitHub Pages and loads fonts from Google Fonts. These services may log technical access data, such as IP address, under their own policies." } },
+    { "titulo": { "pt": "Calculadora e demos", "en": "Calculator and demos" }, "texto": { "pt": "A calculadora e as demos funcionam inteiramente no seu navegador. Nada do que você digita é enviado.", "en": "The calculator and demos run entirely in your browser. Nothing you type is sent." } },
+    { "titulo": { "pt": "Dúvidas", "en": "Questions" }, "texto": { "pt": "Quem responde por este site é Guilherme Rocha (Rock .dev). Escreva para o e-mail no rodapé desta página.", "en": "This site is run by Guilherme Rocha (Rock .dev). Write to the email address in the footer of this page." } }
+  ]
+}

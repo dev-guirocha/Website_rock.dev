@@ -1,0 +1,645 @@
+{
+  "nome": "Assessoria Horizonte",
+  "ficticio": true,
+  "semente": 20261026,
+  "meses": [
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "assessores": [
+    {
+      "id": "A",
+      "nome": "Assessor A",
+      "serie": [
+        {
+          "mes": "2025-11",
+          "captacao": 22000,
+          "receita": 12593,
+          "clientes": 73
+        },
+        {
+          "mes": "2025-12",
+          "captacao": 209000,
+          "receita": 16129,
+          "clientes": 77
+        },
+        {
+          "mes": "2026-01",
+          "captacao": 298000,
+          "receita": 17749,
+          "clientes": 75
+        },
+        {
+          "mes": "2026-02",
+          "captacao": 300000,
+          "receita": 17600,
+          "clientes": 79
+        },
+        {
+          "mes": "2026-03",
+          "captacao": 141000,
+          "receita": 14872,
+          "clientes": 79
+        },
+        {
+          "mes": "2026-04",
+          "captacao": -23000,
+          "receita": 9808,
+          "clientes": 79
+        },
+        {
+          "mes": "2026-05",
+          "captacao": 224000,
+          "receita": 9698,
+          "clientes": 82
+        },
+        {
+          "mes": "2026-06",
+          "captacao": 208000,
+          "receita": 22218,
+          "clientes": 86
+        },
+        {
+          "mes": "2026-07",
+          "captacao": 64000,
+          "receita": 20251,
+          "clientes": 84
+        },
+        {
+          "mes": "2026-08",
+          "captacao": 279000,
+          "receita": 16655,
+          "clientes": 84
+        },
+        {
+          "mes": "2026-09",
+          "captacao": 59000,
+          "receita": 13312,
+          "clientes": 86
+        },
+        {
+          "mes": "2026-10",
+          "captacao": -76000,
+          "receita": 8191,
+          "clientes": 84
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "nome": "Assessor B",
+      "serie": [
+        {
+          "mes": "2025-11",
+          "captacao": -244000,
+          "receita": 7011,
+          "clientes": 33
+        },
+        {
+          "mes": "2025-12",
+          "captacao": 1065000,
+          "receita": 7478,
+          "clientes": 37
+        },
+        {
+          "mes": "2026-01",
+          "captacao": 97000,
+          "receita": 5764,
+          "clientes": 37
+        },
+        {
+          "mes": "2026-02",
+          "captacao": 55000,
+          "receita": 5611,
+          "clientes": 39
+        },
+        {
+          "mes": "2026-03",
+          "captacao": -263000,
+          "receita": 7905,
+          "clientes": 41
+        },
+        {
+          "mes": "2026-04",
+          "captacao": -128000,
+          "receita": 10007,
+          "clientes": 40
+        },
+        {
+          "mes": "2026-05",
+          "captacao": -132000,
+          "receita": 5857,
+          "clientes": 41
+        },
+        {
+          "mes": "2026-06",
+          "captacao": 81000,
+          "receita": 10174,
+          "clientes": 43
+        },
+        {
+          "mes": "2026-07",
+          "captacao": 801000,
+          "receita": 8650,
+          "clientes": 47
+        },
+        {
+          "mes": "2026-08",
+          "captacao": 960000,
+          "receita": 7893,
+          "clientes": 49
+        },
+        {
+          "mes": "2026-09",
+          "captacao": 727000,
+          "receita": 5804,
+          "clientes": 52
+        },
+        {
+          "mes": "2026-10",
+          "captacao": 520000,
+          "receita": 13002,
+          "clientes": 54
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "nome": "Assessor C",
+      "serie": [
+        {
+          "mes": "2025-11",
+          "captacao": 141000,
+          "receita": 12070,
+          "clientes": 76
+        },
+        {
+          "mes": "2025-12",
+          "captacao": 165000,
+          "receita": 19703,
+          "clientes": 79
+        },
+        {
+          "mes": "2026-01",
+          "captacao": -123000,
+          "receita": 14967,
+          "clientes": 84
+        },
+        {
+          "mes": "2026-02",
+          "captacao": 381000,
+          "receita": 14751,
+          "clientes": 89
+        },
+        {
+          "mes": "2026-03",
+          "captacao": 355000,
+          "receita": 21854,
+          "clientes": 92
+        },
+        {
+          "mes": "2026-04",
+          "captacao": 255000,
+          "receita": 12312,
+          "clientes": 94
+        },
+        {
+          "mes": "2026-05",
+          "captacao": -67000,
+          "receita": 20476,
+          "clientes": 94
+        },
+        {
+          "mes": "2026-06",
+          "captacao": 316000,
+          "receita": 16104,
+          "clientes": 98
+        },
+        {
+          "mes": "2026-07",
+          "captacao": 353000,
+          "receita": 22579,
+          "clientes": 99
+        },
+        {
+          "mes": "2026-08",
+          "captacao": -45000,
+          "receita": 16999,
+          "clientes": 101
+        },
+        {
+          "mes": "2026-09",
+          "captacao": 166000,
+          "receita": 22539,
+          "clientes": 101
+        },
+        {
+          "mes": "2026-10",
+          "captacao": 63000,
+          "receita": 16673,
+          "clientes": 104
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "nome": "Assessor D",
+      "serie": [
+        {
+          "mes": "2025-11",
+          "captacao": -40000,
+          "receita": 6829,
+          "clientes": 70
+        },
+        {
+          "mes": "2025-12",
+          "captacao": -192000,
+          "receita": 10223,
+          "clientes": 68
+        },
+        {
+          "mes": "2026-01",
+          "captacao": 598000,
+          "receita": 11646,
+          "clientes": 72
+        },
+        {
+          "mes": "2026-02",
+          "captacao": 1041000,
+          "receita": 11188,
+          "clientes": 73
+        },
+        {
+          "mes": "2026-03",
+          "captacao": 584000,
+          "receita": 11458,
+          "clientes": 78
+        },
+        {
+          "mes": "2026-04",
+          "captacao": 387000,
+          "receita": 14120,
+          "clientes": 80
+        },
+        {
+          "mes": "2026-05",
+          "captacao": 222000,
+          "receita": 10682,
+          "clientes": 77
+        },
+        {
+          "mes": "2026-06",
+          "captacao": 1111000,
+          "receita": 9765,
+          "clientes": 75
+        },
+        {
+          "mes": "2026-07",
+          "captacao": -209000,
+          "receita": 14477,
+          "clientes": 80
+        },
+        {
+          "mes": "2026-08",
+          "captacao": 454000,
+          "receita": 7319,
+          "clientes": 80
+        },
+        {
+          "mes": "2026-09",
+          "captacao": 701000,
+          "receita": 18895,
+          "clientes": 81
+        },
+        {
+          "mes": "2026-10",
+          "captacao": 766000,
+          "receita": 18908,
+          "clientes": 79
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "nome": "Assessor E",
+      "serie": [
+        {
+          "mes": "2025-11",
+          "captacao": 277000,
+          "receita": 5928,
+          "clientes": 48
+        },
+        {
+          "mes": "2025-12",
+          "captacao": 693000,
+          "receita": 7815,
+          "clientes": 49
+        },
+        {
+          "mes": "2026-01",
+          "captacao": 392000,
+          "receita": 6770,
+          "clientes": 49
+        },
+        {
+          "mes": "2026-02",
+          "captacao": -132000,
+          "receita": 10162,
+          "clientes": 50
+        },
+        {
+          "mes": "2026-03",
+          "captacao": 286000,
+          "receita": 6610,
+          "clientes": 55
+        },
+        {
+          "mes": "2026-04",
+          "captacao": 389000,
+          "receita": 12858,
+          "clientes": 56
+        },
+        {
+          "mes": "2026-05",
+          "captacao": 134000,
+          "receita": 12067,
+          "clientes": 60
+        },
+        {
+          "mes": "2026-06",
+          "captacao": 427000,
+          "receita": 13639,
+          "clientes": 58
+        },
+        {
+          "mes": "2026-07",
+          "captacao": 913000,
+          "receita": 6312,
+          "clientes": 57
+        },
+        {
+          "mes": "2026-08",
+          "captacao": 561000,
+          "receita": 9825,
+          "clientes": 60
+        },
+        {
+          "mes": "2026-09",
+          "captacao": 699000,
+          "receita": 14417,
+          "clientes": 61
+        },
+        {
+          "mes": "2026-10",
+          "captacao": 776000,
+          "receita": 13097,
+          "clientes": 64
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "nome": "Assessor F",
+      "serie": [
+        {
+          "mes": "2025-11",
+          "captacao": 928000,
+          "receita": 9799,
+          "clientes": 72
+        },
+        {
+          "mes": "2025-12",
+          "captacao": 379000,
+          "receita": 7373,
+          "clientes": 71
+        },
+        {
+          "mes": "2026-01",
+          "captacao": 139000,
+          "receita": 7965,
+          "clientes": 76
+        },
+        {
+          "mes": "2026-02",
+          "captacao": -145000,
+          "receita": 12298,
+          "clientes": 76
+        },
+        {
+          "mes": "2026-03",
+          "captacao": -1000,
+          "receita": 13118,
+          "clientes": 75
+        },
+        {
+          "mes": "2026-04",
+          "captacao": 703000,
+          "receita": 15584,
+          "clientes": 76
+        },
+        {
+          "mes": "2026-05",
+          "captacao": 1055000,
+          "receita": 8532,
+          "clientes": 78
+        },
+        {
+          "mes": "2026-06",
+          "captacao": 437000,
+          "receita": 9823,
+          "clientes": 81
+        },
+        {
+          "mes": "2026-07",
+          "captacao": 893000,
+          "receita": 17413,
+          "clientes": 82
+        },
+        {
+          "mes": "2026-08",
+          "captacao": 1070000,
+          "receita": 13777,
+          "clientes": 85
+        },
+        {
+          "mes": "2026-09",
+          "captacao": 192000,
+          "receita": 13074,
+          "clientes": 86
+        },
+        {
+          "mes": "2026-10",
+          "captacao": 573000,
+          "receita": 13214,
+          "clientes": 87
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "nome": "Assessor G",
+      "serie": [
+        {
+          "mes": "2025-11",
+          "captacao": 252000,
+          "receita": 14159,
+          "clientes": 61
+        },
+        {
+          "mes": "2025-12",
+          "captacao": -9000,
+          "receita": 6449,
+          "clientes": 63
+        },
+        {
+          "mes": "2026-01",
+          "captacao": 194000,
+          "receita": 8566,
+          "clientes": 65
+        },
+        {
+          "mes": "2026-02",
+          "captacao": -24000,
+          "receita": 5687,
+          "clientes": 63
+        },
+        {
+          "mes": "2026-03",
+          "captacao": -56000,
+          "receita": 15332,
+          "clientes": 60
+        },
+        {
+          "mes": "2026-04",
+          "captacao": -37000,
+          "receita": 6113,
+          "clientes": 63
+        },
+        {
+          "mes": "2026-05",
+          "captacao": 267000,
+          "receita": 13444,
+          "clientes": 61
+        },
+        {
+          "mes": "2026-06",
+          "captacao": 163000,
+          "receita": 7580,
+          "clientes": 64
+        },
+        {
+          "mes": "2026-07",
+          "captacao": 195000,
+          "receita": 9573,
+          "clientes": 64
+        },
+        {
+          "mes": "2026-08",
+          "captacao": 133000,
+          "receita": 13999,
+          "clientes": 66
+        },
+        {
+          "mes": "2026-09",
+          "captacao": -9000,
+          "receita": 16439,
+          "clientes": 66
+        },
+        {
+          "mes": "2026-10",
+          "captacao": 251000,
+          "receita": 9620,
+          "clientes": 63
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "nome": "Assessor H",
+      "serie": [
+        {
+          "mes": "2025-11",
+          "captacao": 187000,
+          "receita": 9025,
+          "clientes": 40
+        },
+        {
+          "mes": "2025-12",
+          "captacao": 896000,
+          "receita": 9130,
+          "clientes": 44
+        },
+        {
+          "mes": "2026-01",
+          "captacao": 964000,
+          "receita": 5165,
+          "clientes": 41
+        },
+        {
+          "mes": "2026-02",
+          "captacao": 275000,
+          "receita": 5088,
+          "clientes": 42
+        },
+        {
+          "mes": "2026-03",
+          "captacao": 915000,
+          "receita": 10409,
+          "clientes": 44
+        },
+        {
+          "mes": "2026-04",
+          "captacao": -178000,
+          "receita": 8372,
+          "clientes": 49
+        },
+        {
+          "mes": "2026-05",
+          "captacao": 55000,
+          "receita": 8410,
+          "clientes": 53
+        },
+        {
+          "mes": "2026-06",
+          "captacao": 146000,
+          "receita": 6294,
+          "clientes": 55
+        },
+        {
+          "mes": "2026-07",
+          "captacao": -55000,
+          "receita": 5839,
+          "clientes": 55
+        },
+        {
+          "mes": "2026-08",
+          "captacao": 431000,
+          "receita": 13029,
+          "clientes": 56
+        },
+        {
+          "mes": "2026-09",
+          "captacao": 112000,
+          "receita": 10931,
+          "clientes": 61
+        },
+        {
+          "mes": "2026-10",
+          "captacao": 1232000,
+          "receita": 16907,
+          "clientes": 66
+        }
+      ]
+    }
+  ]
+}

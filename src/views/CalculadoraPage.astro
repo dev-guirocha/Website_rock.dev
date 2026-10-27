@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import c from '../textos/calculadora.json';
+import { t } from '../lib/i18n.js';
+import { calcular, LIMITES } from '../lib/calculadora.js';
+import { moeda } from '../lib/formato.js';
+
+const { lang } = Astro.props;
+const r = calcular({ ...c.padrao, investimento: '' });
+const campos = [
+  ['horasMes', c.padrao.horasMes, 'any'],
+  ['custoHora', c.padrao.custoHora, '0.01'],
+  ['pessoas', c.padrao.pessoas, '1'],
+  ['investimento', '', '0.01'],
+];
+---
+<Base lang={lang} rota="calculadora/" titulo={t(c.meta.titulo, lang)} descricao={t(c.meta.descricao, lang)}>
+  <section class="container secao">
+    <p class="rotulo">{t(c.rotulo, lang)}</p>
+    <h1>{t(c.titulo, lang)}</h1>
+    <p class="lead">{t(c.texto, lang)}</p>
+    <form class="calculadora cartao" data-calculadora data-meses={t(c.resultados.meses, lang)} data-sem-retorno={t(c.resultados['sem-retorno'], lang)}>
+      <div class="campos">
+        {campos.map(([id, valor, passo]) => (
+          <label class="campo">{t(c.campos[id], lang)}<input type="number" name={id} min="0" max={LIMITES[id]} step={passo} inputmode="decimal" value={valor} /></label>
+        ))}
+      </div>
+      <div class="resultados">
+        <p><span>{t(c.resultados.mensal, lang)}</span><output data-resultado="mensal">{moeda(r.custoMensal, lang)}</output></p>
+        <p><span>{t(c.resultados.anual, lang)}</span><output data-resultado="anual">{moeda(r.custoAnual, lang)}</output></p>
+        <p><span>{t(c.resultados.retorno, lang)}</span><output data-resultado="retorno">{t(c.resultados['sem-retorno'], lang)}</output></p>
+      </div>
+    </form>
+    <p class="suave premissa">{t(c.premissa, lang)}</p>
+    <div class="acoes"><WhatsAppCTA lang={lang} mensagem="calculadora" rotulo={t(c.cta, lang)} /></div>
+  </section>
+</Base>
+<script>
+  import '../scripts/calculadora.js';
+</script>
+<style>
+  .calculadora { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); margin-top: 24px; }
+  .campos { display: grid; gap: 16px; }
+  .campo { display: grid; gap: 6px; font-weight: 500; }
+  .campo input { font: inherit; min-height: 44px; padding: 8px 10px; border-radius: 8px; color: var(--texto); background: var(--fundo); border: 1px solid var(--texto-suave); }
+  .resultados { display: grid; gap: 12px; align-content: start; }
+  .resultados p { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin: 0; padding-bottom: 12px; border-bottom: 1px solid var(--borda); }
+  .resultados output { font-family: var(--fonte-numero); font-size: 1.3rem; font-weight: 600; color: var(--primaria); }
+  .premissa { max-width: 70ch; margin-top: 24px; }
+</style>

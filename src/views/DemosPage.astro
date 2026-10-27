@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import textos from '../textos/demos.json';
+import { t, href } from '../lib/i18n.js';
+
+const { lang } = Astro.props;
+const g = textos.galeria;
+---
+<Base lang={lang} rota="demos/" titulo={t(g.meta.titulo, lang)} descricao={t(g.meta.descricao, lang)}>
+  <section class="container secao">
+    <p class="rotulo">{t(g.rotulo, lang)}</p>
+    <h1>{t(g.titulo, lang)}</h1>
+    <p class="lead">{t(g.texto, lang)}</p>
+    <div class="grade">
+      {g.itens.map((d) => (
+        <article class="cartao">
+          <h2 class="cartao-titulo">{t(d.titulo, lang)}</h2>
+          <p>{t(d.texto, lang)}</p>
+          <a class="botao botao-secundario" href={href(lang, `demos/${d.id}/`)}>{t(g.abrir, lang)}</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>
+<style>
+  .cartao-titulo { font-size: 1.3rem; }
+</style>

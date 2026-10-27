@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "titulo": { "pt": "Dados e IA para quem decide", "en": "Data and AI for decision-makers" },
+    "descricao": { "pt": "Painéis, indicadores e IA aplicada para escritórios do mercado financeiro, pequenas e médias empresas e projetos pontuais de dados.", "en": "Dashboards, KPIs and applied AI for financial-market firms, small and mid-sized businesses and one-off data projects." }
+  },
+  "hero": {
+    "rotulo": { "pt": "BI · Dados · IA aplicada", "en": "BI · Data · Applied AI" },
+    "titulo": { "pt": "Dados e IA para quem decide", "en": "Data and AI for decision-makers" },
+    "texto": { "pt": "Organizo os dados que você já tem, transformo em painéis que respondem às perguntas do dia a dia e coloco IA onde ela economiza horas. O foco é o mercado financeiro, com espaço para qualquer negócio que precise enxergar melhor os próprios números.", "en": "I organize the data you already have, turn it into dashboards that answer everyday questions and put AI where it saves hours. The focus is the financial market, with room for any business that needs to see its own numbers more clearly." },
+    "cta": { "pt": "Pedir um diagnóstico", "en": "Request an assessment" },
+    "demos": { "pt": "Ver as demos", "en": "See the demos" },
+    "painel": { "pt": "Abrir o painel completo", "en": "Open the full dashboard" },
+    "kpis": {
+      "captacao": { "pt": "Captação em 12 meses", "en": "12-month net inflow" },
+      "receita": { "pt": "Receita em 12 meses", "en": "12-month revenue" },
+      "clientes": { "pt": "Clientes", "en": "Clients" }
+    },
+    "grafico": { "pt": "Captação líquida por mês", "en": "Net inflow by month" }
+  },
+  "frentes": {
+    "rotulo": { "pt": "O que eu faço", "en": "What I do" },
+    "titulo": { "pt": "Três frentes, um objetivo: decidir com dado confiável", "en": "Three fronts, one goal: decisions based on reliable data" },
+    "itens": [
+      { "id": "bi", "link": "solucoes/#bi", "titulo": { "pt": "BI e Dados", "en": "BI & Data" }, "texto": { "pt": "Painéis e indicadores que substituem a planilha montada à mão todo mês.", "en": "Dashboards and KPIs that replace the spreadsheet rebuilt by hand every month." }, "rotulo": { "pt": "Ver BI e Dados", "en": "See BI & Data" } },
+      { "id": "ia", "link": "solucoes/#ia", "titulo": { "pt": "IA Aplicada", "en": "Applied AI" }, "texto": { "pt": "Assistentes e automações com IA que trabalham sobre os seus dados, com regra clara e conferência.", "en": "AI assistants and automations that work on your data, with clear rules and checks." }, "rotulo": { "pt": "Ver IA Aplicada", "en": "See Applied AI" } },
+      { "id": "cursos", "link": "cursos/", "titulo": { "pt": "Cursos de IA (em breve)", "en": "AI courses (coming soon)" }, "texto": { "pt": "Trilhas de IA aplicada por área, começando pelo mercado financeiro.", "en": "Applied AI tracks by field, starting with the financial market." }, "rotulo": { "pt": "Ver as trilhas", "en": "See the tracks" } }
+    ]
+  },
+  "demos": {
+    "rotulo": { "pt": "Demos", "en": "Demos" },
+    "titulo": { "pt": "Veja funcionando antes de conversar", "en": "See it working before we talk" }
+  },
+  "metodo": {
+    "rotulo": { "pt": "Como eu trabalho", "en": "How I work" },
+    "titulo": { "pt": "Do dado espalhado à decisão, em quatro passos", "en": "From scattered data to decisions, in four steps" },
+    "passos": [
+      { "titulo": { "pt": "Diagnóstico", "en": "Assessment" }, "texto": { "pt": "Entendo quais decisões você precisa tomar e onde o dado está hoje: planilhas, sistemas, exports.", "en": "I learn which decisions you need to make and where the data lives today: spreadsheets, systems, exports." } },
+      { "titulo": { "pt": "Organizar o dado", "en": "Organize the data" }, "texto": { "pt": "Junto as fontes, defino cada indicador por escrito e confiro os números contra a origem.", "en": "I bring the sources together, define each KPI in writing and check the numbers against the source." } },
+      { "titulo": { "pt": "Painel e IA", "en": "Dashboard and AI" }, "texto": { "pt": "Entrego o painel e, quando faz sentido, a automação ou o assistente com IA em cima dele.", "en": "I deliver the dashboard and, where it makes sense, the AI automation or assistant on top of it." } },
+      { "titulo": { "pt": "Acompanhar", "en": "Follow through" }, "texto": { "pt": "Depois da entrega, ajusto o que não estiver respondendo à pergunta certa.", "en": "After delivery, I adjust whatever isn't answering the right question." } }
+    ]
+  },
+  "calculadora": {
+    "titulo": { "pt": "Quanto custa o seu relatório manual?", "en": "How much does your manual report cost?" },
+    "texto": { "pt": "Faça a conta com os seus números: horas por mês, custo da hora e pessoas envolvidas.", "en": "Run the numbers yourself: hours per month, hourly cost and people involved." },
+    "cta": { "pt": "Abrir a calculadora", "en": "Open the calculator" }
+  },
+  "faq": {
+    "titulo": { "pt": "Perguntas frequentes", "en": "Frequently asked questions" },
+    "itens": [
+      { "pergunta": { "pt": "Preciso ter os dados organizados para começar?", "en": "Does my data need to be organized before we start?" }, "resposta": { "pt": "Não. Mapear onde o dado está e o quanto dá para confiar nele é o primeiro passo do diagnóstico.", "en": "No. Mapping where the data lives and how far it can be trusted is the first step of the assessment." } },
+      { "pergunta": { "pt": "Com quais ferramentas você trabalha?", "en": "Which tools do you work with?" }, "resposta": { "pt": "Com as que o seu time já usa, quando elas atendem, como Excel, Power BI e Google Sheets, e com painéis web próprios quando não atendem. Na IA, uso modelos de mercado, sempre sobre os seus dados e com conferência.", "en": "With the ones your team already uses when they fit, such as Excel, Power BI and Google Sheets, and with custom web dashboards when they don't. For AI, I use market models, always on your data and with checks." } },
+      { "pergunta": { "pt": "Como fica a segurança dos meus dados?", "en": "What about the security of my data?" }, "resposta": { "pt": "Peço só o acesso necessário e combinamos as regras antes de começar. O que você me passar fica restrito ao projeto.", "en": "I ask only for the access I need, and we agree on the rules before we start. Whatever you share with me stays within the project." } },
+      { "pergunta": { "pt": "Dá para começar pequeno?", "en": "Can we start small?" }, "resposta": { "pt": "Sim. Um diagnóstico ou um único painel já mostra o valor antes de um projeto maior.", "en": "Yes. An assessment or a single dashboard shows the value before a larger project." } },
+      { "pergunta": { "pt": "Quanto custa?", "en": "How much does it cost?" }, "resposta": { "pt": "Depende do escopo. Depois de uma conversa curta, você recebe uma proposta com escopo, prazo e valor combinados antes de começar.", "en": "It depends on the scope. After a short conversation you receive a proposal with scope, timeline and price agreed before we start." } }
+    ]
+  },
+  "final": {
+    "titulo": { "pt": "Vamos olhar os seus números?", "en": "Shall we look at your numbers?" },
+    "texto": { "pt": "Uma conversa curta pelo WhatsApp basta para entender o problema e dizer se eu sou a pessoa certa para resolvê-lo.", "en": "A short WhatsApp chat is enough to understand the problem and tell whether I'm the right person to solve it." }
+  }
+}

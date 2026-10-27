@@ -1,0 +1,26 @@
+---
+import p from '../textos/projetos.json';
+import { t } from '../lib/i18n.js';
+
+const { lang, projeto } = Astro.props;
+---
+<article class="cartao projeto" data-projeto={projeto.id}>
+  {projeto.imagem && <img src={projeto.imagem} alt="" width="720" height="540" loading="lazy" decoding="async" />}
+  <p class="projeto-tipo">{t(projeto.tipo, lang)}</p>
+  <h2>{projeto.nome}</h2>
+  <p>{t(projeto.resumo, lang)}</p>
+  <ul class="stack">{projeto.stack.map((s) => <li>{s}</li>)}</ul>
+  <p class="projeto-links">
+    <a href={projeto.codigo} target="_blank" rel="noopener">{t(p.codigo, lang)}<span class="sr"> – {projeto.nome}</span></a>
+    {projeto.site && <a href={projeto.site} target="_blank" rel="noopener">{t(p.site, lang)}<span class="sr"> – {projeto.nome}</span></a>}
+  </p>
+</article>
+<style>
+  .projeto img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; margin-bottom: 16px; background: var(--fundo); }
+  .projeto h2 { font-size: 1.3rem; }
+  .projeto-tipo { font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 4px; }
+  .stack { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0 0 12px; }
+  .stack li { font-family: var(--fonte-numero); font-size: .8rem; padding: 2px 8px; border: 1px solid var(--borda); border-radius: 999px; }
+  .projeto-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; }
+  .projeto-links a { display: inline-block; padding: 10px 0; }
+</style>

@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import CourseTrack from '../components/CourseTrack.astro';
+import c from '../textos/cursos.json';
+import { t } from '../lib/i18n.js';
+
+const { lang } = Astro.props;
+---
+<Base lang={lang} rota="cursos/" titulo={t(c.meta.titulo, lang)} descricao={t(c.meta.descricao, lang)}>
+  <section class="container secao">
+    <p class="rotulo">{t(c.rotulo, lang)}</p>
+    <h1>{t(c.titulo, lang)}</h1>
+    <p class="lead">{t(c.texto, lang)}</p>
+    <div class="grade">{c.trilhas.map((trilha) => <CourseTrack lang={lang} trilha={trilha} />)}</div>
+  </section>
+</Base>

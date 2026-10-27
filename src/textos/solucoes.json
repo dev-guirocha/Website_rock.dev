@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "titulo": { "pt": "Soluções", "en": "Solutions" },
+    "descricao": { "pt": "BI e Dados e IA Aplicada: o que eu entrego e para quem.", "en": "BI & Data and Applied AI: what I deliver and for whom." }
+  },
+  "rotulo": { "pt": "Soluções", "en": "Solutions" },
+  "titulo": { "pt": "Organizar o dado, depois colocar IA em cima", "en": "Organize the data, then put AI on top" },
+  "texto": { "pt": "As duas frentes funcionam juntas: a IA só responde bem quando o dado por baixo é confiável.", "en": "The two fronts work together: AI only answers well when the data underneath is reliable." },
+  "rotulos": {
+    "problema": { "pt": "O problema", "en": "The problem" },
+    "entregas": { "pt": "O que eu entrego", "en": "What I deliver" },
+    "publico": { "pt": "Para quem", "en": "Who it's for" }
+  },
+  "demo": { "pt": "Ver um exemplo na demo", "en": "See an example in the demo" },
+  "ofertas": [
+    {
+      "id": "bi",
+      "mensagem": "diagnostico-bi",
+      "demo": "demos/captacao-assessoria/",
+      "titulo": { "pt": "BI e Dados", "en": "BI & Data" },
+      "problema": { "pt": "O relatório do mês sai de várias planilhas coladas à mão, cada área tem um número diferente para o mesmo indicador e a decisão espera o fechamento.", "en": "The monthly report comes from several spreadsheets pasted together by hand, each team has a different number for the same KPI and decisions wait for month-end." },
+      "entregas": [
+        { "pt": "Painéis de indicadores com definição escrita de cada número", "en": "KPI dashboards with a written definition for every number" },
+        { "pt": "Automação de relatórios recorrentes", "en": "Automation of recurring reports" },
+        { "pt": "Integração de fontes: exports, planilhas e sistemas", "en": "Source integration: exports, spreadsheets and systems" },
+        { "pt": "Conferência do painel contra a origem do dado", "en": "Dashboard reconciliation against the data source" }
+      ],
+      "publico": { "pt": "Escritórios de investimento, consultorias e gestoras, em primeiro lugar; também pequenas e médias empresas e times que precisam de um projeto pontual de dados.", "en": "Investment firms, consultancies and asset managers first; also small and mid-sized businesses and teams that need a one-off data project." },
+      "cta": { "pt": "Quero um diagnóstico de BI", "en": "I want a BI assessment" }
+    },
+    {
+      "id": "ia",
+      "mensagem": "ia-aplicada",
+      "demo": "demos/assistente-ia/",
+      "titulo": { "pt": "IA Aplicada", "en": "Applied AI" },
+      "problema": { "pt": "A equipe gasta horas lendo documentos, montando resumos e respondendo às mesmas perguntas sobre os números, e a IA genérica não conhece o seu negócio.", "en": "The team spends hours reading documents, writing summaries and answering the same questions about the numbers, and generic AI doesn't know your business." },
+      "entregas": [
+        { "pt": "Assistentes que respondem sobre os seus dados, citando a fonte de cada resposta", "en": "Assistants that answer questions about your data, citing the source of each answer" },
+        { "pt": "Automação com IA de tarefas repetitivas de texto", "en": "AI automation of repetitive text tasks" },
+        { "pt": "Triagem e resumo de documentos", "en": "Document triage and summarization" },
+        { "pt": "Regras que conferem os números da IA contra a fonte", "en": "Rules that check the AI's numbers against the source" }
+      ],
+      "publico": { "pt": "Quem já tem o dado minimamente organizado e quer ganhar tempo, ou quem quer fazer as duas coisas no mesmo projeto.", "en": "Teams whose data is already reasonably organized and who want to save time, or who want to do both in the same project." },
+      "cta": { "pt": "Quero aplicar IA no meu negócio", "en": "I want to apply AI to my business" }
+    }
+  ]
+}

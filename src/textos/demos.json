@@ -1,0 +1,111 @@
+{
+  "comum": {
+    "voltar": { "pt": "← Todas as demos", "en": "← All demos" },
+    "periodo": { "pt": "Período", "en": "Period" },
+    "meses": { "pt": "Últimos {n} meses", "en": "Last {n} months" },
+    "todos": { "pt": "Todos", "en": "All" },
+    "todas": { "pt": "Todas", "en": "All" },
+    "como-ler": { "pt": "Como ler este painel", "en": "How to read this dashboard" }
+  },
+  "captacao": {
+    "meta": {
+      "titulo": { "pt": "Demo: captação e receita de uma assessoria", "en": "Demo: net inflow and revenue of an advisory firm" },
+      "descricao": { "pt": "Painel fictício de captação líquida, receita e clientes por assessor.", "en": "Fictional dashboard of net inflow, revenue and clients by advisor." }
+    },
+    "titulo": { "pt": "Captação e receita de uma assessoria", "en": "Net inflow and revenue of an advisory firm" },
+    "texto": { "pt": "Uma assessoria de investimentos inventada, com oito assessores e doze meses de histórico. Filtre por período e por assessor para ver como o painel responde.", "en": "An invented investment advisory firm with eight advisors and twelve months of history. Filter by period and advisor to see how the dashboard responds." },
+    "subtitulo": { "pt": "Painel mensal de captação e receita", "en": "Monthly inflow and revenue dashboard" },
+    "assessor": { "pt": "Assessor", "en": "Advisor" },
+    "kpis": {
+      "captacao": { "pt": "Captação líquida", "en": "Net inflow" },
+      "receita": { "pt": "Receita", "en": "Revenue" },
+      "clientes": { "pt": "Clientes (último mês)", "en": "Clients (last month)" },
+      "receita-cliente": { "pt": "Receita por cliente (último mês)", "en": "Revenue per client (last month)" }
+    },
+    "grafico": { "pt": "Captação líquida por mês", "en": "Net inflow by month" },
+    "ranking": { "pt": "Ranking de captação no período", "en": "Inflow ranking for the period" },
+    "colunas": {
+      "assessor": { "pt": "Assessor", "en": "Advisor" },
+      "captacao": { "pt": "Captação líquida", "en": "Net inflow" }
+    },
+    "explicacao": { "pt": "Captação líquida é o dinheiro que entrou menos o que saiu. Barras vermelhas mostram meses em que saiu mais do que entrou. A receita soma o período; clientes e receita por cliente olham só o último mês do período.", "en": "Net inflow is money in minus money out. Red bars show months when more left than came in. Revenue is summed over the period; clients and revenue per client look only at the last month of the period." }
+  },
+  "pme": {
+    "meta": {
+      "titulo": { "pt": "Demo: vendas e margem de uma pequena empresa", "en": "Demo: sales and margin of a small business" },
+      "descricao": { "pt": "Painel fictício de vendas, custo e margem por categoria de uma cafeteria.", "en": "Fictional dashboard of sales, cost and margin by category for a coffee shop." }
+    },
+    "titulo": { "pt": "Vendas e margem de uma pequena empresa", "en": "Sales and margin of a small business" },
+    "texto": { "pt": "Uma cafeteria inventada que sabia quanto vendia, mas não quanto sobrava. O painel separa venda, custo e margem por categoria.", "en": "An invented coffee shop that knew how much it sold but not how much it kept. The dashboard separates sales, cost and margin by category." },
+    "subtitulo": { "pt": "Painel mensal de vendas e margem", "en": "Monthly sales and margin dashboard" },
+    "categoria": { "pt": "Categoria", "en": "Category" },
+    "kpis": {
+      "vendas": { "pt": "Vendas", "en": "Sales" },
+      "custo": { "pt": "Custo", "en": "Cost" },
+      "margem": { "pt": "Margem bruta", "en": "Gross margin" },
+      "margem-pct": { "pt": "Margem %", "en": "Margin %" }
+    },
+    "grafico": { "pt": "Vendas por mês", "en": "Sales by month" },
+    "tabela": { "pt": "Vendas e margem por categoria no período", "en": "Sales and margin by category for the period" },
+    "colunas": {
+      "categoria": { "pt": "Categoria", "en": "Category" },
+      "vendas": { "pt": "Vendas", "en": "Sales" },
+      "margem": { "pt": "Margem %", "en": "Margin %" }
+    },
+    "explicacao": { "pt": "Margem bruta é a venda menos o custo direto do produto. Uma categoria pode vender muito e deixar pouco: compare a coluna de margem antes de decidir onde investir.", "en": "Gross margin is sales minus the direct cost of the product. A category can sell a lot and keep little: compare the margin column before deciding where to invest." }
+  },
+  "assistente": {
+    "meta": {
+      "titulo": { "pt": "Demo: assistente de IA sobre os dados", "en": "Demo: AI assistant over the data" },
+      "descricao": { "pt": "Simulação de um assistente que responde perguntas sobre um painel fictício de assessoria.", "en": "Simulation of an assistant answering questions about a fictional advisory dashboard." }
+    },
+    "titulo": { "pt": "Assistente de IA sobre os dados", "en": "AI assistant over the data" },
+    "texto": { "pt": "É assim que funciona um assistente sobre os dados de um escritório: a pergunta chega em linguagem natural, e a resposta volta com o número e aponta de onde ele veio no painel.", "en": "This is how an assistant over a firm's data works: the question comes in plain language, and the answer comes back with the number and points to where it came from in the dashboard." },
+    "aviso": { "pt": "Simulação: as perguntas são fixas e as respostas são calculadas a partir dos dados do painel quando o site é publicado. Nenhum modelo de IA é chamado nesta página.", "en": "Simulation: the questions are fixed and the answers are calculated from the dashboard data when the site is published. No AI model is called on this page." },
+    "subtitulo": { "pt": "Painel de apoio às respostas", "en": "Dashboard behind the answers" },
+    "grafico": { "pt": "Receita total por mês", "en": "Total revenue by month" },
+    "ranking": { "pt": "Captação nos últimos 3 meses", "en": "Net inflow over the last 3 months" },
+    "colunas": {
+      "assessor": { "pt": "Assessor", "en": "Advisor" },
+      "captacao": { "pt": "Captação líquida", "en": "Net inflow" }
+    },
+    "nome": { "pt": "Assistente", "en": "Assistant" },
+    "voce": { "pt": "Você", "en": "You" },
+    "escolha": { "pt": "Escolha uma pergunta", "en": "Pick a question" },
+    "perguntas": {
+      "top-trimestre": { "pt": "Qual assessor mais captou nos últimos 3 meses?", "en": "Which advisor brought in the most over the last 3 months?" },
+      "total-12m": { "pt": "Quanto a assessoria captou em 12 meses?", "en": "How much did the firm bring in over 12 months?" },
+      "mes-menor-receita": { "pt": "Em que mês a receita foi menor?", "en": "Which month had the lowest revenue?" },
+      "negativos-ultimo-mes": { "pt": "Quantos assessores tiveram captação negativa no último mês?", "en": "How many advisors had negative inflow last month?" },
+      "receita-por-cliente": { "pt": "Qual a receita média por cliente no último mês?", "en": "What was the average revenue per client last month?" },
+      "trimestre-vs-anterior": { "pt": "A captação melhorou em relação ao trimestre anterior?", "en": "Did inflow improve versus the previous quarter?" }
+    },
+    "respostas": {
+      "top-trimestre": { "pt": "{nome} liderou a captação dos últimos 3 meses, com {valor} líquidos.", "en": "{nome} led net inflow over the last 3 months, with {valor}." },
+      "total-12m": { "pt": "A captação líquida somada dos {n} assessores nos últimos 12 meses foi de {valor}.", "en": "Combined net inflow across the {n} advisors over the last 12 months was {valor}." },
+      "mes-menor-receita": { "pt": "A menor receita do período foi em {mes}: {valor}.", "en": "The lowest revenue in the period was in {mes}: {valor}." },
+      "negativos-ultimo-mes": { "pt": "Em {mes}, {valor} assessor(es) tiveram captação líquida negativa.", "en": "In {mes}, {valor} advisor(s) had negative net inflow." },
+      "receita-por-cliente": { "pt": "Em {mes}, a receita média por cliente foi de {valor}.", "en": "In {mes}, average revenue per client was {valor}." },
+      "trimestre-vs-anterior": { "pt": "A captação dos últimos 3 meses ({atual}) {direcao} {valor} em relação aos 3 meses anteriores ({anterior}).", "en": "Net inflow over the last 3 months ({atual}) {direcao} {valor} versus the previous 3 months ({anterior})." }
+    },
+    "direcao": {
+      "subiu": { "pt": "subiu", "en": "rose" },
+      "caiu": { "pt": "caiu", "en": "fell" }
+    }
+  },
+  "galeria": {
+    "meta": {
+      "titulo": { "pt": "Demos", "en": "Demos" },
+      "descricao": { "pt": "Painéis e IA aplicada funcionando, com dados fictícios.", "en": "Dashboards and applied AI in action, with fictional data." }
+    },
+    "rotulo": { "pt": "Demos", "en": "Demos" },
+    "titulo": { "pt": "Veja funcionando antes de conversar", "en": "See it working before we talk" },
+    "texto": { "pt": "Três demonstrações navegáveis. A empresa, as pessoas e os números são inventados; o tipo de problema é real.", "en": "Three interactive demos. The company, people and figures are invented; the kind of problem is real." },
+    "abrir": { "pt": "Abrir demo", "en": "Open demo" },
+    "itens": [
+      { "id": "captacao-assessoria", "titulo": { "pt": "Captação e receita de uma assessoria", "en": "Net inflow and revenue of an advisory firm" }, "texto": { "pt": "Oito assessores, doze meses: captação líquida, receita e clientes, com filtro por período e por assessor.", "en": "Eight advisors, twelve months: net inflow, revenue and clients, filterable by period and advisor." } },
+      { "id": "vendas-pme", "titulo": { "pt": "Vendas e margem de uma pequena empresa", "en": "Sales and margin of a small business" }, "texto": { "pt": "Venda, custo e margem por categoria de uma cafeteria, para ver onde o dinheiro realmente fica.", "en": "Sales, cost and margin by category for a coffee shop, to see where the money actually stays." } },
+      { "id": "assistente-ia", "titulo": { "pt": "Assistente de IA sobre os dados", "en": "AI assistant over the data" }, "texto": { "pt": "Perguntas prontas sobre o painel da assessoria, com cada resposta conferida contra os números. É uma simulação, sem modelo de IA chamado.", "en": "Ready-made questions about the advisory dashboard, with every answer checked against the numbers. It's a simulation; no AI model is called." } }
+    ]
+  }
+}

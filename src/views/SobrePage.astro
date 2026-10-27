@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import s from '../textos/sobre.json';
+import contato from '../config/contato.json';
+import { t, href } from '../lib/i18n.js';
+
+const { lang } = Astro.props;
+---
+<Base lang={lang} rota="sobre/" titulo={t(s.meta.titulo, lang)} descricao={t(s.meta.descricao, lang)}>
+  <section class="container secao sobre">
+    <img src="/images/guilherme.webp" alt={t(s.foto, lang)} width="480" height="640" />
+    <div>
+      <p class="rotulo">{t(s.rotulo, lang)}</p>
+      <h1>Guilherme Rocha</h1>
+      <p class="cargo">{t(s.cargo, lang)}</p>
+      {s.paragrafos.map((p) => <p>{t(p, lang)}</p>)}
+      <div class="acoes">
+        <WhatsAppCTA lang={lang} />
+        <a class="botao botao-secundario" href={contato.resume} target="_blank" rel="noopener">{t(s.resume, lang)}</a>
+        <a class="botao botao-secundario" href={href(lang, 'projetos/')}>{t(s.projetos, lang)}</a>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .sobre { display: grid; gap: 40px; align-items: start; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); }
+  .sobre img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border-radius: var(--raio); }
+  .cargo { font-weight: 600; color: var(--texto-suave); }
+  @media (max-width: 760px) { .sobre { grid-template-columns: 1fr; } .sobre img { max-width: 240px; } }
+</style>

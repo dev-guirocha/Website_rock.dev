@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import s from '../textos/solucoes.json';
+import { t, href } from '../lib/i18n.js';
+
+const { lang } = Astro.props;
+---
+<Base lang={lang} rota="solucoes/" titulo={t(s.meta.titulo, lang)} descricao={t(s.meta.descricao, lang)}>
+  <section class="container secao">
+    <p class="rotulo">{t(s.rotulo, lang)}</p>
+    <h1>{t(s.titulo, lang)}</h1>
+    <p class="lead">{t(s.texto, lang)}</p>
+  </section>
+  {s.ofertas.map((o, i) => (
+    <section class:list={['secao', i % 2 === 0 && 'secao-alt']} id={o.id}>
+      <div class="container">
+        <h2>{t(o.titulo, lang)}</h2>
+        <div class="oferta-grade">
+          <div>
+            <h3>{t(s.rotulos.problema, lang)}</h3>
+            <p>{t(o.problema, lang)}</p>
+            <h3>{t(s.rotulos.publico, lang)}</h3>
+            <p>{t(o.publico, lang)}</p>
+          </div>
+          <div>
+            <h3>{t(s.rotulos.entregas, lang)}</h3>
+            <ul class="lista">{o.entregas.map((e) => <li>{t(e, lang)}</li>)}</ul>
+          </div>
+        </div>
+        <div class="acoes">
+          <WhatsAppCTA lang={lang} mensagem={o.mensagem} rotulo={t(o.cta, lang)} />
+          <a class="botao botao-secundario" href={href(lang, o.demo)}>{t(s.demo, lang)}</a>
+        </div>
+      </div>
+    </section>
+  ))}
+</Base>
+<style>
+  .oferta-grade { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+</style>
